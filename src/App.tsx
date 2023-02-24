@@ -1,11 +1,20 @@
-import './App.css';
-import Homepage from './pages/Homepage';
+import { Outlet } from "react-router-dom";
+import Header from "./Components/Header";
 
-function App() {
+export function App() {
+  return(
+    <div>
+      <Header></Header>
+      <main>
+      <Outlet/>
+      </main>
+      
 
-  return (
-    <Homepage />
+
+
+
+    </div>
   )
 }
 
-export default App;
+
