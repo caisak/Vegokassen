@@ -1,6 +1,6 @@
 import { CSSProperties } from "react";
 
-function Footer() {
+export function Footer() {
   return(
     <footer style={footerStyle}>
       <h2>This is the footer!</h2>
@@ -14,5 +14,3 @@ const footerStyle: CSSProperties = {
   width: '100%',
   textAlign: 'center',
 }
-
-export default Footer;

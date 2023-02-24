@@ -1,16 +1,17 @@
-import { CSSProperties } from "react";
+import styled from "styled-components";
 
-function Header() {
-  return(
-    <header style={headerStyle}>
-      <h1>This is the header!</h1>
-    </header>
-  )
+export const MyHeader = styled.header`
+  background-color: darkgreen;
+`;
+
+export const MyHeaderLogo = styled.h3`
+  color:White;
+`;
+
+export function Header() {
+  return (
+    <MyHeader>
+      <h3>Vego Kassen</h3>
+    </MyHeader>
+  );
 }
-
-const headerStyle: CSSProperties = {
-  textAlign: 'center',
-}
-
-
-export default Header;
