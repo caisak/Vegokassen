@@ -10,16 +10,16 @@ To start project run:
 
 För att få styled components att fungera i typescript:
 3. `npm install --save styled-components`
-3. `npm install --save-dev @types/styled-components`
-3. installera vscode extension: vscode-styled-components
+4. `npm install --save-dev @types/styled-components`
+5. installera vscode extension: vscode-styled-components
 
 
 för att få fontawesome att fungera:
-4. `npm i --save @fortawesome/fontawesome-svg-core`
-4. `npm i --save @fortawesome/free-solid-svg-icons`
-4. `npm install --save @fortawesome/free-brands-svg-icons`
-4. `npm i --save @fortawesome/free-regular-svg-icons`
-4. `npm i --save @fortawesome/react-fontawesome@latest`
+6. `npm i --save @fortawesome/fontawesome-svg-core`
+7. `npm i --save @fortawesome/free-solid-svg-icons`
+8. `npm install --save @fortawesome/free-brands-svg-icons`
+9. `npm i --save @fortawesome/free-regular-svg-icons`
+10. `npm i --save @fortawesome/react-fontawesome@latest`
 
  Starta livecode server: npm run dev
 
