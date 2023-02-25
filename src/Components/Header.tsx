@@ -34,6 +34,7 @@ export const MyHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: 'Titillium Web', sans-serif;
 `;
 
 export const StyledNavUl = styled.ul`
