@@ -1,6 +1,8 @@
 
-import { faCartShopping, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
@@ -24,8 +26,8 @@ export function Header() {
           </li>
         </StyledNavUl>
       </nav>
-      <FontAwesomeIcon icon={faCartShopping} size="lg" color="white" beat/>
-      <FontAwesomeIcon icon={faUser}/>
+      <FontAwesomeIcon icon={faCartShopping} size="lg" color="white" beat />
+
     </MyHeader>
   );
 }
