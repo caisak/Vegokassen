@@ -1,4 +1,4 @@
-// import styled from "styled-components";
+import styled from "styled-components";
 
 export type RecipeCardProps = {
   image: string;
@@ -8,10 +8,30 @@ export type RecipeCardProps = {
 
 export const RecipeCard = ({ image, title, description }: RecipeCardProps) => {
   return (
-    <div>
+  <StyledRecipeCardDiv>
+    <StyledRecipeCardWrapper>
       <img src={image} alt={title} />
-      <h2>{title}</h2>
-      <p>{description}</p>
-    </div>
+      <StyledRecipeCardTitle>{title}</StyledRecipeCardTitle>
+      <StyledRecipeCardDesc>{description}</StyledRecipeCardDesc>
+    </StyledRecipeCardWrapper>
+  </StyledRecipeCardDiv>
   );
 };
+
+// Styled components
+export const StyledRecipeCardDiv = styled.div `
+  color: black; 
+`
+
+export const StyledRecipeCardWrapper = styled.div `
+  color: black; 
+`
+
+export const StyledRecipeCardTitle = styled.h1 `
+  color: red; 
+`
+
+export const StyledRecipeCardDesc = styled.p `
+  color: black; 
+`
+
