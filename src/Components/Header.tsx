@@ -28,9 +28,9 @@ export function Header() {
         </StyledNavUl>
       </nav>
       <StyledHeaderLogo>
+      {CartAmount}
+      <br/>
         <FontAwesomeIcon icon={faCartShopping} size="lg" color="white" beat />
-        <br/>
-        Count: {CartAmount}
       </StyledHeaderLogo>
     </MyHeader>
   );
@@ -45,6 +45,7 @@ export const MyHeader = styled.header`
   align-items: center;
   justify-content: space-between;
   font-family: 'Titillium Web', sans-serif;
+  text-align: center;
 `;
 
 export const StyledNavUl = styled.ul`

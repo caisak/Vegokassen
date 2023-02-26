@@ -20,7 +20,6 @@ export function MyProvider({ children }: { children: React.ReactNode }) {
   return (
     <MyContext.Provider value={{ handleCartAmountUpdate, CartAmount }}>
       {children}
-      hej
     </MyContext.Provider>
   );
 }
