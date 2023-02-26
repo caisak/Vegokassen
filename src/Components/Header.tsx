@@ -1,12 +1,13 @@
-
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { MyContext, MyContextValue } from "./MyProvider";
 
 export function Header() {
+  
+  const { CartAmount } = useContext<MyContextValue>(MyContext);
   return (
     <MyHeader>
       <StyledHeaderLogo>Vego Kassen</StyledHeaderLogo>
@@ -26,8 +27,11 @@ export function Header() {
           </li>
         </StyledNavUl>
       </nav>
-      <FontAwesomeIcon icon={faCartShopping} size="lg" color="white" beat />
-
+      <StyledHeaderLogo>
+        <FontAwesomeIcon icon={faCartShopping} size="lg" color="white" beat />
+        <br/>
+        Count: {CartAmount}
+      </StyledHeaderLogo>
     </MyHeader>
   );
 }
