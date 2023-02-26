@@ -1,10 +1,9 @@
-import { AddToCartButton } from "../Components/AddToCartButton";
-import { AddToCartButton } from "../Components/AddToCartButton";
-import { Button } from "../Components/Button";
-import { faCoffee, faSpinner, faTruck } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faHandPeace } from "@fortawesome/free-regular-svg-icons";
+import { faCoffee, faSpinner, faTruck } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { AddToCartButton } from "../Components/AddToCartButton";
+import { Button } from "../Components/Button";
 
 export function Home() {
 

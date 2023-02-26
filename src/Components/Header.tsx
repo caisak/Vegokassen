@@ -1,6 +1,6 @@
-import { useContext } from "react";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { MyContext, MyContextValue } from "./MyProvider";
