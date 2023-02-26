@@ -1,16 +1,16 @@
 import { Outlet } from "react-router-dom";
-import { Footer } from "./Components/Footer";
-import { Header } from "./Components/Header";
 import './App.css';
+import { Footer } from "./Components/Footer";
+import { TheHeader } from "./Components/Header";
 import { MyProvider } from "./Components/MyProvider";
 
 export function App() {
   return(
-    <div>
+    <div id="hello">
       <MyProvider>
-      <Header></Header>
+      <TheHeader></TheHeader>
       <main>
-      <Outlet/>
+        <Outlet/>
       </main>
       <Footer></Footer>
       </MyProvider>
