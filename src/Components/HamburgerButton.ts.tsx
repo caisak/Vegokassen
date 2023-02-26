@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const OpenButton = styled.button`
     width: 2rem;
     height: 2rem;
@@ -16,6 +15,5 @@ export const OpenButton = styled.button`
     @media (min-width:700px) {
         display: none;
     }
-
 `
 
