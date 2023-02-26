@@ -49,7 +49,7 @@ export function TheHeader() {
             </li>
           </StyledNavUl>
         </nav>
-        <FontAwesomeIcon icon={faCartShopping} size="lg" color="white" beat />
+        <FontAwesomeIcon icon={faCartShopping} size="lg" color="white"/>
       </MyHeader>
       <MobileBurgerNav extendNavBar={extendNavBar}>
         <StyledMobileNavNav>
@@ -132,6 +132,11 @@ export const StyledNavUl = styled.ul`
   }
 `;
 
+export const StyledHeaderLogo = styled.h3`
+  color: White;
+  margin: 0;
+`;
+
 /*Styled NavLink */
 const StyledNavLink = styled(NavLink)`
   color: white;
@@ -144,7 +149,7 @@ const StyledNavLink = styled(NavLink)`
     display: none;
   }
 `;
-
+/*Mobile Nav Styling */
 export const StyledMobileNavNav = styled.nav`
   height: 100%;
   display: flex;
@@ -174,7 +179,3 @@ const StyledMobileNavLink = styled(NavLink)`
   text-decoration: none;
 `;
 
-export const StyledHeaderLogo = styled.h3`
-  color: White;
-  margin: 0;
-`;
