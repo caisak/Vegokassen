@@ -1,51 +1,135 @@
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { OpenButton } from "./HamburgerButton.ts";
 import { MyContext, MyContextValue } from "./MyProvider";
 
-export function Header() {
-  
+interface MobileBurgerNavProps {
+  extendNavBar: boolean;
+}
+
+export function TheHeader() {
+  const [extendNavBar, setExtendNavbar] = useState(false);
   const { CartAmount } = useContext<MyContextValue>(MyContext);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth > 700) {
+        setExtendNavbar(false);
+      }
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
-    <MyHeader>
-      <StyledHeaderLogo>Vego Kassen</StyledHeaderLogo>
-      <nav>
-        <StyledNavUl>
-          <li>
-            <StyledNavLink to="/">Home</StyledNavLink>
-          </li>
-          <li>
-            <StyledNavLink to="products">Products</StyledNavLink>
-          </li>
-          <li>
-            <StyledNavLink to="howitworks">How it works</StyledNavLink>
-          </li>
-          <li>
-            <StyledNavLink to="recipies">Recipies</StyledNavLink>
-          </li>
-        </StyledNavUl>
-      </nav>
-      <StyledHeaderLogo>
-      {CartAmount}
-      <br/>
-        <FontAwesomeIcon icon={faCartShopping} size="lg" color="white" beat />
-      </StyledHeaderLogo>
-    </MyHeader>
+    <Header>
+      <MyHeader>
+        <FlexDiv>
+        <OpenButton
+          onClick={() => {
+            setExtendNavbar((curr) => !curr);
+          }}
+        >
+          {extendNavBar ? <>&#10005;</> : <>&#8801;</>}
+        </OpenButton>
+        <StyledHeaderLogo>Vego Kassen</StyledHeaderLogo>
+        </FlexDiv>
+        <nav>
+          <StyledNavUl>
+            <li>
+              <StyledNavLink to="/">Hem</StyledNavLink>
+            </li>
+            <li>
+              <StyledNavLink to="produkter">Produkter</StyledNavLink>
+            </li>
+            <li>
+              <StyledNavLink to="safunkardet">Så funkar det</StyledNavLink>
+            </li>
+            <li>
+              <StyledNavLink to="recept">Recept</StyledNavLink>
+            </li>
+          </StyledNavUl>
+        </nav>
+          <StyledHeaderLogo>
+          {CartAmount}
+          <br/>
+          <FontAwesomeIcon icon={faCartShopping} size="lg" color="white" beat />
+        </StyledHeaderLogo>
+      </MyHeader>
+      <MobileBurgerNav extendNavBar={extendNavBar}>
+        <StyledMobileNavNav>
+          <StyledMobileNavUl>
+            <li>
+              <StyledMobileNavLink
+                to="/"
+                onClick={() => setExtendNavbar(false)}
+              >
+                Hem
+              </StyledMobileNavLink>
+            </li>
+            <li>
+              <StyledMobileNavLink
+                to="produkter"
+                onClick={() => setExtendNavbar(false)}
+              >
+                Produkter
+              </StyledMobileNavLink>
+            </li>
+            <li>
+              <StyledMobileNavLink
+                to="safunkardet"
+                onClick={() => setExtendNavbar(false)}
+              >
+                Så funkar det
+              </StyledMobileNavLink>
+            </li>
+            <li>
+              <StyledMobileNavLink
+                to="recept"
+                onClick={() => setExtendNavbar(false)}
+              >
+                Recept
+              </StyledMobileNavLink>
+            </li>
+          </StyledMobileNavUl>
+        </StyledMobileNavNav>
+      </MobileBurgerNav>
+    </Header>
   );
 }
 //Stylade komponenter
 
-export const MyHeader = styled.header`
+const FlexDiv = styled.div `
+display: flex;`
+
+const Header = styled.header``;
+export const MyHeader = styled.div`
+  position: fixed;
+  width: 100%;
   background-color: #1c3529;
   padding: 0.5rem;
   height: 3.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: 'Titillium Web', sans-serif;
   text-align: center;
+  font-family: "Titillium Web", sans-serif;
+`;
+
+const MobileBurgerNav = styled.div<MobileBurgerNavProps>`
+  font-family: "Titillium Web", sans-serif;
+  z-index: 10;
+  width: 100%;
+  height: ${(props) => (props.extendNavBar ? "100vh" : "0vh")};
+  background-color: #1c3529;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: height 0.2s ease-in-out;
 `;
 
 export const StyledNavUl = styled.ul`
@@ -59,6 +143,13 @@ export const StyledNavUl = styled.ul`
   }
 `;
 
+export const StyledHeaderLogo = styled.h3`
+  color: White;
+  margin: 0;
+  white-space: nowrap;
+  
+`;
+
 /*Styled NavLink */
 const StyledNavLink = styled(NavLink)`
   color: white;
@@ -67,9 +158,36 @@ const StyledNavLink = styled(NavLink)`
   &:hover {
     color: lightgreen;
   }
+  @media (max-width: 700px) {
+    display: none;
+  }
+`;
+/*Mobile Nav Styling */
+export const StyledMobileNavNav = styled.nav`
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
-export const StyledHeaderLogo = styled.h3`
-  color: White;
+export const StyledMobileNavUl = styled.ul`
+  height: 100%;
   margin: 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  & > * {
+    /* Apply styles to all direct children */
+    margin-bottom: 10vh;
+    text-align: center;
+  }
+`;
+
+/*Styled NavLink */
+const StyledMobileNavLink = styled(NavLink)`
+  color: white;
+  text-decoration: none;
 `;
