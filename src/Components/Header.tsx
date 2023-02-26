@@ -1,3 +1,8 @@
+
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
@@ -21,7 +26,8 @@ export function Header() {
           </li>
         </StyledNavUl>
       </nav>
-      <StyledHeaderLogo>Cart</StyledHeaderLogo>
+      <FontAwesomeIcon icon={faCartShopping} size="lg" color="white" beat />
+
     </MyHeader>
   );
 }
@@ -34,6 +40,7 @@ export const MyHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  font-family: 'Titillium Web', sans-serif;
 `;
 
 export const StyledNavUl = styled.ul`
