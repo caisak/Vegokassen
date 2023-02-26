@@ -1,13 +1,10 @@
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import { useContext } from "react";
-
-import { MyContext, MyContextValue } from "./MyProvider";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { OpenButton } from "./HamburgerButton.ts";
+import { MyContext, MyContextValue } from "./MyProvider";
 
 interface MobileBurgerNavProps {
   extendNavBar: boolean;
@@ -30,6 +27,7 @@ export function TheHeader() {
   return (
     <Header>
       <MyHeader>
+        <FlexDiv>
         <OpenButton
           onClick={() => {
             setExtendNavbar((curr) => !curr);
@@ -38,6 +36,7 @@ export function TheHeader() {
           {extendNavBar ? <>&#10005;</> : <>&#8801;</>}
         </OpenButton>
         <StyledHeaderLogo>Vego Kassen</StyledHeaderLogo>
+        </FlexDiv>
         <nav>
           <StyledNavUl>
             <li>
@@ -103,6 +102,9 @@ export function TheHeader() {
 }
 //Stylade komponenter
 
+const FlexDiv = styled.div `
+display: flex;`
+
 const Header = styled.header``;
 export const MyHeader = styled.div`
   position: fixed;
@@ -144,6 +146,8 @@ export const StyledNavUl = styled.ul`
 export const StyledHeaderLogo = styled.h3`
   color: White;
   margin: 0;
+  white-space: nowrap;
+  
 `;
 
 /*Styled NavLink */
