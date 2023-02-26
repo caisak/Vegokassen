@@ -1,5 +1,9 @@
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { useContext } from "react";
+
+import { MyContext, MyContextValue } from "./MyProvider";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
@@ -11,6 +15,7 @@ interface MobileBurgerNavProps {
 
 export function TheHeader() {
   const [extendNavBar, setExtendNavbar] = useState(false);
+  const { CartAmount } = useContext<MyContextValue>(MyContext);
 
   useEffect(() => {
     function handleResize() {
@@ -49,7 +54,11 @@ export function TheHeader() {
             </li>
           </StyledNavUl>
         </nav>
-        <FontAwesomeIcon icon={faCartShopping} size="lg" color="white"/>
+        <StyledHeaderLogo>
+        <FontAwesomeIcon icon={faCartShopping} size="lg" color="white" beat />
+        <br/>
+        Count: {CartAmount}
+      </StyledHeaderLogo>
       </MyHeader>
       <MobileBurgerNav extendNavBar={extendNavBar}>
         <StyledMobileNavNav>
