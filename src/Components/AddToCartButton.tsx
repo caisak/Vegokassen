@@ -7,7 +7,8 @@ export function AddToCartButton() {
 
   return (
     <div>
-      <MyButton onClick={handleCartAmountUpdate}>Add to Cart</MyButton>
+      <MyButton 
+      onClick={handleCartAmountUpdate}>Add to Cart</MyButton>
     </div>
   );
 }

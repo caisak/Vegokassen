@@ -53,11 +53,11 @@ export function TheHeader() {
             </li>
           </StyledNavUl>
         </nav>
-        <StyledHeaderLogo>
-        <FontAwesomeIcon icon={faCartShopping} size="lg" color="white" beat />
-        <br/>
-        Count: {CartAmount}
-      </StyledHeaderLogo>
+          <StyledHeaderLogo>
+          {CartAmount}
+          <br/>
+          <FontAwesomeIcon icon={faCartShopping} size="lg" color="white" beat />
+        </StyledHeaderLogo>
       </MyHeader>
       <MobileBurgerNav extendNavBar={extendNavBar}>
         <StyledMobileNavNav>
@@ -113,9 +113,9 @@ export const MyHeader = styled.div`
   padding: 0.5rem;
   height: 3.5rem;
   display: flex;
-
   align-items: center;
   justify-content: space-between;
+  text-align: center;
   font-family: "Titillium Web", sans-serif;
 `;
 
@@ -191,4 +191,3 @@ const StyledMobileNavLink = styled(NavLink)`
   color: white;
   text-decoration: none;
 `;
-
