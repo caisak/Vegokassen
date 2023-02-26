@@ -10,7 +10,7 @@ export const RecipeCard = ({ image, title, description }: RecipeCardProps) => {
   return (
   <StyledRecipeCardDiv>
     <StyledRecipeCardWrapper>
-      <img src={image} alt={title} />
+      <StyledRecipeCardImage src={image} alt={title} />
       <StyledRecipeCardTitle>{title}</StyledRecipeCardTitle>
       <StyledRecipeCardDesc>{description}</StyledRecipeCardDesc>
     </StyledRecipeCardWrapper>
@@ -20,18 +20,29 @@ export const RecipeCard = ({ image, title, description }: RecipeCardProps) => {
 
 // Styled components
 export const StyledRecipeCardDiv = styled.div `
-  color: black; 
+  box-shadow: 3px 2px 3px gray;
+  margin: 10px;
 `
 
 export const StyledRecipeCardWrapper = styled.div `
-  color: black; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`
+
+export const StyledRecipeCardImage = styled.img `
+  width: 300px; 
+  height: 400px;
 `
 
 export const StyledRecipeCardTitle = styled.h1 `
-  color: red; 
+  text-align: center;
+  color: #392E7C;
 `
 
 export const StyledRecipeCardDesc = styled.p `
-  color: black; 
+  color: #392E7C;
+  padding: 10px 0px 0px 10px;
 `
-
