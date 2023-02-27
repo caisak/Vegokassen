@@ -4,6 +4,7 @@ import { faCoffee, faSpinner, faTruck } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AddToCartButton } from "../Components/AddToCartButton";
 import { Button } from "../Components/Button";
+import { OrderButton } from "../components/OrderButton";
 import { PromotionAd } from "../Components/PromotionAd";
 
 export function Home() {
@@ -25,6 +26,7 @@ export function Home() {
         Check it out Now! <FontAwesomeIcon icon={faHandPeace} size="2x" color="red" shake border/>
         spinPulse <FontAwesomeIcon icon={faSpinner} spinPulse/>
       </p>
+      <OrderButton />
     </div>
   );
 }
