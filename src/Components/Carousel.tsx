@@ -124,6 +124,7 @@ const InfoBox = styled.div `
 `
 const Title = styled.h2 `
   color: white;
+  margin-bottom: 1rem;
   @media (max-width: 600px) {
     font-size: 1.3rem;
     text-align: center;
