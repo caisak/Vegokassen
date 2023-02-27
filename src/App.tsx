@@ -57,7 +57,7 @@ export function App() {
 }
 
 const StyledSloganWrapper = styled.div`
-  padding: 40px;
+  padding: 50px;
 `
 const StyledSloganHeading = styled.p`
   color: #392E7C;
