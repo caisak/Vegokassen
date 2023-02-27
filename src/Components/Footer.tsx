@@ -71,7 +71,7 @@ export function Footer() {
 
 export const MyFooter = styled.footer`
   color: white;
-  position: fixed;
+  position: bottom;
   width: 100%;
   bottom: 0;
   background-color: #1c3529;
