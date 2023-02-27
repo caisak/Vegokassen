@@ -2,6 +2,7 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faHandPeace } from "@fortawesome/free-regular-svg-icons";
 import { faCoffee, faSpinner, faTruck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styled from "styled-components";
 import { AddToCartButton } from "../Components/AddToCartButton";
 import { Button } from "../Components/Button";
 import { PromotionAd } from "../Components/PromotionAd";
@@ -10,10 +11,10 @@ export function Home() {
 
   
   return (
-    <div>
+    <StyledDiv>
       <PromotionAd text="Begränstat erbjudande! Gratis frakt och 20% rabatt om du beställer inom
         19:00" onClose={() => console.log("Ad closed")} />
-      <h1>This will be the home page</h1>
+      <H>This will be the home page</H>
       <Button />
       <AddToCartButton />
       Your <FontAwesomeIcon icon={faCoffee} /> is hot and ready!
@@ -25,6 +26,14 @@ export function Home() {
         Check it out Now! <FontAwesomeIcon icon={faHandPeace} size="2x" color="red" shake border/>
         spinPulse <FontAwesomeIcon icon={faSpinner} spinPulse/>
       </p>
-    </div>
+    </StyledDiv>
   );
 }
+
+
+const StyledDiv = styled.div `
+background-color:orange;
+
+`
+const H = styled.h1 `
+margin:0;`
