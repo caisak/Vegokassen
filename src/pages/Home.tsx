@@ -3,7 +3,7 @@ import { faEnvelope, faHandPeace } from "@fortawesome/free-regular-svg-icons";
 import { faCoffee, faSpinner, faTruck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AddToCartButton } from "../components/AddToCartButton";
-import { Button } from "../Components/Button";
+import { Button } from "../components/Button";
 import { OrderButton } from "../components/OrderButton";
 import { PromotionAd } from "../components/PromotionAd";
 
