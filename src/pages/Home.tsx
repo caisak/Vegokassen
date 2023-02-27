@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { AddToCartButton } from "../Components/AddToCartButton";
 import { Button } from "../Components/Button";
+import { OrderButton } from "../Components/OrderButton";
 import { PromotionAd } from "../Components/PromotionAd";
 
 export function Home() {
@@ -26,6 +27,7 @@ export function Home() {
         Check it out Now! <FontAwesomeIcon icon={faHandPeace} size="2x" color="red" shake border/>
         spinPulse <FontAwesomeIcon icon={faSpinner} spinPulse/>
       </p>
+      <OrderButton text="Beställ" />
     </StyledDiv>
   );
 }
