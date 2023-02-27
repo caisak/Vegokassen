@@ -32,7 +32,6 @@ export function Home() {
         <MyButton>
         To cart page!
         </MyButton></Link>
-    </div>
       <OrderButton text="Beställ" />
     </StyledDiv>
   );
