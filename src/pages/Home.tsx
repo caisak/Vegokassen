@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Carousel } from "../Components/Carousel";
 import { OrderButton } from "../Components/OrderButton";
 import { PromotionAd } from "../Components/PromotionAd";
 import { RecipeCard, RecipeCardProps } from "../Components/RecipeCard";
@@ -29,10 +30,30 @@ export function Home() {
   };
   
   return (
-    <StyledDiv>
+    <div>
        <PromotionAd text="Begränstat erbjudande! Gratis frakt och 20% rabatt om du beställer inom
         19:00" onClose={() => console.log("Ad closed")} />
-      <main>
+      <StyledMain>
+      <Carousel
+        height={55}
+        images={[
+          "src/Images/food_10.jpg",
+          "src/Images/food_7.jpg",
+          "src/Images/food_2.jpg",
+        ]}
+        titles={[
+          "Vi gör vegetarisk matlagning enkelt och inspirerande!",
+          "Enkla, goda och miljövänliga recept!",
+          "Varje grön dag är en bra dag! Börja din idag!",
+        ]}
+        buttonText={[
+          "Våra Kassar",
+          "Så funkar det!",
+        ]}
+        gradientColor={
+          "tbc"
+        }
+      />
           <StyledRecipeCardsWrapper>
             <StyledSloganWrapper> 
               <StyledSloganHeading>Mat som gör både dig och planeten glad</StyledSloganHeading>
@@ -45,14 +66,14 @@ export function Home() {
             <RecipeCard {...recipe4} />
           </StyledRecipeCardsContainer>
           </StyledRecipeCardsWrapper>
-        </main>
+        </StyledMain>
         <OrderButton text="Beställ" />
-    </StyledDiv>
+    </div>
   );
 }
 
-const StyledDiv = styled.div `
-background-color:orange;
+const StyledMain = styled.main `
+margin: 0;
 
 `
 const H = styled.h1 `
