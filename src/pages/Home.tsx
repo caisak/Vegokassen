@@ -3,10 +3,10 @@ import { faEnvelope, faHandPeace } from "@fortawesome/free-regular-svg-icons";
 import { faCoffee, faSpinner, faTruck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
-import { AddToCartButton } from "../Components/AddToCartButton";
-import { Button } from "../Components/Button";
-import { OrderButton } from "../Components/OrderButton";
-import { PromotionAd } from "../Components/PromotionAd";
+import { AddToCartButton } from "../components/AddToCartButton";
+import { Button } from "../components/Button";
+import { OrderButton } from "../components/OrderButton";
+import { PromotionAd } from "../components/PromotionAd";
 
 export function Home() {
 
