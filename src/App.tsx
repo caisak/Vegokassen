@@ -8,27 +8,27 @@ import { RecipeCard, RecipeCardProps } from "./Components/RecipeCard";
 
 export function App() {
   const recipe1: RecipeCardProps = {
-    title: "RECIPE 1",
-    image: "./assets/recipe1.jpg",
-    description: "hej hej hej hej hej",
+    title: "SUMMER PEACH SALLAD",
+    image: "./assets/recipe9.jpg",
+    description: "A light and refreshing salad that highlights juicy, fresh peaches as the main ingredient.",
   };
 
   const recipe2: RecipeCardProps = {
-    title: "RECIPE 2",
-    image: "./assets/recipe2.jpeg",
-    description: "hej hej hej hej hej",
+    title: "SUMMER PEACH SALLAD",
+    image: "./assets/recipe6.jpg",
+    description: "A light and refreshing salad that highlights juicy, fresh peaches as the main ingredient.",
   };
 
   const recipe3: RecipeCardProps = {
-    title: "RECIPE 3",
-    image: "./assets/recipe3.jpeg",
-    description: "hej hej hej hej hej",
+    title: "SUMMER PEACH SALLAD",
+    image: "./assets/recipe7.jpg",
+    description: "A light and refreshing salad that highlights juicy, fresh peaches as the main ingredient.",
   };
 
   const recipe4: RecipeCardProps = {
-    title: "RECIPE 4",
-    image: "./assets/recipe4.jpg",
-    description: "hej hej hej hej hej",
+    title: "SUMMER PEACH SALLAD",
+    image: "./assets/recipe8.jpg",
+    description: "A light and refreshing salad that highlights juicy, fresh peaches as the main ingredient.",
   };
 
   return (
@@ -37,12 +37,16 @@ export function App() {
         <Header />
         <main>
           <Outlet />
+          <StyledRecipeCardsWrapper>
+          <p>Mat som gör både dig och planeten glad</p>
+          <p>Välj mellan 150+ olika måltider</p>
           <StyledRecipeCardsContainer>
             <RecipeCard {...recipe1} />
             <RecipeCard {...recipe2} />
             <RecipeCard {...recipe3} />
             <RecipeCard {...recipe4} />
           </StyledRecipeCardsContainer>
+          </StyledRecipeCardsWrapper>
         </main>
         <Footer />
       </MyProvider>
@@ -50,9 +54,12 @@ export function App() {
   );
 }
 
+const StyledRecipeCardsWrapper = styled.div`
+  background-color: #fff8ea;
+`
+
 const StyledRecipeCardsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 `;
