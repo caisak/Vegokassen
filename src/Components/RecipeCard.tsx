@@ -40,7 +40,7 @@ const StyledRecipeCardTitle = styled.h2 `
   text-align: center;
   color: #392E7C;
   font-size: 18px;
-  padding: 20px 10px 0px 0px;
+  padding: 20px 10px 0px 10px;
   font-family: 'Ubuntu Condensed', sans-serif;
 `;
 
