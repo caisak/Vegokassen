@@ -2,10 +2,10 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faHandPeace } from "@fortawesome/free-regular-svg-icons";
 import { faCoffee, faSpinner, faTruck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { AddToCartButton } from "../Components/AddToCartButton";
+import { AddToCartButton } from "../components/AddToCartButton";
 import { Button } from "../Components/Button";
 import { OrderButton } from "../components/OrderButton";
-import { PromotionAd } from "../Components/PromotionAd";
+import { PromotionAd } from "../components/PromotionAd";
 
 export function Home() {
 
