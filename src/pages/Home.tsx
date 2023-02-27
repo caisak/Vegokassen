@@ -30,7 +30,7 @@ export function Home() {
   };
 
   const recipe4: RecipeCardProps = {
-    title: "MYNTATÉ PURÉE MED GRANATÄPPLE",
+    title: "MYNTA-TÉ PURÉE MED GRANATÄPPLE",
     image: "src/Images/recipe8.jpg",
     description: "A refreshing minted tea purée with pomegranate. A blend that offers a smooth texture and a fruity flavor.",
   };
@@ -85,7 +85,7 @@ margin:0;`
 
 // Recipe cards styling
 const StyledSloganWrapper = styled.div`
-  padding: 50px;
+  padding: 30px;
 `
 const StyledSloganHeading = styled.p`
   color: #392E7C;
