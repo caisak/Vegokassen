@@ -6,35 +6,47 @@ import styled from "styled-components";
 interface Props {
   images: string[];
   height: number;
+  titles:string[];
+  buttonText:string[];
+  gradientColor:string;
 }
 
 export function Carousel(props: Props) {
 
-  const { images, height } = props;
+  const { images, height, titles, buttonText, gradientColor } = props;
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentTitle, setCurrentTitle] = useState(0);
 
   const handlePrevClick = () => {
     const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
+
+    const newTitleIndex = currentTitle === 0 ? titles.length - 1 : currentTitle - 1;
+    setCurrentTitle(newTitleIndex);
+    console.log(currentTitle)
   };
 
   const handleNextClick = () => {
     const nextIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
     setCurrentIndex(nextIndex);
+    
+    const newTitleIndex = currentTitle === titles.length - 1 ? 0 : currentTitle + 1;
+    setCurrentTitle(newTitleIndex);
+
   };
 
   return (
-    <Container images={images} height={height}>
+    <Container images={images} height={height} titles={titles} buttonText={buttonText} gradientColor={gradientColor}>
       <ButtonWrapper>
         <FontAwesomeIcon onClick={handlePrevClick} icon={faChevronLeft} />
         <FontAwesomeIcon  onClick={handleNextClick} icon={faChevronRight}/>
       </ButtonWrapper>
       <ContentWrapper>
         <InfoBox>
-          <Title>Vi gör vegetarisk matlagning enkelt och inspirerande!</Title>
+          <Title>{titles[currentTitle]}</Title>
           <ButtonBox>
-            <MainWhiteButton>Våra Kassar</MainWhiteButton>
-            <MainButton>Så funkar det!</MainButton>
+            <MainWhiteButton>{buttonText[0]}</MainWhiteButton>
+            <MainButton>{buttonText[1]}</MainButton>
           </ButtonBox>
         </InfoBox>
       </ContentWrapper>
@@ -81,6 +93,10 @@ z-index: 300;
     border-radius: 50%;
     aspect-ratio: 1;
     padding: .3rem .3rem;
+    @media (max-width: 600px) {
+      font-size: .9rem;
+  
+  }
   }
 `;
 const ContentWrapper = styled.div`
@@ -88,20 +104,30 @@ const ContentWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to top, rgba(17, 40, 24, 0.85), transparent);
+  background-image: linear-gradient(to top, rgba(19, 41, 26, 0.85), transparent);
 `;
+
 
 const InfoBox = styled.div `
   display: flex;
   flex-direction: column;
   margin:0;
+  width: 60%;
   position: absolute;
-  top: 68%;
-  left: 7%;
+  bottom: 4%;
+  left: 5%;
   font-family: "Titillium Web", sans-serif;
+  @media (max-width: 800px) {
+    width: 100%;
+    left: 0%;
+  }
 `
 const Title = styled.h2 `
   color: white;
+  @media (max-width: 600px) {
+    font-size: 1.3rem;
+    text-align: center;
+  }
 `
 
 const ButtonBox = styled.div `
@@ -114,7 +140,7 @@ justify-content: flex-start;
 const MainButton = styled.button `
   border-radius: .2rem;
   font-weight: 500;
-  width: 30%;
+  width: 20%;
   margin-right: 5%;
   background-color: #F8E1A6;
   border: none;
@@ -128,12 +154,17 @@ const MainButton = styled.button `
     transform: scale(0.8);
     box-shadow: 0 0 5px black;
   }
+  @media (max-width: 600px) {
+    width: 50%;
+    margin-right: 2%;
+    margin-left: 2%;
+  }
   
 `
 const MainWhiteButton = styled.button `
   border-radius: .2rem;
   font-weight: 500;
-  width: 30%;
+  width: 20%;
   margin-right: 5%;
   background-color: #ffffff;
   border: none;
@@ -146,6 +177,11 @@ const MainWhiteButton = styled.button `
   &:active {
     transform: scale(0.8);
     box-shadow: 0 0 5px black;
+  }
+  @media (max-width: 600px) {
+    width: 50%;
+    margin-right: 2%;
+    margin-left: 2%;
   }
 `
 
