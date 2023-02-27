@@ -26,7 +26,7 @@ export function Home() {
         Check it out Now! <FontAwesomeIcon icon={faHandPeace} size="2x" color="red" shake border/>
         spinPulse <FontAwesomeIcon icon={faSpinner} spinPulse/>
       </p>
-      <OrderButton />
+      <OrderButton text="Beställ" />
     </div>
   );
 }

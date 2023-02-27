@@ -1,17 +1,18 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 interface Props {
-    onClick: () => void;
     text: string;
 }
 
 export function OrderButton(props: Props) {
-    const { onClick, text} = props;
     return (
     <StyledOrderDiv>
+        <Link to="/produkter">
         <StyledOrder>
-            Beställ
+        {props.text}
         </StyledOrder>
+        </Link>
     </StyledOrderDiv>
     )
 }
@@ -32,7 +33,7 @@ background-color: #7CB468
 ;
 color: white;
 height: 2rem;
-width: 95%;
+width: 97vw;
 border-radius: 0.5rem;
 border: none;
 font-family: 'Titillium Web', sans-serif;
