@@ -35,9 +35,12 @@ export function Carousel({ images }: CarouselProps) {
 }
 
 const Container = styled.div`
-  height: 30vh;
+  height: 40vh;
   width: 100%;
   position: relative;
+  @media (max-width: 700px) {
+    height: 30vh;
+  }
 `;
 
 const Image = styled.img`
@@ -45,6 +48,10 @@ const Image = styled.img`
   width: 100%;
   object-fit: cover;
   object-position: 50% 50%;
+  @media (max-width: 700px) {
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
 `;
 
 const ButtonWrapper = styled.div`
