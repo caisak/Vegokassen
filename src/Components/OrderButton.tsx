@@ -21,11 +21,11 @@ export const StyledOrderDiv = styled.div `
 background-color: rgba(255, 0, 0, 0.7);
 height: 3rem;
 width: 100%;
-bottom: 3.5rem;
+bottom: 0;
 display: flex;
 justify-content: center;
 align-items: center;
-position: fixed;
+position: sticky;
 `
 
 export const StyledOrder = styled.button `
