@@ -5,16 +5,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { AddToCartButton } from "../Components/AddToCartButton";
 import { Button, MyButton } from "../Components/Button";
+import styled from "styled-components";
+import { OrderButton } from "../Components/OrderButton";
 import { PromotionAd } from "../Components/PromotionAd";
 
 export function Home() {
 
   
   return (
-    <div>
+    <StyledDiv>
       <PromotionAd text="Begränstat erbjudande! Gratis frakt och 20% rabatt om du beställer inom
         19:00" onClose={() => console.log("Ad closed")} />
-      <h1>This will be the home page</h1>
+      <H>This will be the home page</H>
       <Button />
       <AddToCartButton />
       Your <FontAwesomeIcon icon={faCoffee} /> is hot and ready!
@@ -31,5 +33,15 @@ export function Home() {
         To cart page!
         </MyButton></Link>
     </div>
+      <OrderButton text="Beställ" />
+    </StyledDiv>
   );
 }
+
+
+const StyledDiv = styled.div `
+background-color:orange;
+
+`
+const H = styled.h1 `
+margin:0;`
