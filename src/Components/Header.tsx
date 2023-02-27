@@ -1,7 +1,7 @@
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext, useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { OpenButton } from "./HamburgerButton.ts";
 import { MyContext, MyContextValue } from "./MyProvider";
@@ -53,11 +53,11 @@ export function TheHeader() {
             </li>
           </StyledNavUl>
         </nav>
-          <StyledHeaderLogo>
+        <Link to="cart"><StyledHeaderLogo>
           {CartAmount}
           <br/>
           <FontAwesomeIcon icon={faCartShopping} size="lg" color="white" beat />
-        </StyledHeaderLogo>
+        </StyledHeaderLogo></Link>
       </MyHeader>
       <MobileBurgerNav extendNavBar={extendNavBar}>
         <StyledMobileNavNav>

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 import { App } from './App';
+import { Cart } from './pages/Cart';
 import { Home } from './pages/Home';
 import { HowItWorks } from './pages/HowItWorks';
 import { Products } from './pages/Products';
@@ -15,6 +16,7 @@ const router = createBrowserRouter(createRoutesFromElements(
   <Route path="produkter" element={<Products />} />
   <Route path="safunkardet" element={<HowItWorks/>}/>
   <Route path="recept" element={<Recipies/>}/>
+  <Route path="cart" element={<Cart/>}/>
   <Route path="*" element= {<h2>404 NOT FOUND</h2>}/>
 </Route>
 
