@@ -2,9 +2,10 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faHandPeace } from "@fortawesome/free-regular-svg-icons";
 import { faCoffee, faSpinner, faTruck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { AddToCartButton } from "../Components/AddToCartButton";
-import { Button } from "../Components/Button";
+import { Button, MyButton } from "../Components/Button";
+import styled from "styled-components";
 import { OrderButton } from "../Components/OrderButton";
 import { PromotionAd } from "../Components/PromotionAd";
 
@@ -27,6 +28,10 @@ export function Home() {
         Check it out Now! <FontAwesomeIcon icon={faHandPeace} size="2x" color="red" shake border/>
         spinPulse <FontAwesomeIcon icon={faSpinner} spinPulse/>
       </p>
+      <Link to="cart">
+        <MyButton>
+        To cart page!
+        </MyButton></Link>
       <OrderButton text="Beställ" />
     </StyledDiv>
   );
