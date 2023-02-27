@@ -35,7 +35,7 @@ export function TheHeader() {
         >
           {extendNavBar ? <>&#10005;</> : <>&#8801;</>}
         </OpenButton>
-        <StyledHeaderLogo>Vego Kassen</StyledHeaderLogo>
+          <StyledLogo src="src/Images/vegokassenlogo1.png" alt="" />
         </FlexDiv>
         <nav>
           <StyledNavUl>
@@ -104,6 +104,10 @@ export function TheHeader() {
 
 const FlexDiv = styled.div `
 display: flex;`
+
+const StyledLogo = styled.img`
+height: 50px;
+`
 
 const Header = styled.header``;
 export const MyHeader = styled.div`
