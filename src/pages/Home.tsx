@@ -7,14 +7,15 @@ import { Button } from "../components/Button";
 import { OrderButton } from "../components/OrderButton";
 import { PromotionAd } from "../components/PromotionAd";
 
+
 export function Home() {
 
   
   return (
-    <div>
+    <StyledDiv>
       <PromotionAd text="Begränstat erbjudande! Gratis frakt och 20% rabatt om du beställer inom
         19:00" onClose={() => console.log("Ad closed")} />
-      <h1>This will be the home page</h1>
+      <H>This will be the home page</H>
       <Button />
       <AddToCartButton />
       Your <FontAwesomeIcon icon={faCoffee} /> is hot and ready!
@@ -25,8 +26,16 @@ export function Home() {
         <FontAwesomeIcon icon={faTruck} bounce flip="horizontal" size="2x" color="green"/>
         Check it out Now! <FontAwesomeIcon icon={faHandPeace} size="2x" color="red" shake border/>
         spinPulse <FontAwesomeIcon icon={faSpinner} spinPulse/>
-      </p>
       <OrderButton text="Beställ" />
     </div>
+    </StyledDiv>
   );
 }
+
+
+const StyledDiv = styled.div `
+background-color:orange;
+
+`
+const H = styled.h1 `
+margin:0;`

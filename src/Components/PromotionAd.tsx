@@ -37,6 +37,7 @@ const StyledPromotionAd = styled.div`
   width: 100%;
   height: 2rem;
   background-color: rgba(255, 0, 0, 0.7);
+  z-index: 20;
   border: 2px solid red;
   color: white;
   display: flex;
