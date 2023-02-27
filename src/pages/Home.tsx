@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { HowCard } from "../Components/HowCard";
 import { OrderButton } from "../Components/OrderButton";
 import { PromotionAd } from "../Components/PromotionAd";
 import { RecipeCard, RecipeCardProps } from "../Components/RecipeCard";
@@ -32,6 +33,28 @@ export function Home() {
     <StyledDiv>
        <PromotionAd text="Begränstat erbjudande! Gratis frakt och 20% rabatt om du beställer inom
         19:00" onClose={() => console.log("Ad closed")} />
+        <StyledCardDiv>
+<HowCard
+            numberProps="1"
+            imgSrc="src/Images/order1.jpg"
+            h2Props="Du beställer"
+            text="Beställ enkelt på vår hemsida."
+        />
+        <HowCard 
+          numberProps="2"
+          imgSrc="src/Images/deliver1.jpg"
+          h2Props="Vi levererar"
+          text="Våra leveranser är klimatkompenserade och vi levererar bara den mängd som behövs för att minska matsvinn!"
+        />
+        <HowCard 
+          numberProps="3"
+          imgSrc="src/Images/cooking_3.jpg"
+          h2Props="Ni äter god mat"
+          text="Följ våra recept och njut av god vegetarisk mat anpassad efter din familj."
+        />
+        </StyledCardDiv>
+
+
       <main>
           <StyledRecipeCardsWrapper>
             <StyledSloganWrapper> 
@@ -57,6 +80,11 @@ background-color:orange;
 `
 const H = styled.h1 `
 margin:0;`
+
+const StyledCardDiv = styled.div `
+display: flex;
+flex-direction: row;
+`
 
 // Recipe cards styling
 const StyledSloganWrapper = styled.div`
