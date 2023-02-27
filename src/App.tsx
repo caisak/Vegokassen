@@ -14,21 +14,21 @@ export function App() {
   };
 
   const recipe2: RecipeCardProps = {
-    title: "SUMMER PEACH SALLAD",
+    title: "CREAMY ROASTED CARROT SOUP",
     image: "./assets/recipe6.jpg",
-    description: "A light and refreshing salad that highlights juicy, fresh peaches as the main ingredient.",
+    description: "Made with tender, oven-roasted carrots, blended to perfection with savory spices and a touch of cream.",
   };
 
   const recipe3: RecipeCardProps = {
-    title: "SUMMER PEACH SALLAD",
+    title: "CLASSIC ROASTED ROOT VEGETABLES",
     image: "./assets/recipe7.jpg",
-    description: "A light and refreshing salad that highlights juicy, fresh peaches as the main ingredient.",
+    description: "A hearty dish featuring a medley of earthy and flavorful vegetables, such as beets, parsnips, and sweet potatoes.",
   };
 
   const recipe4: RecipeCardProps = {
-    title: "SUMMER PEACH SALLAD",
+    title: "MINTED TEA PURÉE WITH POMEGRANATE",
     image: "./assets/recipe8.jpg",
-    description: "A light and refreshing salad that highlights juicy, fresh peaches as the main ingredient.",
+    description: "A refreshing minted tea purée with pomegranate. A blend that offers a smooth texture and a fruity flavor.",
   };
 
   return (
@@ -38,8 +38,10 @@ export function App() {
         <main>
           <Outlet />
           <StyledRecipeCardsWrapper>
-          <p>Mat som gör både dig och planeten glad</p>
-          <p>Välj mellan 150+ olika måltider</p>
+            <StyledSloganWrapper> 
+              <StyledSloganHeading>Mat som gör både dig och planeten glad</StyledSloganHeading>
+              <StyledSloganHeadingSmall>Välj mellan 150+ olika måltider</StyledSloganHeadingSmall>
+            </StyledSloganWrapper>
           <StyledRecipeCardsContainer>
             <RecipeCard {...recipe1} />
             <RecipeCard {...recipe2} />
@@ -53,6 +55,24 @@ export function App() {
     </div>
   );
 }
+
+const StyledSloganWrapper = styled.div`
+  padding: 40px;
+`
+const StyledSloganHeading = styled.p`
+  color: #392E7C;
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Rasa', serif;
+  font-weight: bold;
+`
+
+const StyledSloganHeadingSmall = styled.p`
+  color: #392E7C;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Rasa', serif;
+`
 
 const StyledRecipeCardsWrapper = styled.div`
   background-color: #fff8ea;

@@ -19,7 +19,7 @@ export const RecipeCard = ({ image, title, description }: RecipeCardProps) => {
 };
 
 const StyledRecipeCardDiv = styled.div `
-  box-shadow: 0px 4px 4px #dfd7d7;
+  box-shadow: 0px 4px 2px #dfd7d7;
   margin: 10px;
 `;
 
@@ -40,15 +40,15 @@ const StyledRecipeCardTitle = styled.h2 `
   text-align: center;
   color: #392E7C;
   font-size: 18px;
-  padding: 10px;
+  padding: 20px 10px 0px 0px;
   font-family: 'Ubuntu Condensed', sans-serif;
 `;
 
 const StyledRecipeCardDesc = styled.p `
   color: #392E7C;
   font-size: 16px;
-  height: 40px;
-  padding: 5px 8px 20px 10px;
-  font-family: 'Ubuntu Condensed', sans-serif;
+  height: 75px;
+  padding: 10px 10px 20px 10px;
+  font-family: 'Titillium Web', sans-serif;
   text-align: center;
 `;
