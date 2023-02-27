@@ -4,12 +4,15 @@ import { faCoffee, faSpinner, faTruck } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AddToCartButton } from "../Components/AddToCartButton";
 import { Button } from "../Components/Button";
+import { PromotionAd } from "../Components/PromotionAd";
 
 export function Home() {
 
   
   return (
     <div>
+      <PromotionAd text="Begränstat erbjudande! Gratis frakt och 20% rabatt om du beställer inom
+        19:00" onClose={() => console.log("Ad closed")} />
       <h1>This will be the home page</h1>
       <Button />
       <AddToCartButton />
