@@ -18,12 +18,12 @@ export const RecipeCard = ({ image, title, description }: RecipeCardProps) => {
   );
 };
 
-const StyledRecipeCardDiv = styled.div `
+export const StyledRecipeCardDiv = styled.div `
   margin: 10px;
   padding-bottom: 110px;
 `;
 
-const StyledRecipeCardWrapper = styled.div `
+export const StyledRecipeCardWrapper = styled.div `
   display: flex;
   flex-direction: column; 
   width: 300px;
@@ -31,13 +31,13 @@ const StyledRecipeCardWrapper = styled.div `
   box-shadow: 0px 4px 2px #dfd7d7;
 `;
 
-const StyledRecipeCardImage = styled.img `
+export const StyledRecipeCardImage = styled.img `
   width: 100%; 
   height: 400px;
   object-fit: cover;
 `;
 
-const StyledRecipeCardTitle = styled.h2 `
+export const StyledRecipeCardTitle = styled.h2 `
   text-align: center;
   color: #392E7C;
   font-size: 18px;
@@ -45,7 +45,7 @@ const StyledRecipeCardTitle = styled.h2 `
   font-family: 'Ubuntu Condensed', sans-serif;
 `;
 
-const StyledRecipeCardDesc = styled.p `
+export const StyledRecipeCardDesc = styled.p `
   color: #392E7C;
   font-size: 16px;
   height: 105px;
