@@ -102,7 +102,7 @@ const StyledRecipeCardsWrapper = styled.div`
   background-color: #fff8ea;
 `
 
-const StyledRecipeCardsContainer = styled.div`
+export const StyledRecipeCardsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

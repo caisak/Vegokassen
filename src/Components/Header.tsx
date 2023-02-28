@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
+import { CartContext } from "../CartContex";
 import { OpenButton } from "./HamburgerButton.ts";
-import { MyContext, MyContextValue } from "./MyProvider";
 
 interface MobileBurgerNavProps {
   extendNavBar: boolean;
@@ -12,7 +12,8 @@ interface MobileBurgerNavProps {
 
 export function TheHeader() {
   const [extendNavBar, setExtendNavbar] = useState(false);
-  const { CartAmount } = useContext<MyContextValue>(MyContext);
+  const { cartList } = useContext(CartContext);
+
 
   useEffect(() => {
     function handleResize() {
@@ -54,7 +55,7 @@ export function TheHeader() {
           </StyledNavUl>
         </StyledNav>
         <Link to="cart"><StyledHeaderLogo>
-          {CartAmount}
+          {cartList.length}
           <br/>
           <FontAwesomeIcon icon={faCartShopping} size="lg" color="white" beat />
         </StyledHeaderLogo></Link>

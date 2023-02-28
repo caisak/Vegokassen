@@ -1,110 +1,119 @@
 import { useContext, useState } from "react";
 import styled from "styled-components";
+import { CartContext } from "../CartContex";
 import { MyButton } from "../Components/Button";
-import { MyContext, MyContextValue } from "../Components/MyProvider";
 
 type CartItem = {
   name: string;
   image: string;
   price: number;
-  quantity: number;
 };
 
-const initialCartItems: CartItem[] = [
-  {
-    name: 'Item 1',
-    image: 'src/Images/bag_1.jpg',
-    price: 10,
-    quantity: 1,
-  },
-  {
-    name: 'Item 2',
-    image: 'src/Images/bag_transparent.png',
-    price: 15,
-    quantity: 2,
-  },
-];
+type CartItemsMap = {
+  [name: string]: {
+    item: CartItem;
+    quantity: number;
+  };
+};
 
 export function Cart() {
-  const { CartAmount } = useContext<MyContextValue>(MyContext);
-  const [cartItems, setCartItems] = useState<CartItem[]>(initialCartItems);
+  const { cartList, clearCart } = useContext(CartContext);
+  const [ordered, setOrdered] = useState(false); // added state for order status
 
-  const total = cartItems.reduce(
-    (acc, { price, quantity }) => acc + price * quantity,
-    0
-  );
 
+  const cartItemsMap = cartList.reduce<CartItemsMap>((itemsMap, item) => {
+    const existingItem = itemsMap[item.name];
+    if (existingItem) {
+      existingItem.quantity++;
+    } else {
+      itemsMap[item.name] = { item, quantity: 1 };
+    }
+    return itemsMap;
+  }, {});
+
+  const cartItems = Object.values(cartItemsMap);
+
+  const total = cartItems.reduce((total, { item, quantity }) => {
+    return total + item.price * quantity;
+  }, 0);
+
+  if (cartList.length == 0 && ordered) {
+    return <h1>Thanks for your order!</h1>
+  } else if (cartList.length == 0) {
+    return <h1>Your cart is empty!</h1>;
+  }
+  
   return (
     <MyCart>
-      <h1>Cart ({CartAmount} items) </h1>
+      <h1>Cart ({cartList.length} items) </h1>
       <CartTable>
-      <thead style={{ borderBottom: '2px solid black' }}>
+        <thead style={{ borderBottom: "2px solid black" }}>
           <tr>
-            <TableHeader>Item</TableHeader>
+            <TableHeader style={{ textAlign: "left" }}>Item</TableHeader>
             <TableHeader>Price</TableHeader>
             <TableHeader>Quantity</TableHeader>
             <TableHeader>Total</TableHeader>
           </tr>
         </thead>
         <tbody>
-          {cartItems.map(({ name, image, price, quantity }, index) => (
-            <TableRow key={index}
-            style={{ borderBottom: '1px solid #ccc', padding: '10px 0' }}
+          {cartItems.map(({ item, quantity }) => (
+            <TableRow
+              key={item.name}
+              style={{ borderBottom: "1px solid #ccc", padding: "10px 0" }}
             >
-              
               <td>
-                <img src={image} alt={name} 
-                 style={{ width: '50px', height: '50px' }}
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  style={{ width: "50px", height: "50px" }}
                 />
-                {name}
+                {item.name}
               </td>
-              <td>{price}</td>
-              <td>{quantity}</td>
-              <td>{price * quantity}</td>
+              <TableCell>{item.price} kr</TableCell>
+              <TableCell>{quantity}</TableCell>
+              <TableCell>{item.price * quantity} kr</TableCell>
             </TableRow>
           ))}
         </tbody>
         <tfoot>
           <tr>
-            <td colSpan={3}>Total:</td>
-            <td>{total}</td>
+            <td colSpan={4}>Total: {total}</td>
           </tr>
         </tfoot>
       </CartTable>
-      <MyButton>
-      Order!
-    </MyButton>
+      <MyButton onClick={() => clearCart()}>Clear Cart</MyButton>
+      <MyButton onClick={() => {
+        setOrdered(true);
+        clearCart();
+      }}>Order</MyButton>
     </MyCart>
   );
-};
+}
 
-export const MyCart = styled.div `
-height: 100%;
-width: 100%;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-`
+export const MyCart = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+`;
 
 export const CartTable = styled.table`
-width: 80%;
-border-collapse: collapse;
-`
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+`;
 
 export const TableHeader = styled.th`
-text-align: left;
-`
+  text-align: center;
+`;
 
+export const TableRow = styled.tr`
+  height: 4rem;
+`;
 
-export const TableRow = styled.tr `
-height: 4rem;
-`
-
-export const CartItem = styled.div `
-height: 20rem;
-width: 80%;
-display: flex;
-border: 2px solid black;
-`
-
+export const TableCell = styled.td`
+  text-align: center;
+`;
