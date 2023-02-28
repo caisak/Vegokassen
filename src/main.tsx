@@ -10,23 +10,18 @@ import { Products } from './pages/Products';
 import { Recipies } from './pages/Recipes';
 
 const router = createBrowserRouter(createRoutesFromElements(
-
-<Route path="/" element={<App/>}>
-  <Route index element={<Home/>}></Route>
-  <Route path="produkter" element={<Products />} />
-  <Route path="safunkardet" element={<HowItWorks/>}/>
-  <Route path="recept" element={<Recipies/>}/>
-  <Route path="cart" element={<Cart/>}/>
-  <Route path="*" element= {<h2>404 NOT FOUND</h2>}/>
-</Route>
-
-
-)
-
-)
+  <Route path="/" element={<App/>}>
+    <Route index element={<Home/>}></Route>
+    <Route path="produkter" element={<Products />} />
+    <Route path="safunkardet" element={<HowItWorks/>}/>
+    <Route path="recept" element={<Recipies/>}/>
+    <Route path="cart" element={<Cart/>}/>
+    <Route path="*" element= {<h2>404 NOT FOUND</h2>}/>
+  </Route>
+))
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 <React.StrictMode>
- <RouterProvider router= {router}/>
+  <RouterProvider router= {router}/>
 </React.StrictMode>
 );
