@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Carousel } from "../Components/Carousel";
+import { HowCard } from "../Components/HowCard";
 import { OrderButton } from "../Components/OrderButton";
 import { PromotionAd } from "../Components/PromotionAd";
 import { RecipeCard, RecipeCardProps } from "../Components/RecipeCard";
-import { HowCard } from "../Components/HowCard";
 
 export function Home() {
   const recipe1: RecipeCardProps = {
