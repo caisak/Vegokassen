@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { Carousel } from "../Components/Carousel";
+import { HowCard } from "../Components/HowCard";
 import { OrderButton } from "../Components/OrderButton";
 import { PromotionAd } from "../Components/PromotionAd";
 import { RecipeCard, RecipeCardProps } from "../Components/RecipeCard";
-import { HowCard } from "../Components/HowCard";
 
 export function Home() {
   const recipe1: RecipeCardProps = {
@@ -92,6 +92,11 @@ export function Home() {
           </StyledRecipeCardsWrapper>
         </StyledMain>
         <OrderButton text="Beställ" />
+
+        <StyledFillerCard>
+          <StyledFillerText>Genom att välja vegetariskt kan du bidra till att skydda vår planet och dess resurser.</StyledFillerText>
+          <StyledFillerImg src="src/Images/farm.jpeg" alt="" />
+        </StyledFillerCard>
     </div>
   );
 }
@@ -143,3 +148,32 @@ export const StyledRecipeCardsContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
 `;
+
+// Filler cards styling 
+const StyledFillerCard = styled.div`
+  position: relative;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 1100px;
+`;
+
+const StyledFillerImg = styled.img`
+  display: block;
+  width: 80%; 
+  /* height: auto; */
+  margin: 0 auto;
+  height: 380px;
+  object-fit: cover;
+`;
+
+const StyledFillerText = styled.p`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* z-index: 1; */
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  font-family: "Titillium Web", sans-serif;
+`
