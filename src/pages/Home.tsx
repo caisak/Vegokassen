@@ -68,10 +68,16 @@ export function Home() {
           </StyledRecipeCardsWrapper>
         </StyledMain>
         <OrderButton text="Beställ" />
+
+        <StyledFillerCard>
+          <p>hejsvejs</p>
+          <StyledFillerImg src="src/Images/farm.jpeg" alt="" />
+        </StyledFillerCard>
     </div>
   );
 }
 
+// Styling 
 const StyledMain = styled.main `
 margin: 0;
 
@@ -107,3 +113,15 @@ const StyledRecipeCardsContainer = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
 `;
+
+const StyledFillerCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`
+
+const StyledFillerImg = styled.img`
+  height: 400px;
+  position: relative;
+`
