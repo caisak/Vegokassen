@@ -20,7 +20,7 @@ export const RecipeCard = ({ image, title, description }: RecipeCardProps) => {
 
 export const StyledRecipeCardDiv = styled.div `
   margin: 10px;
-  padding-bottom: 110px;
+  padding-bottom: 20px;
 `;
 
 export const StyledRecipeCardWrapper = styled.div `
@@ -50,6 +50,6 @@ export const StyledRecipeCardDesc = styled.p `
   font-size: 16px;
   height: 105px;
   padding: 10px 10px 20px 10px;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
   text-align: center;
 `;
