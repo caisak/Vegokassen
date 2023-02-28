@@ -3,6 +3,8 @@
 import { Link } from "react-router-dom";
 import { AddToCartButton } from "../Components/AddToCartButton";
 import { MyButton } from "../Components/Button";
+import { ReviewCards } from "../Components/Reviews";
+
 
 
 export function Products() {
@@ -14,6 +16,7 @@ export function Products() {
         To cart page!
         </MyButton></Link>
         <AddToCartButton />
+        <ReviewCards></ReviewCards>
     </div>
   );
 }
