@@ -4,6 +4,7 @@ import { HowCard } from "../Components/HowCard";
 import { OrderButton } from "../Components/OrderButton";
 import { PromotionAd } from "../Components/PromotionAd";
 import { RecipeCard, RecipeCardProps } from "../Components/RecipeCard";
+import { ReviewCards } from "../Components/Review";
 
 export function Home() {
   const recipe1: RecipeCardProps = {
@@ -91,6 +92,7 @@ export function Home() {
           </StyledRecipeCardsContainer>
           </StyledRecipeCardsWrapper>
         </StyledMain>
+        <ReviewCards></ReviewCards>
         <OrderButton text="Beställ" />
 
         <StyledFillerCard>
