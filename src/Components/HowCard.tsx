@@ -5,6 +5,7 @@ interface Props {
     imgSrc: string;
     h2Props: string;
     text: string;
+    altProps: string;
 }
 
 export function HowCard(props: Props) {
@@ -13,7 +14,7 @@ export function HowCard(props: Props) {
             <h3>
             {props.numberProps}
             </h3>
-            <StyledImgSrc src={props.imgSrc} alt="" />
+            <StyledImgSrc src={props.imgSrc} alt={props.altProps} />
             <h2>
                 {props.h2Props}
             </h2>
@@ -30,11 +31,18 @@ box-shadow: 0 0 10px #C0C0C0;
 background-color: #FFFF;
 height: 25rem;
 width: 18rem;
+margin-top: 3rem;
 display: flex;
 flex-direction: column;
 align-items: center;
-margin: 3rem;
+justify-self: center;
+align-self: center;
 font-family: 'Titillium Web', sans-serif;
+@media(max-width:900px){
+    width: 100%;
+    height: 23.5rem;
+    
+}
 `;
 
 const StyledP = styled.p`
