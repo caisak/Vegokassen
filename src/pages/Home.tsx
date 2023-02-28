@@ -101,7 +101,6 @@ export function Home() {
   );
 }
 
-// Styling 
 const StyledMain = styled.main `
 margin: 0;
 
@@ -161,8 +160,10 @@ const StyledFillerCard = styled.div`
 const StyledFillerImg = styled.img`
   display: block;
   width: 80%; 
-  height: auto;
+  /* height: auto; */
   margin: 0 auto;
+  height: 380px;
+  object-fit: cover;
 `;
 
 const StyledFillerText = styled.p`
@@ -174,4 +175,5 @@ const StyledFillerText = styled.p`
   font-size: 25px;
   color: #fff;
   text-align: center;
+  font-family: "Titillium Web", sans-serif;
 `
