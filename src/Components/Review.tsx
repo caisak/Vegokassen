@@ -10,7 +10,7 @@ interface ReviewCardProps {
   stars:number;
 }
 
-// Define an array of review card data
+// Recenctioner, content kan inte vara mer är 170 tecken för att få plats.
 const reviewData: ReviewCardProps[] = [
   {
     image:"src/Images/food_10.jpg",
@@ -20,11 +20,11 @@ const reviewData: ReviewCardProps[] = [
     stars:2,
   },
   {
-    image:"src/Images/food_10.jpg",
-    title: 'Disappointed',
-    content: 'I had high hopes for this product but it did not meet my expectations.',
-    author: 'Jane Doe',
-    stars:1
+    image:"src/Images/happy_couple_small.jpg",
+    title: 'Vegokassen räddade mitt äktenskap',
+    content: 'Jag ÄLSKAR Vego kassen! Förut bråkade vi alltid om vilken middag vi skulle äta. Nu äter vi morötter varje dag!',
+    author: 'Mary Sue',
+    stars:5
 
   },
   {
@@ -109,7 +109,7 @@ const ReviewCard: React.FC<ReviewCardProps> = ({ image, title, content, author, 
         <h3>{title}</h3>
         <p>{content}</p>
         <StarRating>{starArray.join('')}</StarRating>
-        <span>By {author}</span>
+        <span>{author}</span>
       </div>
     </Card>
   );
@@ -169,7 +169,8 @@ const Card = styled.div`
   @media (max-width: 700px) {
     width: 15rem;
     margin: .5rem .5rem;
-    padding: .7rem;
+    padding: .3rem;
+    height: 23rem;
  
   }
   div {
@@ -185,15 +186,21 @@ const Card = styled.div`
   }
 
   h3 {
+    font-size: 1.2rem;
     margin-top: 0;
+    margin-bottom: 3px;
+    @media (max-width: 700px) {
+    font-size: 1rem;
+  }
+  
   }
 
   p {
-    margin-bottom: .8rem;
+    font-size: .95rem;
+    margin-bottom: .3rem;
     @media (max-width: 700px) {
-    font-size: .9rem;
-
- 
+    font-size: .85rem;
+    margin-bottom: .2rem;
   }
   }
 
