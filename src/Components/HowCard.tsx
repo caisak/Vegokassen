@@ -11,13 +11,13 @@ interface Props {
 export function HowCard(props: Props) {
     return(
         <StyledCard>
-            <h3>
+            <StyledNumber>
             {props.numberProps}
-            </h3>
+            </StyledNumber>
             <StyledImgSrc src={props.imgSrc} alt={props.altProps} />
-            <h2>
+            <StyledH2>
                 {props.h2Props}
-            </h2>
+            </StyledH2>
             <StyledP>
                 {props.text}
             </StyledP>
@@ -30,7 +30,7 @@ border-radius: 0.5rem;
 box-shadow: 0 0 10px #C0C0C0;
 background-color: #FFFF;
 height: 25rem;
-width: 18rem;
+width: 100%;
 margin-top: 3rem;
 display: flex;
 flex-direction: column;
@@ -38,12 +38,25 @@ align-items: center;
 justify-self: center;
 align-self: center;
 font-family: 'Titillium Web', sans-serif;
-@media(max-width:900px){
+@media(min-width:900px){
     width: 100%;
     height: 23.5rem;
     
 }
-`;
+`
+
+const StyledNumber = styled.h3`
+background-color: #C6C9C5;
+border-radius: 50%;
+width: 2rem;
+height: 2rem;
+text-align: center;
+margin: 0.5rem;
+`
+
+const StyledH2 = styled.h2`
+margin: 1rem;
+`
 
 const StyledP = styled.p`
 text-align: center;
@@ -56,5 +69,4 @@ border-radius: 50%;
 width: 10rem;
 height: 10rem;
 object-fit: cover;
-//object-position: 50% 50%;
 `;

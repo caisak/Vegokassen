@@ -89,7 +89,7 @@ width: 100%;
 display: grid;
 gap: 0.5rem;
 grid-template-columns: repeat(3, 1fr);
-@media(max-width:600px){
+@media(max-width:768px){
   grid-template-columns: 1fr;
   margin-left:.1rem;
   margin-right:.1rem;
