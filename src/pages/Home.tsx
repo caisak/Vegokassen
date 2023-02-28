@@ -94,7 +94,7 @@ export function Home() {
         <OrderButton text="Beställ" />
 
         <StyledFillerCard>
-          <p>hejsvejs</p>
+          <StyledFillerText>Genom att välja vegetariskt kan du bidra till att skydda vår planet och dess resurser.</StyledFillerText>
           <StyledFillerImg src="src/Images/farm.jpeg" alt="" />
         </StyledFillerCard>
     </div>
@@ -150,14 +150,28 @@ const StyledRecipeCardsContainer = styled.div`
   justify-content: space-between;
 `;
 
+// Filler cards styling 
 const StyledFillerCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`
+  position: relative;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 1100px;
+`;
 
 const StyledFillerImg = styled.img`
-  height: 400px;
-  position: relative;
+  display: block;
+  width: 80%; 
+  height: auto;
+  margin: 0 auto;
+`;
+
+const StyledFillerText = styled.p`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* z-index: 1; */
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
 `
