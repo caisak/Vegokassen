@@ -37,7 +37,7 @@ export function TheHeader() {
         </OpenButton>
           <StyledLogo src="src/Images/vegokassenlogo1.png" alt="" />
         </FlexDiv>
-        <nav>
+        <StyledNav>
           <StyledNavUl>
             <li>
               <StyledNavLink to="/">Hem</StyledNavLink>
@@ -52,7 +52,7 @@ export function TheHeader() {
               <StyledNavLink to="recept">Recept</StyledNavLink>
             </li>
           </StyledNavUl>
-        </nav>
+        </StyledNav>
         <Link to="cart"><StyledHeaderLogo>
           {CartAmount}
           <br/>
@@ -106,7 +106,12 @@ const FlexDiv = styled.div `
 display: flex;`
 
 const StyledLogo = styled.img`
-height: 50px;
+height: 3rem;
+
+@media (max-width: 725px) {
+  height: 2.5rem;
+
+  }
 `
 
 const Header = styled.header``;
@@ -116,6 +121,7 @@ export const MyHeader = styled.div`
   background-color: #1c3529;
   padding: 0.5rem;
   height: 3.5rem;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -135,6 +141,11 @@ const MobileBurgerNav = styled.div<MobileBurgerNavProps>`
   justify-content: center;
   transition: height 0.2s ease-in-out;
 `;
+
+const StyledNav = styled.nav `
+margin-right: 11%;
+
+`
 
 export const StyledNavUl = styled.ul`
   margin: 0;

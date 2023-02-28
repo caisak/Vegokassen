@@ -16,8 +16,8 @@ export function Recipies() {
           "Problem att få i dig dina 15 frukter om dagen? Prova våra desserter!",
         ]}
         buttonText={[
-          "Våra Kassar",
-          "Så funkar det!",
+          "Våra fruktkassar",
+          "Jag älskar blåbär!",
         ]}
         gradientColor={
           "tbc"
