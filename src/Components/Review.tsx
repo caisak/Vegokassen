@@ -13,13 +13,6 @@ interface ReviewCardProps {
 // Recenctioner, content kan inte vara mer är 170 tecken för att få plats.
 const reviewData: ReviewCardProps[] = [
   {
-    image:"src/Images/food_10.jpg",
-    title: 'Great Product!',
-    content: 'I love this product. It is very high quality and does exactly what I need it to do.',
-    author: 'John Smith',
-    stars:2,
-  },
-  {
     image:"src/Images/happy_couple_small.jpg",
     title: 'Vegokassen räddade mitt äktenskap',
     content: 'Jag ÄLSKAR Vego kassen! Förut bråkade vi alltid om vilken middag vi skulle äta. Nu äter vi morötter varje dag!',
@@ -33,6 +26,13 @@ const reviewData: ReviewCardProps[] = [
     content: 'This product exceeded my expectations. I would highly recommend it to anyone.',
     author: 'Bob Johnson',
     stars:5
+  },
+  {
+    image:"src/Images/cooking_4.jpg",
+    title: 'Otroliga matkassar!',
+    content: 'Det bästa som hänt mig! Jag älskar vegokassens mat och recept! Jag har ätit rödbetspaj 7 dagar i rad.',
+    author: 'John Smith',
+    stars:1,
   },
   {
     image:"src/Images/food_10.jpg",
@@ -138,17 +138,18 @@ const Container = styled.div`
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #f0efde;
-    border-radius: .8rem;
+    background-color: #e9e8d2;
+    border-radius: 1rem;
   }
 
   &:hover::-webkit-scrollbar-thumb {
     background-color: #dfdba5;
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: 800px) {
     &::-webkit-scrollbar {
       display: block;
+      height: .5rem;
     }
   }
 `;
@@ -163,7 +164,7 @@ const Card = styled.div`
   width: 22rem;
   height: 25rem;
   margin: 1.3rem 1.2rem;
-  padding: 1.3rem;
+  padding: 1.2rem;
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 5, 3, 0.3);
   @media (max-width: 700px) {
@@ -186,8 +187,9 @@ const Card = styled.div`
   }
 
   h3 {
+    font-family: 'Ubuntu Condensed', sans-serif;
     font-size: 1.2rem;
-    margin-top: 0;
+    margin-top: .3rem;
     margin-bottom: 3px;
     @media (max-width: 700px) {
     font-size: 1rem;
