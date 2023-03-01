@@ -1,10 +1,19 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { BigHowCard } from "../Components/BigHowCard";
 import { BigHowCardReversed } from "../Components/BigHowCardReversed";
+import { Modal } from "../Components/Modal";
 
 export function HowItWorks() {
+  const [showModal, setShowModal] = useState(true);
+
+  const closeModal = () => {
+    setShowModal(false);
+  };
     return (
+      
       <div>
+        {showModal && <Modal onClose={closeModal} />}
         <BigHowCard
         title="Du beställer"
         text="Beställ enkelt den kasse som passar dig och din familj bäst. Du behöver inte oroa dig över inköpslistor eller köer i mataffären. "
