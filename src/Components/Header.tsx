@@ -179,7 +179,6 @@ const StyledNavLink = styled(NavLink)`
   }
   /* Active link style */
   &.active {
-    /* border-bottom: 2px solid white; */
     background-color: #f8e1a6;
     padding: 7px;
     border-radius: 10px;
