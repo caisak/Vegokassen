@@ -7,6 +7,7 @@ import { OrderButton } from "../Components/OrderButton";
 import { PromotionAd } from "../Components/PromotionAd";
 import { RecipeCard, RecipeCardProps } from "../Components/RecipeCard";
 import { ReviewCards } from "../Components/Review";
+import { TextBlock } from "../Components/TextBlock";
 
 export function Home() {
   const recipe1: RecipeCardProps = {
@@ -103,6 +104,12 @@ export function Home() {
           </StyledButton>
           </StyledRecipeCardsWrapper>
         </StyledMain>
+        <TextBlock
+          title="Nr 1 Vegetariska matkassar online*"
+          description="*Enligt vegetariska föreningens egna säkra källor som provar alla 2 olika alternativ på markaden just nu i Sverige, samt våra helt riktiga kunder som recencerat oss"
+          backgroundColor="#FF8A48"
+          textColor="#082512"
+      ></TextBlock>
         <ReviewCards></ReviewCards>
         <ApiComponent></ApiComponent>
         <>
