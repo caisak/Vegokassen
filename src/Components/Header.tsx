@@ -180,9 +180,11 @@ const StyledNavLink = styled(NavLink)`
   /* Active link style */
   &.active {
     background-color: #f8e1a6;
-    padding: 7px;
-    border-radius: 10px;
     color: #1c3429;
+    font-size: 1rem;
+    padding: 10px;
+    transition: 0.2s;
+    border-radius: .3rem;
   }
 `;
 

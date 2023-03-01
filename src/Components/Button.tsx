@@ -13,12 +13,13 @@ export function Button(props: ButtonProps) {
 }
 
 export const MyButton = styled.button`
-  background-color: #F8E1A6;
+  background-color: #f8e1a6;
   border: none;
   font-size: 1rem;
   padding: 10px;
   transition: 0.2s;
   border-radius: .3rem;
+  color: #1c3529;
 
   &:hover {
     background-color: #D5C08D;

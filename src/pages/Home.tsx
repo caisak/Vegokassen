@@ -130,6 +130,7 @@ const StyledButton = styled.div`
   display:flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 50px;
 `
 
 // Recipe cards styling
