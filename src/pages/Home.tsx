@@ -7,6 +7,7 @@ import { OrderButton } from "../Components/OrderButton";
 import { PromotionAd } from "../Components/PromotionAd";
 import { RecipeCard, RecipeCardProps } from "../Components/RecipeCard";
 import { ReviewCards } from "../Components/Review";
+import { TextBlock } from "../Components/TextBlock";
 
 export function Home() {
   const recipe1: RecipeCardProps = {
@@ -36,57 +37,59 @@ export function Home() {
   
   return (
     <div>
-       <PromotionAd text="Begränstat erbjudande! Gratis frakt och 20% rabatt om du beställer inom
-        19:00" onClose={() => console.log("Ad closed")} />
-      <StyledMain>
-      <Carousel
-        height={55}
-        images={[
-          "src/Images/food_10.jpg",
-          "src/Images/food_7.jpg",
-          "src/Images/food_2.jpg",
-        ]}
-        titles={[
-          "Vi gör vegetarisk matlagning enkelt och inspirerande!",
-          "Enkla, goda och miljövänliga recept!",
-          "Varje grön dag är en bra dag! Börja din idag!",
-        ]}
-        buttonText={[
-          "Våra Kassar",
-          "Så funkar det!",
-        ]}
-        gradientColor={
-          "tbc"
-        }
+      <PromotionAd
+        text="Begränstat erbjudande! Gratis frakt och 20% rabatt om du beställer inom
+        19:00"
+        onClose={() => console.log("Ad closed")}
       />
-<StyledCardDiv>
-        <HowCard
+      <StyledMain>
+        <Carousel
+          height={55}
+          images={[
+            "src/Images/food_10.jpg",
+            "src/Images/food_7.jpg",
+            "src/Images/food_2.jpg",
+          ]}
+          titles={[
+            "Vi gör vegetarisk matlagning enkelt och inspirerande!",
+            "Enkla, goda och miljövänliga recept!",
+            "Varje grön dag är en bra dag! Börja din idag!",
+          ]}
+          buttonText={["Våra Kassar", "Så funkar det!"]}
+          gradientColor={"tbc"}
+        />
+        <StyledCardDiv>
+          <HowCard
             numberProps="1"
             imgSrc="src/Images/order1.jpg"
             h2Props="Du beställer"
             text="Beställ enkelt på vår hemsida."
             altProps="Person beställer på laptop"
-        />
-        <HowCard 
-          numberProps="2"
-          imgSrc="src/Images/deliver1.jpg"
-          h2Props="Vi levererar"
-          text="Våra leveranser är klimatkompenserade och vi levererar bara den mängd som behövs för att minska matsvinn!"
-          altProps="Lastbil kör över bro"
-        />
-        <HowCard 
-          numberProps="3"
-          imgSrc="src/Images/cooking_3.jpg"
-          h2Props="Ni äter god mat"
-          text="Följ våra recept och njut av god vegetarisk mat anpassad efter din familj."
-          altProps="Ett par lagar mat"
-        />
+          />
+          <HowCard
+            numberProps="2"
+            imgSrc="src/Images/deliver1.jpg"
+            h2Props="Vi levererar"
+            text="Våra leveranser är klimatkompenserade och vi levererar bara den mängd som behövs för att minska matsvinn!"
+            altProps="Lastbil kör över bro"
+          />
+          <HowCard
+            numberProps="3"
+            imgSrc="src/Images/cooking_3.jpg"
+            h2Props="Ni äter god mat"
+            text="Följ våra recept och njut av god vegetarisk mat anpassad efter din familj."
+            altProps="Ett par lagar mat"
+          />
         </StyledCardDiv>
-          <StyledRecipeCardsWrapper>
-            <StyledSloganWrapper> 
-              <StyledSloganHeading>Mat som gör både dig och planeten glad</StyledSloganHeading>
-              <StyledSloganHeadingSmall>Välj mellan 150+ olika måltider</StyledSloganHeadingSmall>
-            </StyledSloganWrapper>
+        <StyledRecipeCardsWrapper>
+          <StyledSloganWrapper>
+            <StyledSloganHeading>
+              Mat som gör både dig och planeten glad
+            </StyledSloganHeading>
+            <StyledSloganHeadingSmall>
+              Välj mellan 150+ olika måltider
+            </StyledSloganHeadingSmall>
+          </StyledSloganWrapper>
           <StyledRecipeCardsContainer>
             <RecipeCard {...recipe1} />
             <RecipeCard {...recipe2} />
@@ -94,22 +97,30 @@ export function Home() {
             <RecipeCard {...recipe4} />
           </StyledRecipeCardsContainer>
           <StyledButton>
-            <Button text ="Läs mer"/>
+            <Button text="Läs mer" />
           </StyledButton>
-          </StyledRecipeCardsWrapper>
-        </StyledMain>
-        <ReviewCards></ReviewCards>
-        <ApiComponent></ApiComponent>
+        </StyledRecipeCardsWrapper>
+      </StyledMain>
+      <TextBlock
+        title="Nr 1 Vegetariska matkassar online*"
+        description="*Enligt vegetariska föreningens egna säkra källor som provar alla 2 olika alternativ på markaden just nu i Sverige, samt våra helt riktiga kunder som recencerat oss"
+        backgroundColor="#FF8A48"
+        textColor="#082512"
+      ></TextBlock>
+      <ReviewCards></ReviewCards>
+      <ApiComponent></ApiComponent>
 
-        <StyledFillerCard>
-          <StyledFillerText>Genom att välja vegetariskt kan du bidra till att skydda vår planet och dess resurser</StyledFillerText>
-          <StyledFillerImg src="src/Images/farm.jpeg" alt="Närbild på växter" />
-        </StyledFillerCard>
-        
-        <>
+      <StyledFillerCard>
+        <StyledFillerText>
+          Genom att välja vegetariskt kan du bidra till att skydda vår planet
+          och dess resurser
+        </StyledFillerText>
+        <StyledFillerImg src="src/Images/farm.jpeg" alt="Närbild på växter" />
+      </StyledFillerCard>
+
+      <>
         <OrderButton text="Beställ" />
-        </>
-        
+      </>
     </div>
   );
 }
