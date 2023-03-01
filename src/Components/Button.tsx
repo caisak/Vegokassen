@@ -17,7 +17,7 @@ export function Button(props: ButtonProps) {
 export function OrderHereButton(props: ButtonProps) {
   return(
     <div>
-    <Link to="/HowItWorks">
+    <Link to="/produkter">
     <BigCardButton>{props.text}</BigCardButton>
     </Link>
     </div>
@@ -27,7 +27,7 @@ export function OrderHereButton(props: ButtonProps) {
 export function ReadMoreButton(props: ButtonProps) {
   return(
     <div>
-    <Link to="/produkter">
+    <Link to="/safunkardet">
     <BigCardButton>{props.text}</BigCardButton>
     </Link>
     </div>
