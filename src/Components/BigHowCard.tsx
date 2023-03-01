@@ -1,19 +1,20 @@
 import styled from "styled-components";
 
 interface Props {
+text: string;
 
 }
 
-export function BroadHowCard(props: Props) {
+export function BigHowCard(props: Props) {
   return (
   <StyledBigDiv>
-    <StyledBigImg />
+    <StyledBigImg src="" alt="" />
     <StyledBigHeader>
 
     </StyledBigHeader>
-    <p>
+    <StyledBigText>
 
-    </p>
+    </StyledBigText>
 
   </StyledBigDiv>
   );
