@@ -94,7 +94,7 @@ export function Home() {
         </StyledMain>
         <StyledFillerCard>
           <StyledFillerText>Genom att välja vegetariskt kan du bidra till att skydda vår planet och dess resurser.</StyledFillerText>
-          <StyledFillerImg src="src/Images/farm.jpeg" alt="" />
+          <StyledFillerImg src="src/Images/farm.jpeg" alt="Närbild på växter" />
         </StyledFillerCard>
         <>
         <OrderButton text="Beställ" />
@@ -125,7 +125,7 @@ grid-template-columns: repeat(3, 1fr);
 
 // Recipe container + slogan styling 
 const StyledSloganWrapper = styled.div`
-  padding: 30px;
+  padding: 50px;
 `
 const StyledSloganHeading = styled.p`
   color: #392E7C;
@@ -152,6 +152,13 @@ export const StyledRecipeCardsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  
+  @media(max-width:668px){
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 `;
 
 // Filler cards styling 
