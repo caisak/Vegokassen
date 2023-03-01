@@ -64,9 +64,12 @@ const MyComponent = () => {
   }, []);
 
   return (
+    <Wrapper>
+
     <VeganIsTheFuture>
         <div>
-        <StyledH2>Population data for Sweden</StyledH2>
+        <StyledH2>Sverige får fler vegetarianer varje år!</StyledH2>
+        <p>*Sveriges befolkning statistik,scb.</p>
       <ul>
         {populationData.map((data) => (
           <li key={data.year}>
@@ -77,31 +80,82 @@ const MyComponent = () => {
       </ul>
         </div>
         <div>
-
+            <img src="src/Images/1.png" alt="statistik" />
         </div>
 
     </VeganIsTheFuture>
+    </Wrapper>
   );
 };
 
+const Wrapper = styled.div `
+width: 100%;
+display: flex;
+justify-content: center;
+height: fit-content;
+background-image: url("src/Images/grass_1.jpg");
+background-size: cover;
+background-position: center;
+
+
+
+`
+
 const VeganIsTheFuture = styled.div`
-  background-color: #8ac98a;
-  border-radius: 1rem;
-  margin: 0.5rem;
+  background-color: #ffffff;
+  border-radius: .5rem;
+  max-width: 82rem;
+  min-width: 360px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  margin: 2rem .5rem;
   padding: 0.5rem;
   font-family: "Titillium Web", sans-serif;
   display: flex;
+  justify-content: space-between;
+  @media (max-width: 800px) {
+    flex-direction: column;
+    margin: .5rem .5rem;
+
+  }
 
   div {
+    margin: 3px;
+    
+  }
+  p {       
+     @media (max-width: 600px) {
+        font-size: .8rem;
+
+    }
 
   }
   ul {
     list-style: none;
     padding: 0;
   }
+  img {
+    width: 32rem;
+    @media (max-width: 800px) {
+    width: 100%;
+
+    }
+
+  }
+  li {
+        font-size: 1rem;
+        @media (max-width: 600px) {
+        font-size: .7rem;
+
+    }
+
+    }
+ 
 `;
 const StyledH2 = styled.h2`
-  font-family: "Ubuntu Condensed", sans-serif;
+  font-family: "Titillium Web", sans-serif;
+  @media (max-width: 600px) {
+        font-size: 1rem;
+    }
 `;
 
 export default MyComponent;
