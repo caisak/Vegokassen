@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 type ButtonProps = {
@@ -9,6 +10,17 @@ export function Button(props: ButtonProps) {
     <MyButton>
       {props.text}
     </MyButton>
+  )
+}
+
+
+export function OrderHereButton(props: ButtonProps) {
+  return(
+    <div>
+    <Link to="/produkter">
+    <BigCardButton>{props.text}</BigCardButton>
+    </Link>
+    </div>
   )
 }
 
@@ -34,5 +46,27 @@ export const MyButton = styled.button`
   }
 `;
 
+const BigCardButton = styled.button`
+  background-color: #f8e1a6;
+  border: none;
+  width: 10rem;
+  font-size: 1rem;
+  padding: 10px;
+  transition: 0.2s;
+  border-radius: .3rem;
+  cursor: pointer;
+  color: black;
+  font-family: "Titillium Web", sans-serif;
+
+
+  &:hover {
+    background-color: #D5C08D;
+  }
+  
+  &:active {
+    transform: scale(0.8);
+    box-shadow: 0 0 5px black;
+  }
+`;
 
 

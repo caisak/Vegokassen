@@ -7,21 +7,29 @@ export function HowItWorks() {
       <div>
         <BigHowCard
         title="Du beställer"
-        text="Du beställer enkelt hemifrån vad du vill ha eller inte ha "
+        text="Beställ enkelt den kasse som passar dig och din familj bäst. Du behöver inte oroa dig över inköpslistor eller köer i mataffären. "
         imageSrc="src/Images/order2.jpg"
         imageAlt="Person beställer på sin dator"
          />
         <BigHowCardReversed
-        title="Vi levererar"
+        title="Vi plockar ihop de fraschaste ingredienserna"
         text="Vi klimatkompenserar er leverans och levererar inom en för oss rimlig tid. No complaints pls"
-        imageSrc="src/Images/deliver1.jpg"
-        imageAlt="" />
+        imageSrc="src/Images/bellpeppers.jpg"
+        imageAlt="Hand plockar paprika"
+        />
 
         <BigHowCard 
-        title="Du lagar din mat"
+        title="Vi levererar"
         text="Laga den hälsosamma maten som kommer med vår klimatkompenserade leverans"
+        imageSrc="src/Images/grocery1.jpg"
+        imageAlt="Matkasse med grönsaker"
+        />
+
+        <BigHowCardReversed
+        title="Du lagar din mat"
+        text="Laga din mat med dom basta vegetariska ingredienserna och lev ett langt och lyckligt liv tillsammans med planeten"
         imageSrc="src/Images/fresh_greens2.jpg"
-        imageAlt=""
+        imageAlt="Grönsaker"
         />
         <ReviewCards></ReviewCards>
       </div>

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { OrderHereButton } from "./Button";
 
 interface Props {
   title: string;
@@ -13,6 +14,9 @@ export function BigHowCardReversed(props: Props) {
       <StyledBigDiv>
         <StyledBigHeader>{props.title}</StyledBigHeader>
         <StyledBigText>{props.text}</StyledBigText>
+        <OrderHereButton
+        text="Beställ här"
+        />
       </StyledBigDiv>
       <StyledBigImg src={props.imageSrc} alt={props.imageAlt} />
     </StyledBigDivContainer>
@@ -29,21 +33,30 @@ const StyledBigDivContainer = styled.div`
   height: 50vh;
   width: 80%;
   margin: auto;
+
+  @media(max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const StyledBigDiv = styled.div`
 display: flex;
 flex-direction: column;
+align-items: center;
 `;
 
 
 const StyledBigImg = styled.img`
 object-fit: cover;
 border-radius: 50%;
-height: 15rem;
-width: 15rem;
+height: 20rem;
+width: 20rem;
 `;
 
 const StyledBigHeader = styled.h2``;
 
-const StyledBigText = styled.p``;
+const StyledBigText = styled.p`
+text-align: center;
+margin: 1rem;
+`;
