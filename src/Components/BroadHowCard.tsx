@@ -7,10 +7,10 @@ interface Props {
 export function BroadHowCard(props: Props) {
   return (
   <StyledBigDiv>
-    <img />
-    <h2>
-    hassa
-    </h2>
+    <StyledBigImg />
+    <StyledBigHeader>
+
+    </StyledBigHeader>
     <p>
 
     </p>
@@ -23,4 +23,16 @@ const StyledBigDiv = styled.div`
 background-color: hotpink;
 height: 50vh;
 width: 100%;
+`
+
+const StyledBigImg = styled.img`
+
+`
+
+const StyledBigHeader = styled.h2`
+
+`
+
+const StyledBigText = styled.p`
+
 `
