@@ -20,6 +20,7 @@ export const MyButton = styled.button`
   transition: 0.2s;
   border-radius: .3rem;
   color: #1c3529;
+  font-family: "Titillium Web", sans-serif;
 
   &:hover {
     background-color: #D5C08D;
