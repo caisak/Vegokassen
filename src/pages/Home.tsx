@@ -5,6 +5,7 @@ import { HowCard } from "../Components/HowCard";
 import { OrderButton } from "../Components/OrderButton";
 import { PromotionAd } from "../Components/PromotionAd";
 import { RecipeCard, RecipeCardProps } from "../Components/RecipeCard";
+import { ReviewCards } from "../Components/Review";
 
 export function Home() {
   const recipe1: RecipeCardProps = {
@@ -96,6 +97,9 @@ export function Home() {
           </StyledButton>
           </StyledRecipeCardsWrapper>
         </StyledMain>
+        <ReviewCards></ReviewCards>
+        <OrderButton text="Beställ" />
+
         <StyledFillerCard>
           <StyledFillerText>Genom att välja vegetariskt kan du bidra till att skydda vår planet och dess resurser</StyledFillerText>
           <StyledFillerImg src="src/Images/farm.jpeg" alt="Närbild på växter" />

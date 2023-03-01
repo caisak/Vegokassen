@@ -1,4 +1,5 @@
 import { Carousel } from "../Components/Carousel";
+import { ReviewCards } from "../Components/Review";
 
 export function Recipies() {
     return (
@@ -23,6 +24,7 @@ export function Recipies() {
           "tbc"
         }
       />
+      <ReviewCards></ReviewCards>
       </div>
     )
   }
