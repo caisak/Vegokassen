@@ -177,7 +177,19 @@ const StyledNavLink = styled(NavLink)`
   @media (max-width: 700px) {
     display: none;
   }
+  /* Active link style */
+  &.active {
+    background-color: #f8e1a6;
+    color: #1c3429;
+    font-size: 1rem;
+    padding: 10px;
+    transition: 0.2s;
+    border-radius: .3rem;
+  }
 `;
+
+
+
 /*Mobile Nav Styling */
 export const StyledMobileNavNav = styled.nav`
   height: 100%;

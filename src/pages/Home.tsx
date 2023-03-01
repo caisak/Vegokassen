@@ -93,12 +93,11 @@ export function Home() {
             <RecipeCard {...recipe4} />
           </StyledRecipeCardsContainer>
           <StyledButton>
-            <Button />
+            <Button text ="Läs mer"/>
           </StyledButton>
           </StyledRecipeCardsWrapper>
         </StyledMain>
         <ReviewCards></ReviewCards>
-        <OrderButton text="Beställ" />
 
         <StyledFillerCard>
           <StyledFillerText>Genom att välja vegetariskt kan du bidra till att skydda vår planet och dess resurser</StyledFillerText>
