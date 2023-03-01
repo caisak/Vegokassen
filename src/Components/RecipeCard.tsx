@@ -29,6 +29,7 @@ export const StyledRecipeCardWrapper = styled.div `
   width: 300px;
   background-color: white;
   box-shadow: 0px 4px 2px #dfd7d7;
+  cursor: pointer;
 `;
 
 export const StyledRecipeCardImage = styled.img `

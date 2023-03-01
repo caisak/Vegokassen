@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "../Components/Button";
 import { Carousel } from "../Components/Carousel";
 import { HowCard } from "../Components/HowCard";
 import { OrderButton } from "../Components/OrderButton";
@@ -90,6 +91,9 @@ export function Home() {
             <RecipeCard {...recipe3} />
             <RecipeCard {...recipe4} />
           </StyledRecipeCardsContainer>
+          <StyledButton>
+            <Button />
+          </StyledButton>
           </StyledRecipeCardsWrapper>
         </StyledMain>
         <StyledFillerCard>
@@ -141,6 +145,13 @@ const StyledSloganHeadingSmall = styled.p`
   font-size: 25px;
   font-family: "Titillium Web", sans-serif;
 `;
+
+const StyledButton = styled.div`
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+`
 
 // Recipe cards styling
 const StyledRecipeCardsWrapper = styled.div`
