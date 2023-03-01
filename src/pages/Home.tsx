@@ -22,7 +22,7 @@ export function Home() {
   const recipe3: RecipeCardProps = {
     title: "KLASSISKA UNGSBAKADE ROTFRUKTER",
     image: "src/Images/recipe7.jpg",
-    description: "Potatisen, palsternackan och morötterna smakar ljuvligt gott av smakhöjare som salt, citron och färsk rosmarin.",
+    description: "Potatisen, palsternackan och morötterna smakar ljuvligt gott av smakhöjare som salt, citron och färsk rosmarin",
     
   };
 
@@ -97,7 +97,7 @@ export function Home() {
           </StyledRecipeCardsWrapper>
         </StyledMain>
         <StyledFillerCard>
-          <StyledFillerText>Genom att välja vegetariskt kan du bidra till att skydda vår planet och dess resurser.</StyledFillerText>
+          <StyledFillerText>Genom att välja vegetariskt kan du bidra till att skydda vår planet och dess resurser</StyledFillerText>
           <StyledFillerImg src="src/Images/farm.jpeg" alt="Närbild på växter" />
         </StyledFillerCard>
         <>
