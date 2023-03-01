@@ -29,6 +29,7 @@ export const StyledRecipeCardWrapper = styled.div `
   width: 300px;
   background-color: white;
   box-shadow: 0px 4px 2px #dfd7d7;
+  cursor: pointer;
 `;
 
 export const StyledRecipeCardImage = styled.img `
@@ -50,6 +51,6 @@ export const StyledRecipeCardDesc = styled.p `
   font-size: 16px;
   height: 105px;
   padding: 10px 10px 20px 10px;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
   text-align: center;
 `;

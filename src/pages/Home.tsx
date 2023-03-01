@@ -9,27 +9,28 @@ import { ReviewCards } from "../Components/Review";
 
 export function Home() {
   const recipe1: RecipeCardProps = {
-    title: "SOMMARPERSIKOSALLAD",
+    title: "BLOMKÅLSPURÉ",
     image: "src/Images/recipe9.jpg",
-    description: "A light and refreshing salad that highlights juicy, fresh peaches as the main ingredient.",
+    description: "Krämig blomkålspuré serverad med mandarin och körsbärstomat",
   };
 
   const recipe2: RecipeCardProps = {
     title: "KRÄMIG MOROTSSOPPA",
     image: "src/Images/recipe6.jpg",
-    description: "Made with tender, oven-roasted carrots, blended to perfection with savory spices and a touch of cream.",
+    description: "Rustik och färgglad morotssoppa, en perfekt värmande soppa när det är lite kyligare ute",
   };
 
   const recipe3: RecipeCardProps = {
-    title: "KLASSISKT UNGSBAKADE ROTFRUKTER",
+    title: "KLASSISKA UNGSBAKADE ROTFRUKTER",
     image: "src/Images/recipe7.jpg",
-    description: "A hearty dish featuring a medley of earthy and flavorful vegetables, such as beets, parsnips, and sweet potatoes.",
+    description: "Potatisen, palsternackan och morötterna smakar ljuvligt gott av smakhöjare som salt, citron och färsk rosmarin",
+    
   };
 
   const recipe4: RecipeCardProps = {
-    title: "MYNTA-TÉ PURÉE MED GRANATÄPPLE",
+    title: "GRÖN ÄRTPURÉ MED GRANATÄPPLE",
     image: "src/Images/recipe8.jpg",
-    description: "A refreshing minted tea purée with pomegranate. A blend that offers a smooth texture and a fruity flavor.",
+    description: "Knalligt grön ärtpuré med granatäpple. God som både birätt eller som pålägg",
   };
   
   return (
@@ -100,9 +101,13 @@ export function Home() {
         <OrderButton text="Beställ" />
 
         <StyledFillerCard>
-          <StyledFillerText>Genom att välja vegetariskt kan du bidra till att skydda vår planet och dess resurser.</StyledFillerText>
-          <StyledFillerImg src="src/Images/farm.jpeg" alt="" />
+          <StyledFillerText>Genom att välja vegetariskt kan du bidra till att skydda vår planet och dess resurser</StyledFillerText>
+          <StyledFillerImg src="src/Images/farm.jpeg" alt="Närbild på växter" />
         </StyledFillerCard>
+        <>
+        <OrderButton text="Beställ" />
+        </>
+        
     </div>
   );
 }
@@ -126,22 +131,15 @@ grid-template-columns: repeat(3, 1fr);
 }
 `
 
-const StyledButton = styled.div`
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 50px;
-`
-
-// Recipe cards styling
+// Recipe container + slogan styling 
 const StyledSloganWrapper = styled.div`
-  padding: 30px;
+  padding: 50px;
 `
 const StyledSloganHeading = styled.p`
   color: #392E7C;
   text-align: center;
   font-size: 30px;
-  font-family: 'Rasa', serif;
+  font-family: "Titillium Web", sans-serif;
   font-weight: bold;
 `
 
@@ -149,17 +147,42 @@ const StyledSloganHeadingSmall = styled.p`
   color: #392E7C;
   text-align: center;
   font-size: 25px;
-  font-family: 'Rasa', serif;
+  font-family: "Titillium Web", sans-serif;
+`;
+
+const StyledButton = styled.div`
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 `
 
+// Recipe cards styling
 const StyledRecipeCardsWrapper = styled.div`
   background-color: #fff8ea;
-`
+  padding-bottom: 50px;
+`;
 
 export const StyledRecipeCardsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  
+  @media(max-width:850px){
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media (min-width: 851px) and (max-width: 1000px) {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
 `;
 
 // Filler cards styling 
@@ -189,4 +212,4 @@ const StyledFillerText = styled.p`
   color: #fff;
   text-align: center;
   font-family: "Titillium Web", sans-serif;
-`
+`;
