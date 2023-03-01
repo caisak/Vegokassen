@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Button } from "../Components/Button";
 import { Carousel } from "../Components/Carousel";
 import { HowCard } from "../Components/HowCard";
 import { OrderButton } from "../Components/OrderButton";
@@ -90,6 +91,9 @@ export function Home() {
             <RecipeCard {...recipe3} />
             <RecipeCard {...recipe4} />
           </StyledRecipeCardsContainer>
+          <StyledButton>
+            <Button text ="Läs mer"/>
+          </StyledButton>
           </StyledRecipeCardsWrapper>
         </StyledMain>
         <ReviewCards></ReviewCards>
@@ -120,6 +124,12 @@ grid-template-columns: repeat(3, 1fr);
   margin-left:.1rem;
   margin-right:.1rem;
 }
+`
+
+const StyledButton = styled.div`
+  display:flex;
+  justify-content: center;
+  align-items: center;
 `
 
 // Recipe cards styling

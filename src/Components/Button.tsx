@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
-export function Button() {
+type ButtonProps = {
+  text: string;
+};
+
+export function Button(props: ButtonProps) {
   return(
     <MyButton>
-      Generic Button
+      {props.text}
     </MyButton>
   )
 }
@@ -25,5 +29,6 @@ export const MyButton = styled.button`
     box-shadow: 0 0 5px black;
   }
 `;
+
 
 
