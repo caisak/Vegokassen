@@ -24,6 +24,17 @@ export function OrderHereButton(props: ButtonProps) {
   )
 }
 
+export function ReadMoreButton(props: ButtonProps) {
+  return(
+    <div>
+    <Link to="/safunkardet">
+    <BigCardButton>{props.text}</BigCardButton>
+    </Link>
+    </div>
+  )
+}
+
+
 export const MyButton = styled.button`
   background-color: #f8e1a6;
   border: none;
@@ -69,5 +80,4 @@ const BigCardButton = styled.button`
     box-shadow: 0 0 5px black;
   }
 `;
-
 
