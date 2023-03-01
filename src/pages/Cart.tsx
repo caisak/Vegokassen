@@ -125,7 +125,7 @@ export const CartHeader = styled.div`
 
 export const ClearCartButton = styled.button`
   border: none;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: red;
   text-decoration: underline;
   background-color: inherit;
@@ -140,7 +140,7 @@ export const CartTable = styled.table`
   border-collapse: collapse;
   margin-top: 1.5rem;
   margin-bottom: 2.5rem;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   border-bottom: 2px solid black;
 
   @media (max-width: 600px) {
@@ -219,6 +219,7 @@ width: 80%;
 justify-content: space-between;
 text-align: center;
 align-items: center;
+font-size: .9rem;
 
 @media (max-width: 600px) {
   font-size: 0.8rem;
