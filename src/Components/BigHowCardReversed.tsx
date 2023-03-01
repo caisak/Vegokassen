@@ -7,14 +7,14 @@ interface Props {
   imageAlt: string;
 }
 
-export function BigHowCard(props: Props) {
+export function BigHowCardReversed(props: Props) {
   return (
     <StyledBigDivContainer>
-      <StyledBigImg src={props.imageSrc} alt={props.imageAlt} />
       <StyledBigDiv>
         <StyledBigHeader>{props.title}</StyledBigHeader>
         <StyledBigText>{props.text}</StyledBigText>
       </StyledBigDiv>
+      <StyledBigImg src={props.imageSrc} alt={props.imageAlt} />
     </StyledBigDivContainer>
   );
 }
@@ -25,7 +25,7 @@ const StyledBigDivContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   font-family: 'Titillium Web', sans-serif;
-  background-color: #fff8ea;
+  background-color: #FFF;
   height: 50vh;
   width: 80%;
   margin: auto;
