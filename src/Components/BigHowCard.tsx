@@ -30,11 +30,12 @@ const StyledBigDivContainer = styled.div`
   justify-content: space-between;
   font-family: 'Titillium Web', sans-serif;
   background-color: #fff8ea;
-  height: 50vh;
+  height: 22rem;
   width: 80%;
   margin: auto;
+  margin-bottom: 2rem;
 
-  @media(max-width: 900px) {
+  @media(max-width: 768px) {
     display: flex;
     flex-direction: column;
   }
@@ -52,6 +53,11 @@ object-fit: cover;
 border-radius: 50%;
 height: 20rem;
 width: 20rem;
+margin: 1rem;
+@media(max-width: 768px) {
+    height: 8rem;
+    width: 8rem;
+  }
 `;
 
 const StyledBigHeader = styled.h2``;

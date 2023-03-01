@@ -101,10 +101,7 @@ export function Home() {
         <ReviewCards></ReviewCards>
         <ApiComponent></ApiComponent>
 
-        <StyledFillerCard>
-          <StyledFillerText>Genom att välja vegetariskt kan du bidra till att skydda vår planet och dess resurser</StyledFillerText>
-          <StyledFillerImg src="src/Images/farm.jpeg" alt="Närbild på växter" />
-        </StyledFillerCard>
+       
         
         <>
         <OrderButton text="Beställ" />
@@ -185,33 +182,4 @@ export const StyledRecipeCardsContainer = styled.div`
     margin-left: 100px;
     margin-right: 100px;
   }
-`;
-
-// Filler cards styling 
-const StyledFillerCard = styled.div`
-  position: relative;
-  margin: 2rem auto;
-  width: 100%;
-  max-width: 1100px;
-`;
-
-const StyledFillerImg = styled.img`
-  display: block;
-  width: 80%; 
-  /* height: auto; */
-  margin: 0 auto;
-  height: 380px;
-  object-fit: cover;
-`;
-
-const StyledFillerText = styled.p`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* z-index: 1; */
-  font-size: 25px;
-  color: #fff;
-  text-align: center;
-  font-family: "Titillium Web", sans-serif;
 `;

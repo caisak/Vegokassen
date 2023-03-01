@@ -56,6 +56,7 @@ const BigCardButton = styled.button`
   border-radius: .3rem;
   cursor: pointer;
   color: black;
+  margin-bottom: 1rem;
   font-family: "Titillium Web", sans-serif;
 
 

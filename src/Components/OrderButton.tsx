@@ -38,6 +38,7 @@ border-radius: 0.5rem;
 border: none;
 font-family: 'Titillium Web', sans-serif;
 font-size: large;
+cursor: pointer;
 
 &:hover {
     background-color: #699659;

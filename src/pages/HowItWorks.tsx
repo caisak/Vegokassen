@@ -1,6 +1,6 @@
+import styled from "styled-components";
 import { BigHowCard } from "../Components/BigHowCard";
 import { BigHowCardReversed } from "../Components/BigHowCardReversed";
-import { ReviewCards } from "../Components/Review";
 
 export function HowItWorks() {
     return (
@@ -31,8 +31,40 @@ export function HowItWorks() {
         imageSrc="src/Images/fresh_greens2.jpg"
         imageAlt="Grönsaker"
         />
-        <ReviewCards></ReviewCards>
+         <StyledFillerCard>
+          <StyledFillerText>Genom att välja vegetariskt kan du bidra till att skydda vår planet och dess resurser</StyledFillerText>
+          <StyledFillerImg src="src/Images/farm.jpeg" alt="Närbild på växter" />
+        </StyledFillerCard>
       </div>
     )
   }
-  
+
+
+  // Filler cards styling 
+const StyledFillerCard = styled.div`
+position: relative;
+width: 100%;
+`;
+
+const StyledFillerImg = styled.img`
+display: block;
+width: 100%; 
+filter: blur(1px);
+/* height: auto; */
+margin: 0 auto;
+height: 25rem;
+object-fit: cover;
+`;
+
+const StyledFillerText = styled.p`
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 1;
+font-size: 25px;
+color: #fff;
+text-align: center;
+font-family: "Titillium Web", sans-serif;
+`;
+ 
