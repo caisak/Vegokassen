@@ -22,13 +22,13 @@ const ProductsList: Product[] = [
     name: "15-minuterskassen",
     image: "src/Images/groceries_2.jpg",
     price: 399,
-    description: "Värna om planeten, er tid och er hälsa utan att kompromissa! Specialgjord med rätter som bara tar 15 minuter att laga. Hej då snabbmat, välkommen riktigt snabb mat!",
+    description: "Värna om planeten, er tid och er hälsa utan att kompromissa! Rätterna i denna kasse tar bara 15 minuter att laga.",
   },
   {
     name: "Fruktkassen",
     image: "src/Images/recipe7.jpg",
-    price: 199,
-    description: "Tillgodose veckans behov av vitaminer med vår populära fruktkasse.",
+    price: 149,
+    description: "Tillgodose veckans behov av vitaminer med vår populära fruktkasse! En salig blandning av sött och syrligt.",
   },
 ];
 
