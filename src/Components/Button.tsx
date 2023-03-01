@@ -17,12 +17,23 @@ export function Button(props: ButtonProps) {
 export function OrderHereButton(props: ButtonProps) {
   return(
     <div>
+    <Link to="/HowItWorks">
+    <BigCardButton>{props.text}</BigCardButton>
+    </Link>
+    </div>
+  )
+}
+
+export function ReadMoreButton(props: ButtonProps) {
+  return(
+    <div>
     <Link to="/produkter">
     <BigCardButton>{props.text}</BigCardButton>
     </Link>
     </div>
   )
 }
+
 
 export const MyButton = styled.button`
   background-color: #f8e1a6;
@@ -69,5 +80,4 @@ const BigCardButton = styled.button`
     box-shadow: 0 0 5px black;
   }
 `;
-
 

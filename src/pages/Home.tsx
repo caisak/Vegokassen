@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ApiComponent } from "../Components/ApiComponent";
-import { Button } from "../Components/Button";
+import { Button, ReadMoreButton } from "../Components/Button";
 import { Carousel } from "../Components/Carousel";
 import { HowCard } from "../Components/HowCard";
 import { OrderButton } from "../Components/OrderButton";
@@ -82,6 +82,11 @@ export function Home() {
           altProps="Ett par lagar mat"
         />
         </StyledCardDiv>
+        <StyledButton>
+        <ReadMoreButton
+        text="Läs mer"
+        />
+        </StyledButton>
           <StyledRecipeCardsWrapper>
             <StyledSloganWrapper> 
               <StyledSloganHeading>Mat som gör både dig och planeten glad</StyledSloganHeading>
@@ -100,9 +105,6 @@ export function Home() {
         </StyledMain>
         <ReviewCards></ReviewCards>
         <ApiComponent></ApiComponent>
-
-       
-        
         <>
         <OrderButton text="Beställ" />
         </>
@@ -113,6 +115,7 @@ export function Home() {
 
 const StyledMain = styled.main `
 margin: 0;
+background-color: #fff8ea;
 
 `
 const H = styled.h1 `
