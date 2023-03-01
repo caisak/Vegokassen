@@ -140,25 +140,34 @@ const StyledSloganHeadingSmall = styled.p`
   text-align: center;
   font-size: 25px;
   font-family: "Titillium Web", sans-serif;
-`
+`;
 
 // Recipe cards styling
 const StyledRecipeCardsWrapper = styled.div`
   background-color: #fff8ea;
   padding-bottom: 50px;
-`
+`;
 
 export const StyledRecipeCardsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   
-  @media(max-width:668px){
+  @media(max-width:850px){
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-left: 0;
+  margin-right: 0;
 }
+
+@media (min-width: 851px) and (max-width: 1000px) {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
 `;
 
 // Filler cards styling 
@@ -188,4 +197,4 @@ const StyledFillerText = styled.p`
   color: #fff;
   text-align: center;
   font-family: "Titillium Web", sans-serif;
-`
+`;
