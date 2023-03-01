@@ -32,10 +32,26 @@ export const Modal: React.FC<Props> = ({ onClose }) => {
               <FontAwesomeIcon icon={faXmark}></FontAwesomeIcon>
             </CloseButton>
             <WhiteBox>
-                <h3>Glöm inte bort oss!</h3>
+                <h2>Glöm inte bort oss!</h2>
                 <p>Få 10% rabatt när du prenumerar på vårt nyhetsbrev</p>
+                <EmailInput type="email" />
+                <p>Jag är mest intresserad av:</p>
+                <CheckboxDiv>
+                    <div>
+                        <Checkbox type="checkbox" name="billigt" id="billigt" />
+                        <label htmlFor="billigt">Billigt</label>
 
-   
+                    </div>
+                    <div>
+                        <Checkbox type="checkbox" name="green" id="billigt" />
+                        <label htmlFor="green">Grönt</label>
+                    </div>
+                    <div>
+                        <Checkbox type="checkbox" name="frukt" id="billigt" />
+                        <label htmlFor="frukt">Frukt</label>
+                    </div>
+                </CheckboxDiv>
+                <SubmitButton onClick={closeModal}>Håll mig uppdaterad!</SubmitButton>
             </WhiteBox>
           </ModalContent>
         </MyModal>
@@ -84,17 +100,57 @@ const WhiteBox = styled.div`
   padding: 1rem;
   float: right;
   width: 60%;
+  color: #1c3529;
   height: 100%;
   box-shadow: 0 2px 4px rgba(0, 3, 3, 0.2);
   display: flex;
   text-align: center;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   @media (max-width: 600px) {
     padding: 0.5rem;
   }
 `;
+
+const SubmitButton = styled.button`
+  background-color: #3D9069;
+  border: none;
+  width: 100%;
+  font-size: 1rem;
+  padding: .7rem;
+  transition: 0.2s;
+  border-radius: .3rem;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: "Titillium Web", sans-serif;
+  &:hover {
+    background-color: #54ad83;
+  }
+  &:active {
+    transform: scale(0.8);
+    box-shadow: 0 0 5px black;
+  }
+`
+const EmailInput = styled.input `
+border: 1.5px solid #808080;
+width: 100%;
+height: 1.7rem;
+border-radius: .2rem;
+margin: .3rem;
+
+`
+const CheckboxDiv = styled.div `
+width: 100%;
+    display:flex;
+    justify-content: space-around;
+    margin-bottom:.4rem;
+`
+const Checkbox = styled.input.attrs({ type: "checkbox" })`
+  border-radius: 50%;
+  accent-color: #3D9069;
+  margin-right:4px;
+`
 
 const CloseButton = styled.span`
   color: #105434;
