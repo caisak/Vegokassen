@@ -98,7 +98,6 @@ export function Home() {
           </StyledRecipeCardsWrapper>
         </StyledMain>
         <ReviewCards></ReviewCards>
-        <OrderButton text="Beställ" />
 
         <StyledFillerCard>
           <StyledFillerText>Genom att välja vegetariskt kan du bidra till att skydda vår planet och dess resurser</StyledFillerText>
