@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { ApiComponent } from "../Components/ApiComponent";
 import { Button } from "../Components/Button";
 import { Carousel } from "../Components/Carousel";
 import { HowCard } from "../Components/HowCard";
@@ -98,11 +99,13 @@ export function Home() {
           </StyledRecipeCardsWrapper>
         </StyledMain>
         <ReviewCards></ReviewCards>
+        <ApiComponent></ApiComponent>
 
         <StyledFillerCard>
           <StyledFillerText>Genom att välja vegetariskt kan du bidra till att skydda vår planet och dess resurser</StyledFillerText>
           <StyledFillerImg src="src/Images/farm.jpeg" alt="Närbild på växter" />
         </StyledFillerCard>
+        
         <>
         <OrderButton text="Beställ" />
         </>
