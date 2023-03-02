@@ -118,7 +118,7 @@ const StyledPutInCartButton = styled.button`
   width: 95%;
   height: 2rem;
   background-color: #FF8A48;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   color: #003f2d;
   border: none;
   font-weight: bold;

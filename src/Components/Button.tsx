@@ -68,7 +68,7 @@ export const MyButton = styled.button`
 `;
 
 const BigCardButton = styled.button`
-  background-color: #f8e1a6;
+  background-color: #ffe282;
   border: none;
   width: 10rem;
   font-size: 1rem;

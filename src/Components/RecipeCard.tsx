@@ -40,14 +40,14 @@ export const StyledRecipeCardImage = styled.img `
 
 export const StyledRecipeCardTitle = styled.h2 `
   text-align: center;
-  color: #392E7C;
+  color: #141f12;
   font-size: 18px;
   padding: 25px 10px 0px 10px;
   font-family: 'Ubuntu Condensed', sans-serif;
 `;
 
 export const StyledRecipeCardDesc = styled.p `
-  color: #392E7C;
+  color: ##141f12;
   font-size: 16px;
   height: 105px;
   padding: 10px 10px 20px 10px;
