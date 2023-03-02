@@ -30,24 +30,29 @@ export function Products() {
 }
 
 const StyledProductContainer = styled.div`
+  max-width: 69rem;
   display: grid;
+  justify-self: center;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 0.5rem;
-  margin: 1rem;
+  grid-gap: 0.9rem;
+  margin: auto;
+  margin-top: 2rem;
 
   @media only screen and (max-width: 1200px) {
     grid-template-columns: repeat(3, 1fr);
+    margin: 2rem 1.6rem;
   }
 
   @media only screen and (max-width: 900px) {
     grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  @media only screen and (max-width: 550px) {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 2rem 2rem;
+    grid-gap: 1.5rem;
   }
 
-  @media only screen and (max-width: 700px) {
-    grid-template-columns: 1fr;
-
-
-  }
 `;
 
 const StyledProductDiv = styled.div`
@@ -55,12 +60,29 @@ const StyledProductDiv = styled.div`
   flex-direction: column;
   align-items: center;
   border-radius: 0.5rem;
-  height: 80vh;
-  width: 20rem;
+  height: 30rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   box-shadow: 0 0 10px #c0c0c0;
-  background-color: #ffff;
+  background-color: #3D9069;
   font-family: "Titillium Web", sans-serif;
   margin: auto;
+  color: white;
+  @media only screen and (max-width: 1200px) {
+    width: 94%;
+
+  }
+
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+   
+  }
+  @media only screen and (max-width: 550px) {
+    height: 25rem;
+    padding:.2rem;
+  }
 `;
 
 const StyledProductHeader = styled.h2`
@@ -69,30 +91,50 @@ const StyledProductHeader = styled.h2`
 
 const StyledProductImage = styled.img`
   object-fit: cover;
-  height: 20rem;
-  width: 100%;
+  height: 40%;
+  width: 93%;
   margin-bottom: 0.5rem;
+  border-radius: .3rem;
+  @media only screen and (max-width: 1200px) {
+    width: 90%;
+  }
+  @media only screen and (max-width: 900px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 550px) {
+    height: 45%;
+  }
 `;
 
 const StyledProductText = styled.p`
   margin: 0.5rem;
   text-align: center;
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+  }
 `;
 
 const StyledPutInCartButton = styled.button`
   width: 95%;
   height: 2rem;
-  background-color: pink;
+  background-color: #FF8A48;
   border-radius: 0.5rem;
+  color: #003f2d;
   border: none;
-  margin-top: 2rem;
+  font-weight: bold;
+  margin-bottom: .5rem;
+  
 
   &:hover {
-    background-color: #c79eb6;
+    background-color: #e2712f;
+    color: white;
   }
 
   &:active {
     transform: scale(0.99);
     box-shadow: 0 0 5px black;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 90%;
   }
 `;
