@@ -6,14 +6,15 @@ export type RecipeCardProps = {
   title: string;
   description: string;
   time: string;
+  tagBackgroundColor: string;
 };
 
-export const RecipeCard = ({ image, tag, title, description, time }: RecipeCardProps) => {
+export const RecipeCard = ({ image, tag, title, description, time, tagBackgroundColor }: RecipeCardProps) => {
   return (
     <StyledRecipeCardDiv>
       <StyledRecipeCardWrapper>
         <StyledRecipeCardImage src={image} alt={title} />
-        <StyledCategory backgroundColor={props.backgroundColor} color="white">{tag}</StyledCategory>
+        <StyledCategory backgroundColor={tagBackgroundColor} color="white">{tag}</StyledCategory>
         <StyledRecipeCardTitle>{title}</StyledRecipeCardTitle>
         <StyledRecipeCardDesc>{description}</StyledRecipeCardDesc>
         <StyledRecipeCardTime>{time}</StyledRecipeCardTime>

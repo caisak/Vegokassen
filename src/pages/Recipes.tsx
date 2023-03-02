@@ -1,5 +1,63 @@
+import styled from "styled-components";
 import { Carousel } from "../Components/Carousel";
+import { RecipeCard, RecipeCardProps } from "../Components/DetailedRecipeCard";
 import { ReviewCards } from "../Components/Review";
+import { StyledRecipeCardsContainer } from "./Home";
+
+const recipe1: RecipeCardProps = {
+  title: "BLOMKÅLSPURÉ",
+  tag: "nyttig",
+  image: "src/Images/recipe9.jpg",
+  description: "Krämig blomkålspuré serverad med mandarin och körsbärstomat",
+  time: "hej",
+  tagBackgroundColor: "green"
+};
+
+const recipe2: RecipeCardProps = {
+  title: "KRÄMIG MOROTSSOPPA",
+  tag: "nyttig",
+  image: "src/Images/recipe6.jpg",
+  description: "Rustik och färgglad morotssoppa, en perfekt värmande soppa när det är lite kyligare ute",
+  time: "hej",
+  tagBackgroundColor: "blue"
+};
+
+const recipe3: RecipeCardProps = {
+  title: "KLASSISKA UNGSBAKADE ROTFRUKTER",
+  tag: "nyttig",
+  image: "src/Images/recipe7.jpg",
+  description: "Potatisen, palsternackan och morötterna smakar ljuvligt gott av smakhöjare som salt, citron och färsk rosmarin",
+  time: "hej",
+  tagBackgroundColor: "blue"
+  
+};
+
+const recipe4: RecipeCardProps = {
+  title: "GRÖN ÄRTPURÉ MED GRANATÄPPLE",
+  tag: "nyttig",
+  image: "src/Images/recipe8.jpg",
+  description: "Knalligt grön ärtpuré med granatäpple. God som både birätt eller som pålägg",
+  time: "hej",
+  tagBackgroundColor: "blue"
+};
+
+const recipe5: RecipeCardProps = {
+  title: "GRÖN ÄRTPURÉ MED GRANATÄPPLE",
+  tag: "nyttig",
+  image: "src/Images/recipe8.jpg",
+  description: "Knalligt grön ärtpuré med granatäpple. God som både birätt eller som pålägg",
+  time: "hej",
+  tagBackgroundColor: "blue"
+};
+
+const recipe6: RecipeCardProps = {
+  title: "GRÖN ÄRTPURÉ MED GRANATÄPPLE",
+  tag: "nyttig",
+  image: "src/Images/recipe8.jpg",
+  description: "Knalligt grön ärtpuré med granatäpple. God som både birätt eller som pålägg",
+  time: "hej",
+  tagBackgroundColor: "blue"
+};
 
 export function Recipies() {
     return (
@@ -24,8 +82,31 @@ export function Recipies() {
           "tbc"
         }
       />
+      <RecipeCardContainerBackground>
+        <Test>
+          <StyledRecipeCardsContainer>
+            <RecipeCard {...recipe1} />
+            <RecipeCard {...recipe2} />
+            <RecipeCard {...recipe3} />
+            <RecipeCard {...recipe4} />
+            <RecipeCard {...recipe5} />
+            <RecipeCard {...recipe6} />
+          </StyledRecipeCardsContainer>
+        </Test> 
+      </RecipeCardContainerBackground>
+
       <ReviewCards></ReviewCards>
       </div>
     )
   }
-  
+
+
+const RecipeCardContainerBackground = styled.div`
+  background-color: blue;
+`
+const Test = styled.div`
+  margin-left: 15%;
+  margin-right: 15%;
+  `
+
+
