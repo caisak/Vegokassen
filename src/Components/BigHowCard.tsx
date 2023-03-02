@@ -31,7 +31,7 @@ const StyledBigDivContainer = styled.div`
   font-family: 'Titillium Web', sans-serif;
   background-color: #fff8ea;
   color: #142613;
-  height: 22rem;
+  height: auto;
   width: 80%;
   margin: auto;
   margin-bottom: 2rem;

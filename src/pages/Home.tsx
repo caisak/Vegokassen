@@ -37,8 +37,8 @@ export function Home() {
   
   return (
     <div>
-       <PromotionAd text="Begränsat erbjudande! Gratis frakt och 20% rabatt om du beställer inom
-        19:00" onClose={() => console.log("Ad closed")} />
+       <PromotionAd text="Begränsat erbjudande! Gratis frakt och 20% rabatt om du beställer innan
+        24:00" onClose={() => console.log("Ad closed")} />
       <StyledMain>
       <Carousel
         height={55}
