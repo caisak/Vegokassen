@@ -65,7 +65,6 @@ export const ApiComponent = () => {
 
   return (
     <Wrapper>
-
     <VeganIsTheFuture>
         <div>
         <StyledH2>Sverige får fler vegetarianer varje år!</StyledH2>
@@ -82,7 +81,6 @@ export const ApiComponent = () => {
         <div>
             <img src="src/Images/stats.png" alt="statistik" />
         </div>
-
     </VeganIsTheFuture>
     </Wrapper>
   );
