@@ -3,14 +3,20 @@
     margin: 0px;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
+    min-height: 100%;
+     position: relative;
     /* overflow-y: hidden; */
 }
 
 main {
-    margin-top: 3.5rem;
+    margin-top: 3.5rem;  
 }
 
 #hello {

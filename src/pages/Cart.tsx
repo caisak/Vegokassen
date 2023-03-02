@@ -1,4 +1,5 @@
 import { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { CartContext } from "../CartContex";
 
@@ -38,7 +39,11 @@ export function Cart() {
   if (cartList.length == 0 && ordered) {
     return <EmptyCart>Thanks for your order!</EmptyCart>;
   } else if (cartList.length == 0) {
-    return <EmptyCart>Your cart is empty!</EmptyCart>;
+    return (
+    <EmptyCart>
+      Your cart is empty!<br/>
+      <Link to="../produkter"> Check out our products!</Link>
+      </EmptyCart>);
   }
 
   return (
@@ -71,7 +76,7 @@ export function Cart() {
                       alt={item.name}
                       />
                   </FirstCell>
-                  <FirstCell colSpan={2} style={{marginLeft: "10px"}}>{item.name}</FirstCell>
+                  <FirstCell style={{marginLeft: "10px"}}>{item.name}</FirstCell>
                 </FlexCell>
               <TableCell>{item.price} kr</TableCell>
               <TableCell>{quantity}</TableCell>
@@ -112,14 +117,13 @@ export const CartHeader = styled.div`
   width: 80%;
   justify-content: space-between;
 
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
     font-size: 0.8rem;
     }
 
     @media (max-width: 370px) {
       width: 85%;
       }
-
 
 `;
 
@@ -132,7 +136,6 @@ export const ClearCartButton = styled.button`
   cursor: pointer;
   margin-right: 10px;
   font-family: "Titillium Web", sans-serif;
-
 `;
 
 export const CartTable = styled.table`
@@ -143,7 +146,7 @@ export const CartTable = styled.table`
   font-size: 1.4rem;
   border-bottom: 2px solid black;
 
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
     font-size: 1.15rem;
     }
 
@@ -153,7 +156,7 @@ export const ItemHeader = styled.th`
 text-align: left; 
 width: 50%;
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   width: 40%;
   }
 `
@@ -161,7 +164,7 @@ export const TableHeader = styled.th`
   text-align: center;
   width: auto;
 
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
   padding-right: 0;
   }
 
@@ -177,7 +180,7 @@ align-items: center;
 width: 100%;
 margin-right: auto;
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
 flex-wrap: wrap;
 justify-content: center;
 flex-direction: column-reverse;
@@ -185,11 +188,11 @@ align-items: flex-start;
 }
 `;
 
-export const FirstCell = styled.td`
+export const FirstCell = styled.span`
   display: inline-block;
   vertical-align: middle;
 
-  @media (max-width: 600px) {
+  @media (max-width: 650px) {
     margin-left: 0!important;
   }
 `;
@@ -200,7 +203,7 @@ height: 75px;
 vertical-align: middle;
 margin: 4px 0 4px 0;
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   width: 55px;
   height: 55px;
 }
@@ -221,7 +224,7 @@ text-align: center;
 align-items: center;
 font-size: .9rem;
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   font-size: 0.8rem;
   }
 
