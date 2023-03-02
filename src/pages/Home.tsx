@@ -108,7 +108,7 @@ export function Home() {
         </StyledMain>
         <TextBlock
           title="Nr 1 Vegetariska matkassar online*"
-          description="*Enligt vegetariska föreningens egna säkra källor som provar alla 2 olika alternativ på markaden just nu i Sverige, samt våra helt riktiga kunder som recencerat oss"
+          description="*Enligt vegetariska föreningens egna säkra källor som provar alla 2 olika alternativ på markaden just nu i Sverige, samt våra helt riktiga kunder som recenserat oss"
           backgroundColor="#FF8A48"
           textColor="#082512"
       ></TextBlock>

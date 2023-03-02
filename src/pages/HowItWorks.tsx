@@ -15,28 +15,28 @@ export function HowItWorks() {
       <div>
         {showModal && <Modal onClose={closeModal} />}
         <BigHowCard
-        title="Du beställer"
-        text="Beställ enkelt den kasse som passar dig och din familj bäst. Du behöver inte oroa dig över inköpslistor eller köer i mataffären. "
+        title="Beställ var som helst, när som helst"
+        text="Skippa långa köer i mataffären och borttappade inköpslistor. Välj i lugn och ro bland våra matkassar och hitta den som är rätt för ditt liv och din familj. Beställ var som helst, när som helst."
         imageSrc="src/Images/order2.jpg"
         imageAlt="Person beställer på sin dator"
          />
         <BigHowCardReversed
-        title="Vi plockar ihop de fraschaste ingredienserna"
-        text="Vi klimatkompenserar er leverans och levererar inom en för oss rimlig tid. No complaints pls"
+        title="Vi handplockar de bästa ingredienserna"
+        text="Vi väljer varsamt ut råvarorna till din matkasse. Vi skickar bara med så mycket som behövs för att minska matsvinnet. Bra för planeten och bra för plånboken."
         imageSrc="src/Images/bellpeppers.jpg"
         imageAlt="Hand plockar paprika"
         />
 
         <BigHowCard 
         title="Vi levererar"
-        text="Laga den hälsosamma maten som kommer med vår klimatkompenserade leverans"
+        text="Våra leveranser är så klart klimatkompenserade och vi jobbar ständigt för att minska våra utsläpp och värnar om ekologisk hållbarhet och de globala målen."
         imageSrc="src/Images/grocery1.jpg"
         imageAlt="Matkasse med grönsaker"
         />
 
         <BigHowCardReversed
-        title="Du lagar din mat"
-        text="Laga din mat med dom basta vegetariska ingredienserna och lev ett langt och lyckligt liv tillsammans med planeten"
+        title="Laga med kärlek"
+        text="Njut av mat som är god både för dig och planeten! Följa våra roliga och enkla recept eller laga på ditt eget sätt. Vad väntar du på? Testa Vegokassen idag!"
         imageSrc="src/Images/fresh_greens2.jpg"
         imageAlt="Grönsaker"
         />
