@@ -81,7 +81,7 @@ const reviewData: ReviewCardProps[] = [
   {
     image:"src/Images/thumbs_down.jpg",
     title: 'Mina barn gillar inte grönsaker och äter inte vegetariskt',
-    content: 'Jag trodde er familjekasse var barnvänlig men mina barn vill inte äta grönsaker. Kommer INTE köpa igen.',
+    content: 'Kommer INTE köpa igen.',
     author: 'Emelie D.',
     stars:1,
     kasse:"Familjekassen",
