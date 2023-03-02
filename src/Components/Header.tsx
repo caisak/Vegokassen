@@ -14,7 +14,6 @@ export function TheHeader() {
   const [extendNavBar, setExtendNavbar] = useState(false);
   const { cartList } = useContext(CartContext);
 
-
   useEffect(() => {
     function handleResize() {
       if (window.innerWidth > 700) {
@@ -29,13 +28,13 @@ export function TheHeader() {
     <Header>
       <MyHeader>
         <FlexDiv>
-        <OpenButton
-          onClick={() => {
-            setExtendNavbar((curr) => !curr);
-          }}
-        >
-          {extendNavBar ? <>&#10005;</> : <>&#8801;</>}
-        </OpenButton>
+          <OpenButton
+            onClick={() => {
+              setExtendNavbar((curr) => !curr);
+            }}
+          >
+            {extendNavBar ? <>&#10005;</> : <>&#8801;</>}
+          </OpenButton>
           <StyledLogo src="src/Images/vegokassenlogo1.png" alt="" />
         </FlexDiv>
         <StyledNav>
@@ -54,11 +53,18 @@ export function TheHeader() {
             </li>
           </StyledNavUl>
         </StyledNav>
-        <Link to="cart"><StyledHeaderLogo>
-          {cartList.length}
-          <br/>
-          <FontAwesomeIcon icon={faCartShopping} size="lg" color="white" beat />
-        </StyledHeaderLogo></Link>
+        <Link to="cart">
+          <StyledHeaderLogo>
+            {cartList.length}
+            <br />
+            <FontAwesomeIcon
+              icon={faCartShopping}
+              size="lg"
+              color="white"
+              beat
+            />
+          </StyledHeaderLogo>
+        </Link>
       </MyHeader>
       <MobileBurgerNav extendNavBar={extendNavBar}>
         <StyledMobileNavNav>
@@ -103,17 +109,17 @@ export function TheHeader() {
 }
 //Stylade komponenter
 
-const FlexDiv = styled.div `
-display: flex;`
+const FlexDiv = styled.div`
+  display: flex;
+`;
 
 const StyledLogo = styled.img`
-height: 3rem;
+  height: 3rem;
 
-@media (max-width: 725px) {
-  height: 2.5rem;
-
+  @media (max-width: 725px) {
+    height: 2.5rem;
   }
-`
+`;
 
 export const Header = styled.header``;
 export const MyHeader = styled.div`
@@ -132,8 +138,9 @@ export const MyHeader = styled.div`
 
 const MobileBurgerNav = styled.div<MobileBurgerNavProps>`
   font-family: "Titillium Web", sans-serif;
+  margin-top: 3.5rem;
   position: fixed;
-  z-index: ${(props) => (props.extendNavBar ? "100" : "0")};
+  z-index: ${(props) => (props.extendNavBar ? "1000" : "0")};
   width: 100%;
   height: ${(props) => (props.extendNavBar ? "100vh" : "0vh")};
   background-color: #1c3529;
@@ -144,13 +151,13 @@ const MobileBurgerNav = styled.div<MobileBurgerNavProps>`
   transition: height 0.2s ease-in-out;
 `;
 
-const StyledNav = styled.nav `
-margin-right: 11%;
+const StyledNav = styled.nav`
+  margin-right: 11%;
 
-@media (max-width: 860px) {
-  display: none;
-}
-`
+  @media (max-width: 860px) {
+    display: none;
+  }
+`;
 
 export const StyledNavUl = styled.ul`
   margin: 0;
@@ -167,7 +174,6 @@ export const StyledHeaderLogo = styled.h3`
   color: White;
   margin: 0;
   white-space: nowrap;
-  
 `;
 
 /*Styled NavLink */
@@ -187,11 +193,9 @@ const StyledNavLink = styled(NavLink)`
     color: #1c3429;
     font-size: 1rem;
     padding: 10px;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
   }
 `;
-
-
 
 /*Mobile Nav Styling */
 export const StyledMobileNavNav = styled.nav`
@@ -222,5 +226,6 @@ const StyledMobileNavLink = styled(NavLink)<MobileBurgerNavProps>`
   color: #ffffff;
   opacity: ${(props) => (props.extendNavBar ? "1" : "0")};
   text-decoration: none;
-  ;
-`
+
+`;
+

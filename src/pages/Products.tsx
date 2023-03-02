@@ -22,7 +22,7 @@ export function Products() {
         Oavsett vilken kasse du väljer kan du vara säker på att maten är både god och hälsosam"
         secondText="Utforska våra olika kassar nedan! Det finns någon för alla."
         image="src/Images/oranges.jpg"
-        accentTextColor="#2e180e"
+        accentTextColor="#502305"
         textColor="#1c3529"
         gradient="rgba(255, 199, 96, 0.75)"
       ></Showcase>
@@ -68,7 +68,6 @@ const StyledProductContainer = styled.div`
     margin: 2rem 2rem;
     grid-gap: 1.5rem;
   }
-
 `;
 
 const StyledProductDiv = styled.div`
@@ -88,16 +87,14 @@ const StyledProductDiv = styled.div`
   color: white;
   @media only screen and (max-width: 1200px) {
     width: 94%;
-
   }
 
   @media only screen and (max-width: 900px) {
     width: 100%;
-   
   }
   @media only screen and (max-width: 550px) {
     height: 25rem;
-    padding:.2rem;
+    padding: 0.2rem;
   }
 `;
 
@@ -107,18 +104,20 @@ const StyledProductHeader = styled.h2`
 
 const StyledProductImage = styled.img`
   object-fit: cover;
-  height: 40%;
+  height: 45%;
   width: 93%;
   margin-bottom: 0.5rem;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   @media only screen and (max-width: 1200px) {
     width: 90%;
+    height: 54%;
   }
   @media only screen and (max-width: 900px) {
     width: 80%;
   }
   @media only screen and (max-width: 550px) {
-    height: 45%;
+    height: 56%;
+    width: 70%;
   }
 `;
 
@@ -127,19 +126,20 @@ const StyledProductText = styled.p`
   text-align: center;
   @media only screen and (max-width: 600px) {
     width: 90%;
+    margin: 0rem;
+    font-size: .8rem;
   }
 `;
 
 const StyledPutInCartButton = styled.button`
   width: 95%;
   height: 2rem;
-  background-color: #FF8A48;
+  background-color: #ff8a48;
   border-radius: 0.3rem;
   color: #1d3218;
   border: none;
   font-weight: bold;
-  margin-bottom: .5rem;
-  
+  margin-bottom: 0.5rem;
 
   &:hover {
     background-color: #e2712f;
@@ -154,4 +154,3 @@ const StyledPutInCartButton = styled.button`
     width: 90%;
   }
 `;
-
