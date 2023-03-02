@@ -7,7 +7,7 @@ import { StyledRecipeCardsContainer } from "./Home";
 const recipe1: RecipeCardProps = {
   title: "BLOMKÅLSPURÉ",
   tag: "Under 15 min",
-  image: "src/Images/recipe9.jpg",
+  image: "src/Images/1recipe.jpeg",
   description: "Krämig blomkålspuré serverad med mandarin och körsbärstomat",
   time: "15 MIN",
   tagBackgroundColor: "#ff8a48"
@@ -16,7 +16,7 @@ const recipe1: RecipeCardProps = {
 const recipe2: RecipeCardProps = {
   title: "KRÄMIG MOROTSSOPPA",
   tag: "Familjevänlig",
-  image: "src/Images/recipe6.jpg",
+  image: "src/Images/2recipe.jpeg",
   description: "Rustik och färgglad morotssoppa, en perfekt värmande soppa när det är lite kyligare ute",
   time: "30 MIN",
   tagBackgroundColor: "#68a75f"
@@ -25,7 +25,7 @@ const recipe2: RecipeCardProps = {
 const recipe3: RecipeCardProps = {
   title: "KLASSISKA UNGSBAKADE ROTFRUKTER",
   tag: "För dig som tränar",
-  image: "src/Images/recipe7.jpg",
+  image: "src/Images/3recipe.jpeg",
   description: "Potatisen, palsternackan och morötterna smakar ljuvligt gott av smakhöjare som salt, citron och färsk rosmarin",
   time: "25 MIN",
   tagBackgroundColor: "#ffe282"
@@ -34,7 +34,7 @@ const recipe3: RecipeCardProps = {
 const recipe4: RecipeCardProps = {
   title: "GRÖN ÄRTPURÉ MED GRANATÄPPLE",
   tag: "För dig som tränar",
-  image: "src/Images/recipe8.jpg",
+  image: "src/Images/4recipe.jpeg",
   description: "Knalligt grön ärtpuré med granatäpple. God som både birätt eller som pålägg",
   time: "60 MIN",
   tagBackgroundColor: "#ffe282"
@@ -43,7 +43,7 @@ const recipe4: RecipeCardProps = {
 const recipe5: RecipeCardProps = {
   title: "GRÖN ÄRTPURÉ MED GRANATÄPPLE",
   tag: "Under 15 min",
-  image: "src/Images/recipe8.jpg",
+  image: "src/Images/5recipe.jpeg",
   description: "Knalligt grön ärtpuré med granatäpple. God som både birätt eller som pålägg",
   time: "15 MIN",
   tagBackgroundColor: "#ff8a48"
@@ -52,7 +52,7 @@ const recipe5: RecipeCardProps = {
 const recipe6: RecipeCardProps = {
   title: "GRÖN ÄRTPURÉ MED GRANATÄPPLE",
   tag: "Familjevänlig",
-  image: "src/Images/recipe8.jpg",
+  image: "src/Images/6recipe.jpeg",
   description: "Knalligt grön ärtpuré med granatäpple. God som både birätt eller som pålägg",
   time: "50 MIN",
   tagBackgroundColor: "#68a75f"
