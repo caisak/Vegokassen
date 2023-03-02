@@ -5,55 +5,55 @@ import { ReviewCards } from "../Components/Review";
 import { StyledRecipeCardsContainer } from "./Home";
 
 const recipe1: RecipeCardProps = {
-  title: "BLOMKÅLSPURÉ",
+  title: "Rödbetspaj",
   tag: "Under 15 min",
   image: "src/Images/1recipe.jpeg",
-  description: "Krämig blomkålspuré serverad med mandarin och körsbärstomat",
+  description: "med svarta oliver och fetaost",
   time: "15 MIN",
   tagBackgroundColor: "#ff8a48"
 };
 
 const recipe2: RecipeCardProps = {
-  title: "KRÄMIG MOROTSSOPPA",
+  title: "Gräddig blomkålsgryta",
   tag: "Familjevänlig",
   image: "src/Images/2recipe.jpeg",
-  description: "Rustik och färgglad morotssoppa, en perfekt värmande soppa när det är lite kyligare ute",
+  description: "med ris",
   time: "30 MIN",
   tagBackgroundColor: "#68a75f"
 };
 
 const recipe3: RecipeCardProps = {
-  title: "KLASSISKA UNGSBAKADE ROTFRUKTER",
+  title: "Vegogratäng",
   tag: "För dig som tränar",
   image: "src/Images/3recipe.jpeg",
-  description: "Potatisen, palsternackan och morötterna smakar ljuvligt gott av smakhöjare som salt, citron och färsk rosmarin",
+  description: "med grönkål och soltorkade tomater",
   time: "25 MIN",
   tagBackgroundColor: "#ffe282"
 };
 
 const recipe4: RecipeCardProps = {
-  title: "GRÖN ÄRTPURÉ MED GRANATÄPPLE",
+  title: "Bulgursallad",
   tag: "För dig som tränar",
   image: "src/Images/4recipe.jpeg",
-  description: "Knalligt grön ärtpuré med granatäpple. God som både birätt eller som pålägg",
+  description: "med böngroddar",
   time: "60 MIN",
   tagBackgroundColor: "#ffe282"
 };
 
 const recipe5: RecipeCardProps = {
-  title: "GRÖN ÄRTPURÉ MED GRANATÄPPLE",
+  title: "Currygryta",
   tag: "Under 15 min",
   image: "src/Images/5recipe.jpeg",
-  description: "Knalligt grön ärtpuré med granatäpple. God som både birätt eller som pålägg",
+  description: "med bönor och ris",
   time: "15 MIN",
   tagBackgroundColor: "#ff8a48"
 };
 
 const recipe6: RecipeCardProps = {
-  title: "GRÖN ÄRTPURÉ MED GRANATÄPPLE",
+  title: "Bönbiggar med majs och vitlösris",
   tag: "Familjevänlig",
   image: "src/Images/6recipe.jpeg",
-  description: "Knalligt grön ärtpuré med granatäpple. God som både birätt eller som pålägg",
+  description: "med majs, jalapenos och vitlöksris",
   time: "50 MIN",
   tagBackgroundColor: "#68a75f"
 };
@@ -101,29 +101,10 @@ export function Recipies() {
 
 const RecipeCardContainerBackground = styled.div`
   background-color: #fff8ea;
+  
 `
 const Test = styled.div`
   margin-left: 10%;
   margin-right: 10%;
-  `
-
-const StyledRecipeCardsWrapper = styled.div`
-display: flex;
-flex-direction: column;
-
-@media(max-width:850px){
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-margin-left: 0;
-margin-right: 0;
-}
-
-@media (min-width: 851px) and (max-width: 1000px) {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 100px;
-  margin-right: 100px;
-}
-`;
+  
+`
