@@ -182,7 +182,7 @@ const StyledNavLink = styled(NavLink)`
   }
   /* Active link style */
   &.active {
-    background-color: #f8e1a6;
+    background-color: #69a85f;
     color: #1c3429;
     font-size: 1rem;
     padding: 10px;

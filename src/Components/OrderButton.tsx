@@ -29,7 +29,7 @@ position: sticky;
 `
 
 export const StyledOrder = styled.button `
-background-color:  #699659;
+background-color:  #69a85f;
 color: white;
 height: 2rem;
 width: 97vw;
