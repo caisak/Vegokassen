@@ -100,9 +100,8 @@ export function Recipies() {
     )
   }
 
-
 const RecipeCardContainerBackground = styled.div`
-  background-color: blue;
+  background-color: #fff8ea;
 `
 const Test = styled.div`
   margin-left: 15%;

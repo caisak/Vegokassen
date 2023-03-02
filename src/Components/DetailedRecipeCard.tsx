@@ -25,27 +25,29 @@ export const RecipeCard = ({ image, tag, title, description, time, tagBackground
 
 export const StyledRecipeCardDiv = styled.div`
   margin: 20px;
-  width: calc(100% / 3 - 40px); /* distribute cards evenly and subtract margins */
+  width: 300px;
 `;
 
 export const StyledRecipeCardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   background-color: white;
-  box-shadow: 0px 4px 2px #dfd7d7;
   cursor: pointer;
-  margin: 0 auto; /* center the cards horizontally */
+  margin: 0 auto;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 10px #C0C0C0;
 `;
 
 export const StyledCategory = styled.p<{ backgroundColor: string; color: string }>`
   width: fit-content;
-  padding: 10px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  position: absolute;
+  margin-top: 100px;
+  padding: 6px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
   background-color: ${props => props.backgroundColor};
   color: ${props => props.color};
 `;
-
 
 export const StyledRecipeCardImage = styled.img`
   width: 100%;
@@ -54,7 +56,6 @@ export const StyledRecipeCardImage = styled.img`
 `;
 
 export const StyledRecipeCardTitle = styled.h2`
-  text-align: center;
   color: #392e7c;
   font-size: 18px;
   padding: 25px 10px 0px 10px;
@@ -64,13 +65,12 @@ export const StyledRecipeCardTitle = styled.h2`
 export const StyledRecipeCardDesc = styled.p`
   color: #392e7c;
   font-size: 16px;
-  height: 50px;
+  height: 80px;
   padding: 10px 10px 0px 10px;
   font-family: "Titillium Web", sans-serif;
-  text-align: center;
 `;
 
 export const StyledRecipeCardTime = styled.p`
   color: red;
-  text-align: center;
+  padding: 0px 0px 10px 10px; 
 `;

@@ -5,7 +5,6 @@ import { Footer } from "./Components/Footer";
 import { TheHeader } from "./Components/Header";
 
 export function App() {
-
   return(
     <div id="hello">
       <CartProvider>
