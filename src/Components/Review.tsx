@@ -11,7 +11,7 @@ interface ReviewCardProps {
   kasse: string;
 }
 
-// Recensioner, content kan inte vara mer är 170 tecken för att få plats.
+// Reviews, maximum of 170 characters to still fit inside the card.
 const reviewData: ReviewCardProps[] = [
   {
     image: "src/Images/happy_couple_small.jpg",

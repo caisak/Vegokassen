@@ -8,6 +8,7 @@ interface Props {
   imageAlt: string;
 }
 
+//is virtually the same as BigHowCard except reversed. Renders a card with a round image, styled h2 and styled p
 export function BigHowCardReversed(props: Props) {
   return (
     <StyledBigDivContainer>

@@ -5,6 +5,7 @@ interface Props {
   text: string;
 }
 
+//wide button that links to the products page
 export function OrderButton(props: Props) {
   return (
     <StyledOrderDiv>

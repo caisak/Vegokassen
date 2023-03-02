@@ -8,6 +8,7 @@ interface Props {
   altProps: string;
 }
 
+//renders a card with a number, round image, header and text
 export function HowCard(props: Props) {
   return (
     <StyledCard>

@@ -8,6 +8,7 @@ interface Props {
   imageAlt: string;
 }
 
+//renders a card with a round image, styled h2 and styled p
 export function BigHowCard(props: Props) {
   return (
     <StyledBigDivContainer>
