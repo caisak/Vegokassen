@@ -63,7 +63,7 @@ export const Modal: React.FC<Props> = ({ onClose }) => {
 const MyModal = styled.div`
   display: block;
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   padding-top: 100px;
   left: 0;
   top: 0;

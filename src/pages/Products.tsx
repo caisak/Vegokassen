@@ -15,13 +15,16 @@ export function Products() {
     <div>
       <Showcase
         title="Våra kassar"
-        text="bjkdsfbjlkxfhnldsahfölkdsahföasdhfhöasdhfdsah öfhasdköhfkdsöhfd s
-        ahfhsdafösdahfdasfadsöfsdaf jkdsfbjlkxfhnldsa hfölkdsahföasdhfhöasdhfd 
-        sahöfhasdk öhfkds öhfdsahf"
-        secondText="aodhsahdhw"
+        text="Vegokassen är ett företag som erbjuder olika vegetariska matkassar som 
+        passar både för vardagsmat och till festliga tillfällen. Våra matkassar innehåller 
+        noga utvalda, färska och näringsrika grönsaker, baljväxter och kryddor som är ekologiskt 
+        odlade och fria från animaliska produkter. Du kan välja mellan olika matkassar, som exempelvis familjekassen, eller fruktkassen.
+        Oavsett vilken kasse du väljer kan du vara säker på att maten är både god och hälsosam"
+        secondText="Utforska våra olika kassar nedan! Det finns någon för alla."
         image="src/Images/oranges.jpg"
-        accentTextColor="darkorange"
+        accentTextColor="#2e180e"
         textColor="#1c3529"
+        gradient="rgba(255, 199, 96, 0.75)"
       ></Showcase>
       <StyledProductContainer>
         {ProductsList.map((product) => (

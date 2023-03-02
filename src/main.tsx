@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client';
 
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
 import { App } from './App';
+import { CartProvider } from './CartContex';
+import ErrorBoundary from './Components/ErrorBoundary';
 import { Cart } from './pages/Cart';
 import { Home } from './pages/Home';
 import { HowItWorks } from './pages/HowItWorks';
@@ -22,6 +24,10 @@ const router = createBrowserRouter(createRoutesFromElements(
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 <React.StrictMode>
-  <RouterProvider router= {router}/>
+  <ErrorBoundary>
+    <CartProvider>
+      <RouterProvider router= {router}/>
+    </CartProvider>
+  </ErrorBoundary>
 </React.StrictMode>
 );

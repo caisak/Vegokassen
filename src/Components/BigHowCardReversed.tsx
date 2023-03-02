@@ -39,6 +39,7 @@ const StyledBigDivContainer = styled.div`
   @media(max-width: 768px) {
     display: flex;
     flex-direction: column;
+    height: fit-content;
   }
 `;
 

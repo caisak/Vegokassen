@@ -64,7 +64,7 @@ export function TheHeader() {
         <StyledMobileNavNav>
           <StyledMobileNavUl>
             <li>
-              <StyledMobileNavLink
+              <StyledMobileNavLink extendNavBar={extendNavBar}
                 to="/"
                 onClick={() => setExtendNavbar(false)}
               >
@@ -72,7 +72,7 @@ export function TheHeader() {
               </StyledMobileNavLink>
             </li>
             <li>
-              <StyledMobileNavLink
+              <StyledMobileNavLink extendNavBar={extendNavBar}
                 to="produkter"
                 onClick={() => setExtendNavbar(false)}
               >
@@ -80,7 +80,7 @@ export function TheHeader() {
               </StyledMobileNavLink>
             </li>
             <li>
-              <StyledMobileNavLink
+              <StyledMobileNavLink extendNavBar={extendNavBar}
                 to="safunkardet"
                 onClick={() => setExtendNavbar(false)}
               >
@@ -88,7 +88,7 @@ export function TheHeader() {
               </StyledMobileNavLink>
             </li>
             <li>
-              <StyledMobileNavLink
+              <StyledMobileNavLink extendNavBar={extendNavBar}
                 to="recept"
                 onClick={() => setExtendNavbar(false)}
               >
@@ -115,7 +115,7 @@ height: 3rem;
   }
 `
 
-const Header = styled.header``;
+export const Header = styled.header``;
 export const MyHeader = styled.div`
   position: fixed;
   width: 100%;
@@ -132,7 +132,8 @@ export const MyHeader = styled.div`
 
 const MobileBurgerNav = styled.div<MobileBurgerNavProps>`
   font-family: "Titillium Web", sans-serif;
-  z-index: 10;
+  position: fixed;
+  z-index: ${(props) => (props.extendNavBar ? "100" : "0")};
   width: 100%;
   height: ${(props) => (props.extendNavBar ? "100vh" : "0vh")};
   background-color: #1c3529;
@@ -186,7 +187,6 @@ const StyledNavLink = styled(NavLink)`
     color: #1c3429;
     font-size: 1rem;
     padding: 10px;
-    transition: 0.2s;
     border-radius: .3rem;
   }
 `;
@@ -218,7 +218,9 @@ export const StyledMobileNavUl = styled.ul`
 `;
 
 /*Styled NavLink */
-const StyledMobileNavLink = styled(NavLink)`
-  color: white;
+const StyledMobileNavLink = styled(NavLink)<MobileBurgerNavProps>`
+  color: #ffffff;
+  opacity: ${(props) => (props.extendNavBar ? "1" : "0")};
   text-decoration: none;
-`;
+  ;
+`

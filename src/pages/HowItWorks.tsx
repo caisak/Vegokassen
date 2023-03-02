@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { BigHowCard } from "../Components/BigHowCard";
 import { BigHowCardReversed } from "../Components/BigHowCardReversed";
 import { Modal } from "../Components/Modal";
+import { Showcase } from "../Components/Showcase";
 
 export function HowItWorks() {
   const [showModal, setShowModal] = useState(true);
@@ -13,10 +14,20 @@ export function HowItWorks() {
     return (
       
       <div>
+        <Showcase
+        title="Så funkar det!"
+        text="Är du nyfiken på hur det går till, från köp till leverans? Vi finns här för dig. Vår process är snabb, 
+        smidig och enkel, precis som allt i din vardag borde vara.  "
+        secondText="Om du har fler frågor eller funderingar, tveka inte att höra av er till oss!"
+        image="src/Images/cows_1.jpg"
+        accentTextColor="#fddb69"
+        textColor="white"
+        gradient="rgba(48, 41, 21, 0.65)"
+      ></Showcase>
         {showModal && <Modal onClose={closeModal} />}
         <BigHowCard
         title="Beställ var som helst, när som helst"
-        text="Skippa långa köer i mataffären och borttappade inköpslistor. Välj i lugn och ro bland våra matkassar och hitta den som är rätt för ditt liv och din familj. Beställ var som helst, när som helst."
+        text="Skippa långa köer i mataffären och borttappade inköpslistor. Välj i lugn och ro bland våra matkassar. Beställ var som helst, när som helst."
         imageSrc="src/Images/order2.jpg"
         imageAlt="Person beställer på sin dator"
          />
