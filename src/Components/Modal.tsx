@@ -114,7 +114,7 @@ const WhiteBox = styled.div`
 `;
 
 const SubmitButton = styled.button`
-  background-color: #3D9069;
+  background-color: #69a85f;
   border: none;
   width: 100%;
   font-size: 1rem;
@@ -148,7 +148,7 @@ width: 100%;
 `
 const Checkbox = styled.input.attrs({ type: "checkbox" })`
   border-radius: 50%;
-  accent-color: #3D9069;
+  accent-color: #69a85f;
   margin-right:4px;
 `
 

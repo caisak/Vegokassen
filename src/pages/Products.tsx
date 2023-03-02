@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import styled from "styled-components";
 import { CartContext } from "../CartContex";
+import { Showcase } from "../Components/Showcase";
 import ProductsList, { Product } from "../Products.data";
 
 export function Products() {
@@ -11,21 +12,33 @@ export function Products() {
   }
 
   return (
-    <StyledProductContainer>
-      {ProductsList.map((product) => (
-        <div key={product.image}>
-          <StyledProductDiv>
-            <StyledProductHeader>{product.name}</StyledProductHeader>
-            <StyledProductImage src={product.image} alt={product.name} />
-            <StyledProductText>{product.description}</StyledProductText>
-            <p>{product.price} kr</p>
-            <StyledPutInCartButton onClick={() => handleAddToCart(product)}>
-              Lägg till i kundvagn
-            </StyledPutInCartButton>
-          </StyledProductDiv>
-        </div>
-      ))}
-    </StyledProductContainer>
+    <div>
+      <Showcase
+        title="Våra kassar"
+        text="bjkdsfbjlkxfhnldsahfölkdsahföasdhfhöasdhfdsah öfhasdköhfkdsöhfd s
+        ahfhsdafösdahfdasfadsöfsdaf jkdsfbjlkxfhnldsa hfölkdsahföasdhfhöasdhfd 
+        sahöfhasdk öhfkds öhfdsahf"
+        secondText="aodhsahdhw"
+        image="src/Images/oranges.jpg"
+        accentTextColor="darkorange"
+        textColor="#1c3529"
+      ></Showcase>
+      <StyledProductContainer>
+        {ProductsList.map((product) => (
+          <div key={product.image}>
+            <StyledProductDiv>
+              <StyledProductHeader>{product.name}</StyledProductHeader>
+              <StyledProductImage src={product.image} alt={product.name} />
+              <StyledProductText>{product.description}</StyledProductText>
+              <p>{product.price} kr</p>
+              <StyledPutInCartButton onClick={() => handleAddToCart(product)}>
+                Lägg till i kundvagn
+              </StyledPutInCartButton>
+            </StyledProductDiv>
+          </div>
+        ))}
+      </StyledProductContainer>
+    </div>
   );
 }
 
@@ -66,7 +79,7 @@ const StyledProductDiv = styled.div`
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 0 10px #c0c0c0;
-  background-color: #3D9069;
+  background-color: #4c7b45;
   font-family: "Titillium Web", sans-serif;
   margin: auto;
   color: white;
@@ -118,8 +131,8 @@ const StyledPutInCartButton = styled.button`
   width: 95%;
   height: 2rem;
   background-color: #FF8A48;
-  border-radius: 0.5rem;
-  color: #003f2d;
+  border-radius: 0.3rem;
+  color: #1d3218;
   border: none;
   font-weight: bold;
   margin-bottom: .5rem;
@@ -138,3 +151,4 @@ const StyledPutInCartButton = styled.button`
     width: 90%;
   }
 `;
+

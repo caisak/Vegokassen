@@ -18,7 +18,7 @@ export function OrderButton(props: Props) {
 }
 
 export const StyledOrderDiv = styled.div `
-background-color: rgba(255, 0, 0, 0.7);
+background-color: #fff8ea;
 height: 3rem;
 width: 100%;
 bottom: 0;
@@ -29,12 +29,11 @@ position: sticky;
 `
 
 export const StyledOrder = styled.button `
-background-color: #7CB468
-;
+background-color:  #69a85f;
 color: white;
 height: 2rem;
 width: 97vw;
-border-radius: 0.5rem;
+border-radius: 0.3rem;
 border: none;
 font-family: 'Titillium Web', sans-serif;
 font-size: large;

@@ -37,7 +37,7 @@ export function Home() {
   
   return (
     <div>
-       <PromotionAd text="Begränstat erbjudande! Gratis frakt och 20% rabatt om du beställer inom
+       <PromotionAd text="Begränsat erbjudande! Gratis frakt och 20% rabatt om du beställer inom
         19:00" onClose={() => console.log("Ad closed")} />
       <StyledMain>
       <Carousel
@@ -147,7 +147,7 @@ const StyledSloganWrapper = styled.div`
   padding: 50px;
 `
 const StyledSloganHeading = styled.p`
-  color: #392E7C;
+  color: #f37d39;
   text-align: center;
   font-size: 30px;
   font-family: "Titillium Web", sans-serif;
@@ -155,7 +155,7 @@ const StyledSloganHeading = styled.p`
 `
 
 const StyledSloganHeadingSmall = styled.p`
-  color: #392E7C;
+  color: #608f60;
   text-align: center;
   font-size: 25px;
   font-family: "Titillium Web", sans-serif;
