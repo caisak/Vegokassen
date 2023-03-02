@@ -10,13 +10,13 @@ interface ReviewCardProps {
   stars:number;
 }
 
-// Recenctioner, content kan inte vara mer är 170 tecken för att få plats.
+// Recensioner, content kan inte vara mer är 170 tecken för att få plats.
 const reviewData: ReviewCardProps[] = [
   {
     image:"src/Images/happy_couple_small.jpg",
     title: 'Vegokassen räddade mitt äktenskap',
     content: 'Jag ÄLSKAR Vego kassen! Förut bråkade vi alltid om vilken middag vi skulle äta. Nu äter vi morötter varje dag!',
-    author: 'Mary Sue',
+    author: 'Mary S.',
     stars:5
 
   },
@@ -24,21 +24,21 @@ const reviewData: ReviewCardProps[] = [
     image:"src/Images/food_10.jpg",
     title: 'Amazing!',
     content: 'This product exceeded my expectations. I would highly recommend it to anyone.',
-    author: 'Bob Johnson',
+    author: 'Bob J.',
     stars:5
   },
   {
     image:"src/Images/cooking_4.jpg",
     title: 'Otroliga matkassar!',
     content: 'Det bästa som hänt mig! Jag älskar vegokassens mat och recept! Jag har ätit rödbetspaj 7 dagar i rad.',
-    author: 'John Smith',
+    author: 'John S.',
     stars:1,
   },
   {
     image:"src/Images/food_10.jpg",
-    title: 'Terrible Service',
+    title: 'Mina barn äter äntligen grönsaker!',
     content: 'I had a terrible experience with the customer service for this product.',
-    author: 'Samantha Lee',
+    author: 'Samantha L.',
     stars:5
   },
   {
