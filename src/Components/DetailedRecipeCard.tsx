@@ -25,7 +25,8 @@ export const RecipeCard = ({ image, tag, title, description, time, tagBackground
 
 export const StyledRecipeCardDiv = styled.div`
   margin: 20px;
-  width: calc(33.33% - 40px);
+  width: 300px;
+  
 `;
 
 export const StyledRecipeCardWrapper = styled.div`
@@ -35,9 +36,12 @@ export const StyledRecipeCardWrapper = styled.div`
   justify-content: space-between; 
   background-color: white;
   cursor: pointer;
-  margin: 0 auto;
   border-radius: 0.3rem;
   box-shadow: 0 0 10px #C0C0C0;
+
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 
 export const StyledCategory = styled.p<{ backgroundColor: string; color: string }>`
@@ -50,6 +54,7 @@ export const StyledCategory = styled.p<{ backgroundColor: string; color: string 
   background-color: ${props => props.backgroundColor};
   color: ${props => props.color};
   font-family: "Titillium Web", sans-serif;
+
 `;
 
 export const StyledRecipeCardImage = styled.img`

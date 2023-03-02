@@ -103,8 +103,27 @@ const RecipeCardContainerBackground = styled.div`
   background-color: #fff8ea;
 `
 const Test = styled.div`
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 10%;
+  margin-right: 10%;
   `
 
+const StyledRecipeCardsWrapper = styled.div`
+display: flex;
+flex-direction: column;
 
+@media(max-width:850px){
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-left: 0;
+margin-right: 0;
+}
+
+@media (min-width: 851px) and (max-width: 1000px) {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+`;
