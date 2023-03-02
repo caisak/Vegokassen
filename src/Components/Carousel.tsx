@@ -143,7 +143,7 @@ const MainButton = styled.button `
   font-weight: 500;
   width: 20%;
   margin-right: 5%;
-  background-color: #F8E1A6;
+  background-color: #ffe282;
   border: none;
   font-family: "Titillium Web", sans-serif;
   color: #105434;
@@ -167,10 +167,10 @@ const MainWhiteButton = styled.button `
   font-weight: 500;
   width: 20%;
   margin-right: 5%;
-  background-color: #ffffff;
+  background-color: #FF8A48;
   border: none;
   font-family: "Titillium Web", sans-serif;
-  color: #105434;
+  color: #263c28;
   transition: 0.2s;
   &:hover {
     background-color: #cfcfcf;

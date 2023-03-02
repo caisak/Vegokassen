@@ -37,29 +37,29 @@ export function Cart() {
   }, 0);
 
   if (cartList.length == 0 && ordered) {
-    return <EmptyCart>Thanks for your order!</EmptyCart>;
+    return <EmptyCart>Tack för din beställning!</EmptyCart>;
   } else if (cartList.length == 0) {
     return (
     <EmptyCart>
-      Your cart is empty!<br/>
-      <Link to="../produkter"> Check out our products!</Link>
+      Din kundvagn är tom!<br/>
+      <Link to="../produkter"> Kolla in våra kassar!</Link>
       </EmptyCart>);
   }
 
   return (
     <MyCart>
       <CartHeader>
-        <h1>Cart ({cartList.length} items) </h1>
+        <h1>Kundvagn ({cartList.length} artiklar) </h1>
         <ClearCartButton onClick={() => clearCart()}>
-          Clear cart
+          Töm kundvagn
         </ClearCartButton>
       </CartHeader>
       <CartTable>
         <thead style={{ borderBottom: "2px solid black" }}>
           <tr>
-            <ItemHeader>Item</ItemHeader>
-            <TableHeader style={{ paddingRight: "14px" }}>Price</TableHeader>
-            <TableHeader>Quantity</TableHeader>
+            <ItemHeader>Artikel</ItemHeader>
+            <TableHeader style={{ paddingRight: "14px" }}>Pris</TableHeader>
+            <TableHeader>Antal</TableHeader>
             <TableHeader style={{ paddingRight: "14px" }}>Total</TableHeader>
           </tr>
         </thead>
@@ -86,14 +86,14 @@ export function Cart() {
         </tbody>
       </CartTable>
       <OrderDiv>
-        <h1>Grand Total: <span style={{whiteSpace: "nowrap"}}>{total} kr</span></h1>
+        <h1>Totalt: <span style={{whiteSpace: "nowrap"}}>{total} kr</span></h1>
         <CheckoutButton
           onClick={() => {
             setOrdered(true);
             clearCart();
           }}
         >
-          Order
+          Beställ!
         </CheckoutButton>
       </OrderDiv>
     </MyCart>
