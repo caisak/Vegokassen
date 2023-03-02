@@ -42,7 +42,7 @@ export function Cart() {
     return (
     <EmptyCart>
       Your cart is empty!<br/>
-      <Link to="../produkter"> Check out our products! </Link>
+      <Link to="../produkter"> Check out our products!</Link>
       </EmptyCart>);
   }
 
