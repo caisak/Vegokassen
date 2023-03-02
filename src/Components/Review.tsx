@@ -73,7 +73,7 @@ const reviewData: ReviewCardProps[] = [
   {
     image:"src/Images/cooking_4.jpg",
     title: 'Otroliga matkassar!',
-    content: 'Det bästa som hänt mig! Jag älskar vegokassens mat och recept! Jag har ätit rödbetspaj 7 dagar i rad.',
+    content: 'Det bästa som hänt mig! Jag älskar vegokassens mat och recept! Rödbetspaj 7 dagar i rad.',
     author: 'John S.',
     stars:1,
     kasse:"Familjekassen",
