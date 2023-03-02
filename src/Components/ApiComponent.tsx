@@ -69,7 +69,7 @@ export const ApiComponent = () => {
     <VeganIsTheFuture>
         <div>
         <StyledH2>Sverige får fler vegetarianer varje år!</StyledH2>
-        <p>*Sveriges befolkning statistik,scb.</p>
+        <p>*Sveriges befolkningsstatistik, scb.</p>
       <ul>
         {populationData.map((data) => (
           <li key={data.year}>

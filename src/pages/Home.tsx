@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ApiComponent } from "../Components/ApiComponent";
-import { Button, ReadMoreButton } from "../Components/Button";
+import { ReadMoreButton, RecipeButton } from "../Components/Button";
 import { Carousel } from "../Components/Carousel";
 import { HowCard } from "../Components/HowCard";
 import { OrderButton } from "../Components/OrderButton";
@@ -100,7 +100,9 @@ export function Home() {
             <RecipeCard {...recipe4} />
           </StyledRecipeCardsContainer>
           <StyledButton>
-            <Button text ="Läs mer"/>
+            <RecipeButton
+            text="Läs mer"
+            />
           </StyledButton>
           </StyledRecipeCardsWrapper>
         </StyledMain>
