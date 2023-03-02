@@ -10,7 +10,7 @@ const recipe1: RecipeCardProps = {
   image: "src/Images/recipe9.jpg",
   description: "Krämig blomkålspuré serverad med mandarin och körsbärstomat",
   time: "15 MIN",
-  tagBackgroundColor: "blue"
+  tagBackgroundColor: "#ff8a48"
 };
 
 const recipe2: RecipeCardProps = {
@@ -19,7 +19,7 @@ const recipe2: RecipeCardProps = {
   image: "src/Images/recipe6.jpg",
   description: "Rustik och färgglad morotssoppa, en perfekt värmande soppa när det är lite kyligare ute",
   time: "30 MIN",
-  tagBackgroundColor: "green"
+  tagBackgroundColor: "#68a75f"
 };
 
 const recipe3: RecipeCardProps = {
@@ -28,35 +28,34 @@ const recipe3: RecipeCardProps = {
   image: "src/Images/recipe7.jpg",
   description: "Potatisen, palsternackan och morötterna smakar ljuvligt gott av smakhöjare som salt, citron och färsk rosmarin",
   time: "25 MIN",
-  tagBackgroundColor: "yellow"
-  
+  tagBackgroundColor: "#ffe282"
 };
 
 const recipe4: RecipeCardProps = {
   title: "GRÖN ÄRTPURÉ MED GRANATÄPPLE",
-  tag: "nyttig",
+  tag: "För dig som tränar",
   image: "src/Images/recipe8.jpg",
   description: "Knalligt grön ärtpuré med granatäpple. God som både birätt eller som pålägg",
-  time: "hej",
-  tagBackgroundColor: "blue"
+  time: "60 MIN",
+  tagBackgroundColor: "#ffe282"
 };
 
 const recipe5: RecipeCardProps = {
   title: "GRÖN ÄRTPURÉ MED GRANATÄPPLE",
-  tag: "nyttig",
+  tag: "Under 15 min",
   image: "src/Images/recipe8.jpg",
   description: "Knalligt grön ärtpuré med granatäpple. God som både birätt eller som pålägg",
-  time: "hej",
-  tagBackgroundColor: "blue"
+  time: "15 MIN",
+  tagBackgroundColor: "#ff8a48"
 };
 
 const recipe6: RecipeCardProps = {
   title: "GRÖN ÄRTPURÉ MED GRANATÄPPLE",
-  tag: "nyttig",
+  tag: "Familjevänlig",
   image: "src/Images/recipe8.jpg",
   description: "Knalligt grön ärtpuré med granatäpple. God som både birätt eller som pålägg",
-  time: "hej",
-  tagBackgroundColor: "blue"
+  time: "50 MIN",
+  tagBackgroundColor: "#68a75f"
 };
 
 export function Recipies() {
