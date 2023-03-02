@@ -72,7 +72,6 @@ export function Footer() {
 
 export const MyFooter = styled.footer`
   color: white;
-  position: relative;
   width: 100%;
   bottom: 0;
   background-color: #1c3529;
@@ -81,6 +80,8 @@ export const MyFooter = styled.footer`
   align-items: center;
   justify-content: space-evenly;
   font-family: "Titillium Web", sans-serif;
+  position: absolute;
+  bottom: 0;
 `;
 
 export const SocialLinks = styled.div`
