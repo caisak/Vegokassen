@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { BigHowCard } from "../Components/BigHowCard";
 import { BigHowCardReversed } from "../Components/BigHowCardReversed";
 import { Modal } from "../Components/Modal";
+import { Showcase } from "../Components/Showcase";
 
 export function HowItWorks() {
   const [showModal, setShowModal] = useState(true);
@@ -13,6 +14,14 @@ export function HowItWorks() {
     return (
       
       <div>
+        <Showcase
+        title="Så här funkar det"
+        text="Undrar du vad som händer när du beställer en matkasse från oss? Fortsätt läs!"
+        secondText="aodhsahdhw"
+        image="src/Images/dippingsauce.jpg"
+        accentTextColor="darkorange"
+        textColor="#1c3529"
+      ></Showcase>
         {showModal && <Modal onClose={closeModal} />}
         <BigHowCard
         title="Beställ var som helst, när som helst"
