@@ -47,6 +47,7 @@ export const StyledCategory = styled.p<{ backgroundColor: string; color: string 
   border-bottom-right-radius: 3px;
   background-color: ${props => props.backgroundColor};
   color: ${props => props.color};
+  font-family: "Titillium Web", sans-serif;
 `;
 
 export const StyledRecipeCardImage = styled.img`
@@ -56,14 +57,14 @@ export const StyledRecipeCardImage = styled.img`
 `;
 
 export const StyledRecipeCardTitle = styled.h2`
-  color: #392e7c;
+  color: #1c3429;
   font-size: 18px;
   padding: 25px 10px 0px 10px;
   font-family: "Ubuntu Condensed", sans-serif;
 `;
 
 export const StyledRecipeCardDesc = styled.p`
-  color: #392e7c;
+  color: #1c3429;
   font-size: 16px;
   height: 80px;
   padding: 10px 10px 0px 10px;
@@ -71,6 +72,7 @@ export const StyledRecipeCardDesc = styled.p`
 `;
 
 export const StyledRecipeCardTime = styled.p`
-  color: red;
+  color: #ff8a48;
   padding: 0px 0px 10px 10px; 
+  font-family: "Ubuntu Condensed", sans-serif;
 `;
