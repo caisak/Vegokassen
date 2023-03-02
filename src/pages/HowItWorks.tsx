@@ -11,20 +11,23 @@ export function HowItWorks() {
   const closeModal = () => {
     setShowModal(false);
   };
-  return (
-    <div>
-      <Showcase
-        title="Så här funkar det"
-        text="Undrar du vad som händer när du beställer en matkasse från oss? Fortsätt läs!"
+    return (
+      
+      <div>
+        <Showcase
+        title="Så funkar det!"
+        text="Är du nyfiken på hur det går till, från köp till leverans? Vi finns här för dig. Vår process är snabb, 
+        smidig och enkel, precis som allt i din vardag borde vara.  "
         secondText="Tack för att du väljer grönt"
         image="src/Images/dippingsauce.jpg"
-        accentTextColor="darkorange"
-        textColor="#1c3529"
+        accentTextColor="#fddb69"
+        textColor="white"
+        gradient="rgba(48, 41, 21, 0.65)"
       ></Showcase>
-      {showModal && <Modal onClose={closeModal} />}
-      <BigHowCard
+        {showModal && <Modal onClose={closeModal} />}
+        <BigHowCard
         title="Beställ var som helst, när som helst"
-        text="Skippa långa köer i mataffären och borttappade inköpslistor. Välj i lugn och ro bland våra matkassar och hitta den som är rätt för ditt liv och din familj. Beställ var som helst, när som helst."
+        text="Skippa långa köer i mataffären och borttappade inköpslistor. Välj i lugn och ro bland våra matkassar. Beställ var som helst, när som helst."
         imageSrc="src/Images/order2.jpg"
         imageAlt="Person beställer på sin dator"
       />
