@@ -17,7 +17,7 @@ export function HowItWorks() {
         <Showcase
         title="Så här funkar det"
         text="Undrar du vad som händer när du beställer en matkasse från oss? Fortsätt läs!"
-        secondText="aodhsahdhw"
+        secondText="Tack för att du väljer grönt"
         image="src/Images/dippingsauce.jpg"
         accentTextColor="darkorange"
         textColor="#1c3529"

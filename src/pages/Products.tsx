@@ -15,10 +15,8 @@ export function Products() {
     <div>
       <Showcase
         title="Våra kassar"
-        text="bjkdsfbjlkxfhnldsahfölkdsahföasdhfhöasdhfdsah öfhasdköhfkdsöhfd s
-        ahfhsdafösdahfdasfadsöfsdaf jkdsfbjlkxfhnldsa hfölkdsahföasdhfhöasdhfd 
-        sahöfhasdk öhfkds öhfdsahf"
-        secondText="aodhsahdhw"
+        text="Nedan finns info om våra utvalda matkassar med recept skapade för dig av våra kockar."
+        secondText="Tack för att du väljer grönt"
         image="src/Images/oranges.jpg"
         accentTextColor="darkorange"
         textColor="#1c3529"
