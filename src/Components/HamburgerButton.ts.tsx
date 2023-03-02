@@ -11,8 +11,11 @@ export const OpenButton = styled.button`
     color:white;
     font-size: 1.4rem;
     cursor: pointer;
+    @media (max-width:861px) {
+        font-size: 2rem;
+    }
 
-    @media (min-width:700px) {
+    @media (min-width:861px) {
         display: none;
     }
 `
