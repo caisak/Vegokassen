@@ -1,7 +1,7 @@
 import {
   faFacebook,
   faInstagram,
-  faLinkedin
+  faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -53,7 +53,10 @@ export function Footer() {
       <MyForm onSubmit={handleSubmit}>
         <div>
           <label>
-            {newsLetterText} <EmailIcon><FontAwesomeIcon icon={faEnvelope} /></EmailIcon>
+            {newsLetterText}{" "}
+            <EmailIcon>
+              <FontAwesomeIcon icon={faEnvelope} />
+            </EmailIcon>
           </label>
           <br />
           {formSubmitted ? null : <InputEmail />}
@@ -85,14 +88,13 @@ export const MyFooter = styled.footer`
 `;
 
 export const SocialLinks = styled.div`
-display: flex;
-justify-content: space-between;
-column-gap: 20px;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
 
-@media (max-width: 400px) {
-  column-gap: 2px;
-}
-
+  @media (max-width: 400px) {
+    column-gap: 2px;
+  }
 `;
 
 export const MyForm = styled.form`
@@ -115,10 +117,10 @@ export const InputEmail = styled.input.attrs({ type: "text" })`
 `;
 
 export const EmailIcon = styled.span`
-@media (max-width: 500px) {
-  display: none;
-}
-`
+  @media (max-width: 500px) {
+    display: none;
+  }
+`;
 
 const SubmitButton = styled.input.attrs({ type: "submit" })`
   border-radius: 0.3rem;
@@ -127,7 +129,7 @@ const SubmitButton = styled.input.attrs({ type: "submit" })`
   width: 5rem;
   padding: 10px;
   height: 100%;
-  
+
   &:hover {
     background-color: gray;
   }
@@ -140,5 +142,4 @@ const SubmitButton = styled.input.attrs({ type: "submit" })`
   @media (max-width: 500px) {
     display: none;
   }
-
 `;

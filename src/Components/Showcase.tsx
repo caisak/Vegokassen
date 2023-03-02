@@ -70,7 +70,7 @@ const Content = styled.div<Props>`
     }
   }
 
-  p { 
+  p {
     margin-bottom: 2%;
     font-weight: 700;
     @media (max-width: 600px) {
@@ -79,11 +79,12 @@ const Content = styled.div<Props>`
   }
 
   h3 {
+
     margin-bottom: .2rem;
     color: ${(props) => props.accentTextColor};
     @media (max-width: 600px) {
       font-size: 0.9rem;
-      margin-bottom: .1rem;
+      margin-bottom: 0.1rem;
     }
   }
 `;
