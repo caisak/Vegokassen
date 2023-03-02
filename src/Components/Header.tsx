@@ -115,7 +115,7 @@ height: 3rem;
   }
 `
 
-const Header = styled.header``;
+export const Header = styled.header``;
 export const MyHeader = styled.div`
   position: fixed;
   width: 100%;
@@ -132,6 +132,7 @@ export const MyHeader = styled.div`
 
 const MobileBurgerNav = styled.div<MobileBurgerNavProps>`
   font-family: "Titillium Web", sans-serif;
+  position: fixed;
   z-index: 10;
   width: 100%;
   height: ${(props) => (props.extendNavBar ? "100vh" : "0vh")};
@@ -186,7 +187,6 @@ const StyledNavLink = styled(NavLink)`
     color: #1c3429;
     font-size: 1rem;
     padding: 10px;
-    transition: 0.2s;
     border-radius: .3rem;
   }
 `;

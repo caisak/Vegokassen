@@ -1,22 +1,23 @@
 import { Outlet } from "react-router-dom";
-import './App.css';
-import { CartProvider } from "./CartContex";
+import "./App.css";
+import ErrorBoundary from "./Components/ErrorBoundary";
 import { Footer } from "./Components/Footer";
 import { TheHeader } from "./Components/Header";
 
 export function App() {
-
-  return(
+  return (
     <div id="hello">
-      <CartProvider>
+      <ErrorBoundary>
         <TheHeader></TheHeader>
-        <main>
-          <Outlet/>
-        </main>
+      </ErrorBoundary>
+      <main>
+        <ErrorBoundary>
+          <Outlet />
+        </ErrorBoundary>
+      </main>
+      <ErrorBoundary>
         <Footer></Footer>
-      </CartProvider>
+      </ErrorBoundary>
     </div>
-  )
+  );
 }
-
-
