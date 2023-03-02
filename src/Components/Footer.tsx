@@ -105,6 +105,8 @@ export const MyForm = styled.form`
 
 export const InputEmail = styled.input.attrs({ type: "text" })`
   width: 100%;
+  border-radius: 0.5rem;
+  border: none;
 
   &:focus {
     outline: none;
