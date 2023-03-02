@@ -1,10 +1,10 @@
 import styled from "styled-components";
 import { Carousel } from "../Components/Carousel";
-import { RecipeCard, RecipeCardProps } from "../Components/DetailedRecipeCard";
+import { CustomRecipeCard, CustomRecipeCardProps } from "../Components/CustomRecipeCard";
 import { ReviewCards } from "../Components/Review";
 import { StyledRecipeCardsContainer } from "./Home";
 
-const recipe1: RecipeCardProps = {
+const recipe1: CustomRecipeCardProps = {
   title: "Rödbetspaj",
   tag: "Under 15 min",
   image: "src/Images/1recipe.jpeg",
@@ -13,7 +13,7 @@ const recipe1: RecipeCardProps = {
   tagBackgroundColor: "#ff8a48"
 };
 
-const recipe2: RecipeCardProps = {
+const recipe2: CustomRecipeCardProps = {
   title: "Gräddig blomkålsgryta",
   tag: "Familjevänlig",
   image: "src/Images/2recipe.jpeg",
@@ -22,7 +22,7 @@ const recipe2: RecipeCardProps = {
   tagBackgroundColor: "#68a75f"
 };
 
-const recipe3: RecipeCardProps = {
+const recipe3: CustomRecipeCardProps = {
   title: "Vegogratäng",
   tag: "För dig som tränar",
   image: "src/Images/3recipe.jpeg",
@@ -31,7 +31,7 @@ const recipe3: RecipeCardProps = {
   tagBackgroundColor: "#ffe282"
 };
 
-const recipe4: RecipeCardProps = {
+const recipe4: CustomRecipeCardProps = {
   title: "Bulgursallad",
   tag: "För dig som tränar",
   image: "src/Images/4recipe.jpeg",
@@ -40,7 +40,7 @@ const recipe4: RecipeCardProps = {
   tagBackgroundColor: "#ffe282"
 };
 
-const recipe5: RecipeCardProps = {
+const recipe5: CustomRecipeCardProps = {
   title: "Currygryta",
   tag: "Under 15 min",
   image: "src/Images/5recipe.jpeg",
@@ -49,7 +49,7 @@ const recipe5: RecipeCardProps = {
   tagBackgroundColor: "#ff8a48"
 };
 
-const recipe6: RecipeCardProps = {
+const recipe6: CustomRecipeCardProps = {
   title: "Bönbiggar med majs och vitlösris",
   tag: "Familjevänlig",
   image: "src/Images/6recipe.jpeg",
@@ -84,12 +84,12 @@ export function Recipies() {
       <RecipeCardContainerBackground>
         <Test>
           <StyledRecipeCardsContainer>
-            <RecipeCard {...recipe1} />
-            <RecipeCard {...recipe2} />
-            <RecipeCard {...recipe3} />
-            <RecipeCard {...recipe4} />
-            <RecipeCard {...recipe5} />
-            <RecipeCard {...recipe6} />
+            <CustomRecipeCard {...recipe1} />
+            <CustomRecipeCard {...recipe2} />
+            <CustomRecipeCard {...recipe3} />
+            <CustomRecipeCard {...recipe4} />
+            <CustomRecipeCard {...recipe5} />
+            <CustomRecipeCard {...recipe6} />
           </StyledRecipeCardsContainer>
         </Test> 
       </RecipeCardContainerBackground>
