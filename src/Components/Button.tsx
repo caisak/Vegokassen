@@ -76,7 +76,7 @@ const BigCardButton = styled.button`
   transition: 0.2s;
   border-radius: .3rem;
   cursor: pointer;
-  color: black;
+  color: #142613;
   margin-bottom: 1rem;
   font-family: "Titillium Web", sans-serif;
 

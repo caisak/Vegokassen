@@ -30,6 +30,7 @@ border-radius: 0.5rem;
 box-shadow: 0 0 10px #C0C0C0;
 background-color: #FFFF;
 height: 25rem;
+color: #142613;
 width: 100%;
 margin-top: 3rem;
 display: flex;
