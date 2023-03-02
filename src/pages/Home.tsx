@@ -91,7 +91,7 @@ export function Home() {
           <StyledRecipeCardsWrapper>
             <StyledSloganWrapper> 
               <StyledSloganHeading>Mat som gör både dig och planeten glad</StyledSloganHeading>
-              <StyledSloganHeadingSmall>Välj mellan 150+ olika måltider</StyledSloganHeadingSmall>
+              <StyledSloganHeadingSmall>Måltider som ingår i våra kassar</StyledSloganHeadingSmall>
             </StyledSloganWrapper>
           <StyledRecipeCardsContainer>
             <RecipeCard {...recipe1} />
