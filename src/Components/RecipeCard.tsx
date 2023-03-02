@@ -47,7 +47,7 @@ export const StyledRecipeCardTitle = styled.h2 `
 `;
 
 export const StyledRecipeCardDesc = styled.p `
-  color: ##141f12;
+  color: #141f12;
   font-size: 16px;
   height: 105px;
   padding: 10px 10px 20px 10px;

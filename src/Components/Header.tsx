@@ -132,8 +132,9 @@ export const MyHeader = styled.div`
 
 const MobileBurgerNav = styled.div<MobileBurgerNavProps>`
   font-family: "Titillium Web", sans-serif;
+  margin-top: 3.5rem;
   position: fixed;
-  z-index: ${(props) => (props.extendNavBar ? "100" : "0")};
+  z-index: ${(props) => (props.extendNavBar ? "1000" : "0")};
   width: 100%;
   height: ${(props) => (props.extendNavBar ? "100vh" : "0vh")};
   background-color: #1c3529;

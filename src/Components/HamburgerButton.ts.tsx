@@ -10,6 +10,7 @@ export const OpenButton = styled.button`
     border: none;
     color:white;
     font-size: 1.4rem;
+    z-index: 2000;
     cursor: pointer;
     @media (max-width:861px) {
         font-size: 2rem;
