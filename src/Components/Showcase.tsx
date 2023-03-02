@@ -1,37 +1,56 @@
 import styled from "styled-components";
 
 interface Props {
-    title:string
-    text:string
-    secondText:string
-    image:string
-    textColor:string
-    accentTextColor:string
+  title: string;
+  text: string;
+  secondText: string;
+  image: string;
+  textColor: string;
+  accentTextColor: string;
 }
 
-
-export function Showcase({ title, text, secondText, image, textColor, accentTextColor }: Props) {
-    return(
-        <ShowCaseDiv title={title} text={text} secondText={secondText} image={image} textColor={textColor} accentTextColor={accentTextColor}>
-            <Content title={title} text={text} secondText={secondText} image={image} textColor={textColor} accentTextColor={accentTextColor}>
-                <h1>{title}</h1>
-                <p>{text}</p>
-                <h3>{secondText}</h3>
-            </Content>
-        </ShowCaseDiv>
-    )
+export function Showcase({
+  title,
+  text,
+  secondText,
+  image,
+  textColor,
+  accentTextColor,
+}: Props) {
+  return (
+    <ShowCaseDiv
+      title={title}
+      text={text}
+      secondText={secondText}
+      image={image}
+      textColor={textColor}
+      accentTextColor={accentTextColor}
+    >
+      <Content
+        title={title}
+        text={text}
+        secondText={secondText}
+        image={image}
+        textColor={textColor}
+        accentTextColor={accentTextColor}
+      >
+        <h1>{title}</h1>
+        <p>{text}</p>
+        <h3>{secondText}</h3>
+      </Content>
+    </ShowCaseDiv>
+  );
 }
 
-const ShowCaseDiv = styled.div <Props>`
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    height: fit-content;
-    background-image: url(${(props) => props.image});
-    background-size: cover;
-    background-position: center;
-
-`
+const ShowCaseDiv = styled.div<Props>`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  background-image: url(${(props) => props.image});
+  background-size: cover;
+  background-position: center;
+`;
 
 const Content = styled.div<Props>`
   max-width: 69rem;
@@ -57,7 +76,7 @@ const Content = styled.div<Props>`
     }
   }
 
-  p { 
+  p {
     margin-bottom: 2%;
     font-weight: 600;
     @media (max-width: 600px) {
@@ -66,11 +85,11 @@ const Content = styled.div<Props>`
   }
 
   h3 {
-    margin-bottom: .6rem;
+    margin-bottom: 0.6rem;
     color: ${(props) => props.accentTextColor};
     @media (max-width: 600px) {
       font-size: 0.9rem;
-      margin-bottom: .1rem;
+      margin-bottom: 0.1rem;
     }
   }
 `;

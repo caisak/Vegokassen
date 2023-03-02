@@ -5,10 +5,13 @@ import styled from "styled-components";
 
 interface PromotionAdProps {
   onClose: () => void;
-  text:string;
+  text: string;
 }
 
-export function PromotionAd({ onClose, text }: PromotionAdProps): JSX.Element | null {
+export function PromotionAd({
+  onClose,
+  text,
+}: PromotionAdProps): JSX.Element | null {
   const [isVisible, setIsVisible] = useState(true);
 
   const handleClose = () => {
@@ -23,9 +26,7 @@ export function PromotionAd({ onClose, text }: PromotionAdProps): JSX.Element | 
   return (
     <StyledPromotionAd>
       <div></div>
-      <StyledPromotionText>
-        {text}
-      </StyledPromotionText>
+      <StyledPromotionText>{text}</StyledPromotionText>
       <CloseAdButton onClick={handleClose} className="close-button">
         <FontAwesomeIcon icon={faXmark} />
       </CloseAdButton>

@@ -1,4 +1,7 @@
-import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
 import styled from "styled-components";
@@ -6,13 +9,12 @@ import styled from "styled-components";
 interface Props {
   images: string[];
   height: number;
-  titles:string[];
-  buttonText:string[];
-  gradientColor:string;
+  titles: string[];
+  buttonText: string[];
+  gradientColor: string;
 }
 
 export function Carousel(props: Props) {
-
   const { images, height, titles, buttonText, gradientColor } = props;
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentTitle, setCurrentTitle] = useState(0);
@@ -21,25 +23,32 @@ export function Carousel(props: Props) {
     const newIndex = currentIndex === 0 ? images.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
 
-    const newTitleIndex = currentTitle === 0 ? titles.length - 1 : currentTitle - 1;
+    const newTitleIndex =
+      currentTitle === 0 ? titles.length - 1 : currentTitle - 1;
     setCurrentTitle(newTitleIndex);
-    console.log(currentTitle)
+    console.log(currentTitle);
   };
 
   const handleNextClick = () => {
     const nextIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
     setCurrentIndex(nextIndex);
-    
-    const newTitleIndex = currentTitle === titles.length - 1 ? 0 : currentTitle + 1;
-    setCurrentTitle(newTitleIndex);
 
+    const newTitleIndex =
+      currentTitle === titles.length - 1 ? 0 : currentTitle + 1;
+    setCurrentTitle(newTitleIndex);
   };
 
   return (
-    <Container images={images} height={height} titles={titles} buttonText={buttonText} gradientColor={gradientColor}>
+    <Container
+      images={images}
+      height={height}
+      titles={titles}
+      buttonText={buttonText}
+      gradientColor={gradientColor}
+    >
       <ButtonWrapper>
         <FontAwesomeIcon onClick={handlePrevClick} icon={faChevronLeft} />
-        <FontAwesomeIcon  onClick={handleNextClick} icon={faChevronRight}/>
+        <FontAwesomeIcon onClick={handleNextClick} icon={faChevronRight} />
       </ButtonWrapper>
       <ContentWrapper>
         <InfoBox>
@@ -75,7 +84,7 @@ const Container = styled.div<Props>`
 `;
 
 const ButtonWrapper = styled.div`
-z-index: 300;
+  z-index: 300;
   position: absolute;
   top: 50%;
   left: 0;
@@ -89,14 +98,13 @@ z-index: 300;
     color: white;
     cursor: pointer;
     font-size: 1.2rem;
-    background-color: rgba(0, 31, 14, 0.3);;
+    background-color: rgba(0, 31, 14, 0.3);
     border-radius: 50%;
     aspect-ratio: 1;
-    padding: .3rem .3rem;
+    padding: 0.3rem 0.3rem;
     @media (max-width: 600px) {
-      font-size: .9rem;
-  
-  }
+      font-size: 0.9rem;
+    }
   }
 `;
 const ContentWrapper = styled.div`
@@ -104,14 +112,17 @@ const ContentWrapper = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to top, rgba(19, 41, 26, 0.85), transparent);
+  background-image: linear-gradient(
+    to top,
+    rgba(19, 41, 26, 0.85),
+    transparent
+  );
 `;
 
-
-const InfoBox = styled.div `
+const InfoBox = styled.div`
   display: flex;
   flex-direction: column;
-  margin:0;
+  margin: 0;
   width: 60%;
   position: absolute;
   bottom: 4%;
@@ -121,25 +132,25 @@ const InfoBox = styled.div `
     width: 100%;
     left: 0%;
   }
-`
-const Title = styled.h2 `
+`;
+const Title = styled.h2`
   color: white;
   margin-bottom: 1rem;
   @media (max-width: 600px) {
     font-size: 1.3rem;
     text-align: center;
   }
-`
+`;
 
-const ButtonBox = styled.div `
-display: flex;
-width: 100%;
-flex-direction: row;
-justify-content: flex-start;
-`
+const ButtonBox = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+`;
 
-const MainButton = styled.button `
-  border-radius: .2rem;
+const MainButton = styled.button`
+  border-radius: 0.2rem;
   font-weight: 500;
   width: 20%;
   margin-right: 5%;
@@ -150,7 +161,7 @@ const MainButton = styled.button `
   transition: 0.2s;
   &:hover {
     background-color: #c5b281;
-  }  
+  }
   &:active {
     transform: scale(0.8);
     box-shadow: 0 0 5px black;
@@ -160,21 +171,20 @@ const MainButton = styled.button `
     margin-right: 2%;
     margin-left: 2%;
   }
-  
-`
-const MainWhiteButton = styled.button `
-  border-radius: .2rem;
+`;
+const MainWhiteButton = styled.button`
+  border-radius: 0.2rem;
   font-weight: 500;
   width: 20%;
   margin-right: 5%;
-  background-color: #FF8A48;
+  background-color: #ff8a48;
   border: none;
   font-family: "Titillium Web", sans-serif;
   color: #263c28;
   transition: 0.2s;
   &:hover {
     background-color: #cfcfcf;
-  }  
+  }
   &:active {
     transform: scale(0.8);
     box-shadow: 0 0 5px black;
@@ -184,7 +194,4 @@ const MainWhiteButton = styled.button `
     margin-right: 2%;
     margin-left: 2%;
   }
-`
-
-
-
+`;
