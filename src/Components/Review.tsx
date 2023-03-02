@@ -8,6 +8,7 @@ interface ReviewCardProps {
   content: string;
   author: string;
   stars:number;
+  kasse: string;
 }
 
 // Recensioner, content kan inte vara mer är 170 tecken för att få plats.
@@ -16,16 +17,58 @@ const reviewData: ReviewCardProps[] = [
     image:"src/Images/happy_couple_small.jpg",
     title: 'Vegokassen räddade mitt äktenskap',
     content: 'Jag ÄLSKAR Vego kassen! Förut bråkade vi alltid om vilken middag vi skulle äta. Nu äter vi morötter varje dag!',
-    author: 'Mary S.',
-    stars:5
+    author: 'Marianne S.',
+    stars:5,
+    kasse:"Familjekassen",
 
   },
   {
+    image:"src/Images/smoothie.jpg",
+    title: 'Mina barn äter äntligen grönsaker!',
+    content: 'Jättebra recept som passar till hela familjen!',
+    author: 'Stina L.',
+    stars:5,
+    kasse:"Familjekassen",
+  },
+  {
+    image:"src/Images/food_8.jpg",
+    title: 'Plant Power kassen',
+    content: 'Jag och frugan har så mycket mer energi efter att vi bytte till er matkasse. Känner mig ung igen höhöhö',
+    author: 'Micke W.',
+    stars:5,
+    kasse:"Plant Power™kassen",
+  },
+  {
+    image:"src/Images/groceries_1.jpg",
+    title: 'Älskar 15-minuterskassen!',
+    content: 'Jag är singel och hatar att laga mat till bara mig själv så 15-minuterskassen är bäst. Älskar när mitt haul kommer <3 Iaf mitt telefonnummer är',
+    author: 'Sara T.',
+    stars:5,
+    kasse:"15-minuterskassen",
+  },
+  {
     image:"src/Images/food_10.jpg",
-    title: 'Amazing!',
-    content: 'This product exceeded my expectations. I would highly recommend it to anyone.',
-    author: 'Bob J.',
-    stars:5
+    title: 'Mye fornøyd',
+    content: 'Maten er av første klasse, mye fornøyd! Har redusert matsvinnet. Rask og veldig hyggelig kundeservice.',
+    author: 'Jan-Olof J.',
+    stars:5,
+    kasse:"Plant Power™kassen",
+  },
+  {
+    image:"src/Images/groceries_2.jpg",
+    title: 'Ok',
+    content: 'Helt ok.',
+    author: 'Bengt K.',
+    stars:3,
+    kasse:"Familjekassen",
+  },
+  {
+    image:"src/Images/apple1.jpg",
+    title: 'Bra förutom möglig paprika och äpple',
+    content: 'Bra matkasse men paprikan jag fick var möglig och någon hade tagit en tugga av ett äpple. Inte så kul men annars bra.',
+    author: 'Anna H.',
+    stars:2,
+    kasse:"Fruktkassen",
   },
   {
     image:"src/Images/cooking_4.jpg",
@@ -33,55 +76,23 @@ const reviewData: ReviewCardProps[] = [
     content: 'Det bästa som hänt mig! Jag älskar vegokassens mat och recept! Jag har ätit rödbetspaj 7 dagar i rad.',
     author: 'John S.',
     stars:1,
+    kasse:"Familjekassen",
   },
   {
-    image:"src/Images/food_10.jpg",
-    title: 'Mina barn äter äntligen grönsaker!',
-    content: 'I had a terrible experience with the customer service for this product.',
-    author: 'Samantha L.',
-    stars:5
+    image:"src/Images/thumbs_down.jpg",
+    title: 'Mina barn gillar inte grönsaker och äter inte vegetariskt',
+    content: 'Jag trodde er familjekasse var barnvänlig men mina barn vill inte äta grönsaker. Kommer INTE köpa igen.',
+    author: 'Emelie D.',
+    stars:1,
+    kasse:"Familjekassen",
   },
   {
-    image:"src/Images/food_8.jpg",
-    title: 'Very Satisfied',
-    content: 'This product was exactly what I was looking for. I am very happy with my purchase.',
-    author: 'Mike Williams',
-    stars:5
-  },
-  {
-    image:"src/Images/food_10.jpg",
-    title: 'Poor Quality',
-    content: 'The quality of this product was very poor. I would not recommend it to anyone.',
-    author: 'Sarah Thompson',
-    stars:2
-  },
-  {
-    image:"src/Images/food_10.jpg",
-    title: 'Excellent!',
-    content: 'This is the best product I have ever used. I am extremely satisfied with my purchase.',
-    author: 'David Wilson',
-    stars:5
-  },
-  {
-    image:"src/Images/food_10.jpg",
-    title: 'Could be Better',
-    content: 'This product is good, but it could be better. I have some suggestions for improvementThis product is good, but it could be better. I have some suggestions for improvement.',
-    author: 'Jessica Chen',
-    stars:3
-  },
-  {
-    image:"src/Images/food_10.jpg",
-    title: 'Great Value',
-    content: 'This product is a great value for the price. I would definitely buy it again.',
-    author: 'Tom Brown',
-    stars:5
-  },
-  {
-    image:"src/Images/food_10.jpg",
-    title: 'Not What I Expected',
-    content: 'This product was not what I expected. I would not recommend it.',
-    author: 'Emily Davis',
-    stars:2
+    image:"src/Images/banana.jpg",
+    title: 'Blev inte mätt',
+    content: 'Fruktkassen räcker INTE till två vuxna i en hel vecka.',
+    author: 'David J.',
+    stars:1,
+    kasse:"Fruktkassen",
   }
 ];
 
@@ -98,7 +109,7 @@ const generateStars = (count: number) => {
 };
 
 // Define the ReviewCard component
-const ReviewCard: React.FC<ReviewCardProps> = ({ image, title, content, author, stars}) => {
+const ReviewCard: React.FC<ReviewCardProps> = ({ image, title, content, author, stars, kasse }) => {
   const starArray=generateStars(stars)
   return (
     <Card>
@@ -109,7 +120,9 @@ const ReviewCard: React.FC<ReviewCardProps> = ({ image, title, content, author, 
         <h3>{title}</h3>
         <p>{content}</p>
         <StarRating>{starArray.join('')}</StarRating>
+        <StyledKasse>{kasse}</StyledKasse>
         <span>{author}</span>
+        
       </div>
     </Card>
   );
@@ -153,6 +166,10 @@ const Container = styled.div`
     }
   }
 `;
+
+const StyledKasse = styled.p`
+color: green;
+`
 
 const Card = styled.div`
   font-family: "Titillium Web", sans-serif;
