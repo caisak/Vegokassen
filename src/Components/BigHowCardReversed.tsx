@@ -31,7 +31,7 @@ const StyledBigDivContainer = styled.div`
   color: #142613;
   background-color: #fff;
   height: auto;
-  width: 80%;
+  width: 100%;
   margin: auto;
   margin-bottom: 2rem;
 
