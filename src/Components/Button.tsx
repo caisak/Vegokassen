@@ -34,6 +34,16 @@ export function ReadMoreButton(props: ButtonProps) {
   )
 }
 
+export function RecipeButton(props: ButtonProps) {
+  return(
+  <div>
+    <Link to="/recept">
+      <BigCardButton>{props.text}</BigCardButton>
+    </Link>
+  </div>
+  )
+}
+
 
 export const MyButton = styled.button`
   background-color: #f8e1a6;
