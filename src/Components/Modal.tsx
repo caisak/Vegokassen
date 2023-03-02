@@ -32,26 +32,27 @@ export const Modal: React.FC<Props> = ({ onClose }) => {
               <FontAwesomeIcon icon={faXmark}></FontAwesomeIcon>
             </CloseButton>
             <WhiteBox>
-                <h2>Glöm inte bort oss!</h2>
-                <p>Få 10% rabatt när du prenumerar på vårt nyhetsbrev</p>
-                <EmailInput type="email" />
-                <p>Jag är mest intresserad av:</p>
-                <CheckboxDiv>
-                    <div>
-                        <Checkbox type="checkbox" name="billigt" id="billigt" />
-                        <label htmlFor="billigt">Billigt</label>
-
-                    </div>
-                    <div>
-                        <Checkbox type="checkbox" name="green" id="billigt" />
-                        <label htmlFor="green">Grönt</label>
-                    </div>
-                    <div>
-                        <Checkbox type="checkbox" name="frukt" id="billigt" />
-                        <label htmlFor="frukt">Frukt</label>
-                    </div>
-                </CheckboxDiv>
-                <SubmitButton onClick={closeModal}>Håll mig uppdaterad!</SubmitButton>
+              <h2>Glöm inte bort oss!</h2>
+              <p>Få 10% rabatt när du prenumerar på vårt nyhetsbrev</p>
+              <EmailInput type="email" />
+              <p>Jag är mest intresserad av:</p>
+              <CheckboxDiv>
+                <div>
+                  <Checkbox type="checkbox" name="billigt" id="billigt" />
+                  <label htmlFor="billigt">Billigt</label>
+                </div>
+                <div>
+                  <Checkbox type="checkbox" name="green" id="billigt" />
+                  <label htmlFor="green">Grönt</label>
+                </div>
+                <div>
+                  <Checkbox type="checkbox" name="frukt" id="billigt" />
+                  <label htmlFor="frukt">Frukt</label>
+                </div>
+              </CheckboxDiv>
+              <SubmitButton onClick={closeModal}>
+                Håll mig uppdaterad!
+              </SubmitButton>
             </WhiteBox>
           </ModalContent>
         </MyModal>
@@ -118,9 +119,9 @@ const SubmitButton = styled.button`
   border: none;
   width: 100%;
   font-size: 1rem;
-  padding: .7rem;
+  padding: 0.7rem;
   transition: 0.2s;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   cursor: pointer;
   color: #ffffff;
   font-family: "Titillium Web", sans-serif;
@@ -131,26 +132,25 @@ const SubmitButton = styled.button`
     transform: scale(0.8);
     box-shadow: 0 0 5px black;
   }
-`
-const EmailInput = styled.input `
-border: 1.5px solid #808080;
-width: 100%;
-height: 1.7rem;
-border-radius: .2rem;
-margin: .3rem;
-
-`
-const CheckboxDiv = styled.div `
-width: 100%;
-    display:flex;
-    justify-content: space-around;
-    margin-bottom:.4rem;
-`
+`;
+const EmailInput = styled.input`
+  border: 1.5px solid #808080;
+  width: 100%;
+  height: 1.7rem;
+  border-radius: 0.2rem;
+  margin: 0.3rem;
+`;
+const CheckboxDiv = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 0.4rem;
+`;
 const Checkbox = styled.input.attrs({ type: "checkbox" })`
   border-radius: 50%;
   accent-color: #69a85f;
-  margin-right:4px;
-`
+  margin-right: 4px;
+`;
 
 const CloseButton = styled.span`
   color: #105434;

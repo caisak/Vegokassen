@@ -65,65 +65,62 @@ export const ApiComponent = () => {
 
   return (
     <Wrapper>
-    <VeganIsTheFuture>
+      <VeganIsTheFuture>
+
         <div>
-        <StyledH2>Sverige får fler vegetarianer varje år!</StyledH2>
-        <p>*Sveriges befolkningsstatistik, scb.</p>
-      <ul>
-        {populationData.map((data) => (
-          <li key={data.year}>
-            <strong>{data.year}: </strong>
-            {data.population}
-          </li>
-        ))}
-      </ul>
+          <StyledH2>Sverige får fler vegetarianer varje år!</StyledH2>
+          <p>*Sveriges befolkningsstatistik, scb.</p>
+          <ul>
+            {populationData.map((data) => (
+              <li key={data.year}>
+                <strong>{data.year}: </strong>
+                {data.population}
+              </li>
+            ))}
+          </ul>
         </div>
         <div>
-            <img src="src/Images/stats.png" alt="statistik" />
+          <img src="src/Images/stats.png" alt="statistik" />
         </div>
+
     </VeganIsTheFuture>
     </Wrapper>
   );
 };
 
-const Wrapper = styled.div `
-width: 100%;
-display: flex;
-justify-content: center;
-height: fit-content;
-background-image: url("src/Images/grass_1.jpg");
-background-size: cover;
-background-position: center;
-
-`
+const Wrapper = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  background-image: url("src/Images/grass_1.jpg");
+  background-size: cover;
+  background-position: center;
+`;
 
 const VeganIsTheFuture = styled.div`
   background-color: #ffffff;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   max-width: 82rem;
   min-width: 360px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  margin: 2rem .5rem;
+  margin: 2rem 0.5rem;
   padding: 0.5rem;
   font-family: "Titillium Web", sans-serif;
   display: flex;
   justify-content: space-between;
   @media (max-width: 800px) {
     flex-direction: column;
-    margin: .5rem .5rem;
-
+    margin: 0.5rem 0.5rem;
   }
 
   div {
     margin: 3px;
-    
   }
-  p {       
-     @media (max-width: 600px) {
-        font-size: .8rem;
-
+  p {
+    @media (max-width: 600px) {
+      font-size: 0.8rem;
     }
-
   }
   ul {
     list-style: none;
@@ -132,25 +129,19 @@ const VeganIsTheFuture = styled.div`
   img {
     width: 32rem;
     @media (max-width: 800px) {
-    width: 100%;
-
+      width: 100%;
     }
-
   }
   li {
-        font-size: 1rem;
-        @media (max-width: 600px) {
-        font-size: .7rem;
-
+    font-size: 1rem;
+    @media (max-width: 600px) {
+      font-size: 0.7rem;
     }
-
-    }
- 
+  }
 `;
 const StyledH2 = styled.h2`
   font-family: "Titillium Web", sans-serif;
   @media (max-width: 600px) {
-        font-size: 1rem;
-    }
+    font-size: 1rem;
+  }
 `;
-
