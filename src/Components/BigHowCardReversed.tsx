@@ -29,6 +29,7 @@ const StyledBigDivContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   font-family: 'Titillium Web', sans-serif;
+  color: #142613;
   background-color: #FFF;
   height: 22rem;
   width: 80%;
@@ -50,6 +51,7 @@ align-items: center;
 
 const StyledBigImg = styled.img`
 object-fit: cover;
+aspect-ratio: 1;
 border-radius: 50%;
 height: 20rem;
 width: 20rem;

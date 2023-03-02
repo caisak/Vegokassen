@@ -105,7 +105,7 @@ export const MyForm = styled.form`
 
 export const InputEmail = styled.input.attrs({ type: "text" })`
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   border: none;
 
   &:focus {
@@ -121,7 +121,7 @@ export const EmailIcon = styled.span`
 `
 
 const SubmitButton = styled.input.attrs({ type: "submit" })`
-  border-radius: 99px;
+  border-radius: 0.3rem;
   border: none;
   font-family: inherit;
   width: 5rem;
