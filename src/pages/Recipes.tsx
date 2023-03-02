@@ -6,29 +6,29 @@ import { StyledRecipeCardsContainer } from "./Home";
 
 const recipe1: RecipeCardProps = {
   title: "BLOMKÅLSPURÉ",
-  tag: "nyttig",
+  tag: "Under 15 min",
   image: "src/Images/recipe9.jpg",
   description: "Krämig blomkålspuré serverad med mandarin och körsbärstomat",
-  time: "hej",
-  tagBackgroundColor: "green"
+  time: "15 MIN",
+  tagBackgroundColor: "blue"
 };
 
 const recipe2: RecipeCardProps = {
   title: "KRÄMIG MOROTSSOPPA",
-  tag: "nyttig",
+  tag: "Familjevänlig",
   image: "src/Images/recipe6.jpg",
   description: "Rustik och färgglad morotssoppa, en perfekt värmande soppa när det är lite kyligare ute",
-  time: "hej",
-  tagBackgroundColor: "blue"
+  time: "30 MIN",
+  tagBackgroundColor: "green"
 };
 
 const recipe3: RecipeCardProps = {
   title: "KLASSISKA UNGSBAKADE ROTFRUKTER",
-  tag: "nyttig",
+  tag: "För dig som tränar",
   image: "src/Images/recipe7.jpg",
   description: "Potatisen, palsternackan och morötterna smakar ljuvligt gott av smakhöjare som salt, citron och färsk rosmarin",
-  time: "hej",
-  tagBackgroundColor: "blue"
+  time: "25 MIN",
+  tagBackgroundColor: "yellow"
   
 };
 
