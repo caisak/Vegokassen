@@ -146,6 +146,9 @@ const MobileBurgerNav = styled.div<MobileBurgerNavProps>`
 const StyledNav = styled.nav `
 margin-right: 11%;
 
+@media (max-width: 860px) {
+  display: none;
+}
 `
 
 export const StyledNavUl = styled.ul`
