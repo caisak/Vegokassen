@@ -25,12 +25,14 @@ export const RecipeCard = ({ image, tag, title, description, time, tagBackground
 
 export const StyledRecipeCardDiv = styled.div`
   margin: 20px;
-  width: 300px;
+  width: calc(33.33% - 40px);
 `;
 
 export const StyledRecipeCardWrapper = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap; 
+  flex-direction: row; 
+  justify-content: space-between; 
   background-color: white;
   cursor: pointer;
   margin: 0 auto;
@@ -66,7 +68,7 @@ export const StyledRecipeCardTitle = styled.h2`
 export const StyledRecipeCardDesc = styled.p`
   color: #1c3429;
   font-size: 16px;
-  height: 80px;
+  height: 100px;
   padding: 10px 10px 0px 10px;
   font-family: "Titillium Web", sans-serif;
 `;
@@ -76,3 +78,5 @@ export const StyledRecipeCardTime = styled.p`
   padding: 0px 0px 10px 10px; 
   font-family: "Ubuntu Condensed", sans-serif;
 `;
+
+
