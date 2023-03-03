@@ -14,7 +14,7 @@ interface ReviewCardProps {
 // Reviews, maximum of 170 characters to still fit inside the card.
 const reviewData: ReviewCardProps[] = [
   {
-    image: "public/Images/happy_couple_small.jpg",
+    image: "Images/happy_couple_small.jpg",
     title: "Vegokassen räddade mitt äktenskap",
     content:
       "Jag ÄLSKAR Vego kassen! Förut bråkade vi alltid om vilken middag vi skulle äta. Nu äter vi morötter varje dag!",
@@ -23,7 +23,7 @@ const reviewData: ReviewCardProps[] = [
     kasse: "Familjekassen",
   },
   {
-    image: "public/Images/smoothie.jpg",
+    image: "Images/smoothie.jpg",
     title: "Mina barn äter äntligen grönsaker!",
     content: "Jättebra recept som passar till hela familjen!",
     author: "Stina L.",
@@ -31,7 +31,7 @@ const reviewData: ReviewCardProps[] = [
     kasse: "Familjekassen",
   },
   {
-    image: "public/Images/food_8.jpg",
+    image: "Images/food_8.jpg",
     title: "Plant Power kassen",
     content:
       "Jag och frugan har så mycket mer energi efter att vi bytte till er matkasse. Känner mig ung igen höhöhö",
@@ -40,7 +40,7 @@ const reviewData: ReviewCardProps[] = [
     kasse: "Plant Power™kassen",
   },
   {
-    image: "public/Images/groceries_1.jpg",
+    image: "Images/groceries_1.jpg",
     title: "Älskar 15-minuterskassen!",
     content:
       "Jag är singel och hatar att laga mat till bara mig själv så 15-minuterskassen är bäst. Älskar när mitt haul kommer <3 Iaf mitt telefonnummer är",
@@ -49,7 +49,7 @@ const reviewData: ReviewCardProps[] = [
     kasse: "15-minuterskassen",
   },
   {
-    image: "public/Images/food_10.jpg",
+    image: "Images/food_10.jpg",
     title: "Mye fornøyd",
     content:
       "Maten er av første klasse, mye fornøyd!Rask og veldig hyggelig kundeservice.",
@@ -58,7 +58,7 @@ const reviewData: ReviewCardProps[] = [
     kasse: "Plant Power™kassen",
   },
   {
-    image: "public/Images/groceries_2.jpg",
+    image: "Images/groceries_2.jpg",
     title: "Ok",
     content: "Helt ok.",
     author: "Eva K.",
@@ -66,7 +66,7 @@ const reviewData: ReviewCardProps[] = [
     kasse: "Familjekassen",
   },
   {
-    image: "public/Images/apple1.jpg",
+    image: "Images/apple1.jpg",
     title: "Bra förutom möglig paprika och äpple",
     content:
       "Bra matkasse men paprikan jag fick var möglig och någon hade tagit en tugga av ett äpple. Inte så kul men annars bra.",
@@ -75,7 +75,7 @@ const reviewData: ReviewCardProps[] = [
     kasse: "Fruktkassen",
   },
   {
-    image: "public/Images/cooking_4.jpg",
+    image: "Images/cooking_4.jpg",
     title: "Otroliga matkassar!",
     content:
       "Det bästa som hänt mig! Jag älskar vegokassens mat och recept! Rödbetspaj 7 dagar i rad.",
@@ -84,7 +84,7 @@ const reviewData: ReviewCardProps[] = [
     kasse: "Familjekassen",
   },
   {
-    image: "public/Images/thumbs_down.jpg",
+    image: "Images/thumbs_down.jpg",
     title: "Mina barn gillar inte grönsaker och äter inte vegetariskt",
     content: "Kommer INTE köpa igen.",
     author: "Emelie D.",
@@ -92,7 +92,7 @@ const reviewData: ReviewCardProps[] = [
     kasse: "Familjekassen",
   },
   {
-    image: "public/Images/banana.jpg",
+    image: "Images/banana.jpg",
     title: "Blev inte mätt",
     content: "Fruktkassen räcker INTE till två vuxna i en hel vecka.",
     author: "David J.",

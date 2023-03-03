@@ -76,7 +76,7 @@ const MyModal = styled.div`
 `;
 
 const ModalContent = styled.div`
-  background-image: url("public/Images/fruits_white_green.jpg");
+  background-image: url("Images/fruits_white_green.jpg");
   background-size: cover;
   background-position: center;
   margin: auto;
