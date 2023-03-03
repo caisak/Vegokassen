@@ -21,7 +21,7 @@ export function Products() {
         odlade och fria från animaliska produkter. Du kan välja mellan olika matkassar, som exempelvis familjekassen, eller fruktkassen.
         Oavsett vilken kasse du väljer kan du vara säker på att maten är både god och hälsosam"
         secondText="Utforska våra olika kassar nedan! Det finns någon för alla."
-        image="src/Images/oranges.jpg"
+        image="public/Images/oranges.jpg"
         accentTextColor="#502305"
         textColor="#1c3529"
         gradient="rgba(255, 199, 96, 0.75)"
