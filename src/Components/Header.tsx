@@ -35,7 +35,7 @@ export function TheHeader() {
           >
             {extendNavBar ? <>&#10005;</> : <>&#8801;</>}
           </OpenButton>
-          <StyledLogo src="src/Images/vegokassenlogo1.png" alt="" />
+          <StyledLogo src="public/Images/vegokassenlogo1.png" alt="" />
         </FlexDiv>
         <StyledNav>
           <StyledNavUl>

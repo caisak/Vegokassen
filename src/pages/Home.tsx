@@ -12,27 +12,27 @@ import { TextBlock } from "../Components/TextBlock";
 export function Home() {
   const recipe1: RecipeCardProps = {
     title: "BLOMKÅLSPURÉ",
-    image: "src/Images/recipe9.jpg",
+    image: "public/Images/recipe9.jpg",
     description: "Krämig blomkålspuré serverad med mandarin och körsbärstomat",
   };
 
   const recipe2: RecipeCardProps = {
     title: "KRÄMIG MOROTSSOPPA",
-    image: "src/Images/recipe6.jpg",
+    image: "public/Images/recipe6.jpg",
     description:
       "Rustik och färgglad morotssoppa, en perfekt värmande soppa när det är lite kyligare ute",
   };
 
   const recipe3: RecipeCardProps = {
     title: "KLASSISKA UNGSBAKADE ROTFRUKTER",
-    image: "src/Images/recipe7.jpg",
+    image: "public/Images/recipe7.jpg",
     description:
       "Potatisen, palsternackan och morötterna smakar ljuvligt gott av smakhöjare som salt, citron och färsk rosmarin",
   };
 
   const recipe4: RecipeCardProps = {
     title: "GRÖN ÄRTPURÉ MED GRANATÄPPLE",
-    image: "src/Images/recipe8.jpg",
+    image: "public/Images/recipe8.jpg",
     description:
       "Knalligt grön ärtpuré med granatäpple. God som både birätt eller som pålägg",
   };
@@ -48,9 +48,9 @@ export function Home() {
         <Carousel
           height={55}
           images={[
-            "src/Images/food_10.jpg",
-            "src/Images/food_7.jpg",
-            "src/Images/food_2.jpg",
+            "public/Images/food_10.jpg",
+            "public/Images/food_7.jpg",
+            "public/Images/food_2.jpg",
           ]}
           titles={[
             "Vi gör vegetarisk matlagning enkelt och inspirerande!",
@@ -63,21 +63,21 @@ export function Home() {
         <StyledCardDiv>
           <HowCard
             numberProps="1"
-            imgSrc="src/Images/order1.jpg"
+            imgSrc="public/Images/order1.jpg"
             h2Props="Du beställer"
             text="Beställ enkelt på vår hemsida."
             altProps="Person beställer på laptop"
           />
           <HowCard
             numberProps="2"
-            imgSrc="src/Images/deliver1.jpg"
+            imgSrc="public/Images/deliver1.jpg"
             h2Props="Vi levererar"
             text="Våra leveranser är klimatkompenserade och vi levererar bara den mängd som behövs för att minska matsvinn!"
             altProps="Lastbil kör över bro"
           />
           <HowCard
             numberProps="3"
-            imgSrc="src/Images/cooking_3.jpg"
+            imgSrc="public/Images/cooking_3.jpg"
             h2Props="Ni äter god mat"
             text="Följ våra recept och njut av god vegetarisk mat anpassad efter din familj."
             altProps="Ett par lagar mat"

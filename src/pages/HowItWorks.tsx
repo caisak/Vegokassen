@@ -19,7 +19,7 @@ export function HowItWorks() {
         text="Är du nyfiken på hur det går till, från köp till leverans? Vi finns här för dig. Vår process är snabb, 
         smidig och enkel, precis som allt i din vardag borde vara.  "
         secondText="Tack för att du väljer grönt"
-        image="src/Images/dippingsauce.jpg"
+        image="public/Images/dippingsauce.jpg"
         accentTextColor="#fddb69"
         textColor="white"
         gradient="rgba(48, 41, 21, 0.65)"
@@ -28,27 +28,27 @@ export function HowItWorks() {
         <BigHowCard
         title="Beställ var som helst, när som helst"
         text="Skippa långa köer i mataffären och borttappade inköpslistor. Välj i lugn och ro bland våra matkassar. Beställ var som helst, när som helst."
-        imageSrc="src/Images/order2.jpg"
+        imageSrc="public/Images/order2.jpg"
         imageAlt="Person beställer på sin dator"
       />
       <BigHowCardReversed
         title="Vi handplockar de bästa ingredienserna"
         text="Vi väljer varsamt ut råvarorna till din matkasse. Vi skickar bara med så mycket som behövs för att minska matsvinnet. Bra för planeten och bra för plånboken."
-        imageSrc="src/Images/bellpeppers.jpg"
+        imageSrc="public/Images/bellpeppers.jpg"
         imageAlt="Hand plockar paprika"
       />
 
       <BigHowCard
         title="Vi levererar"
         text="Våra leveranser är så klart klimatkompenserade och vi jobbar ständigt för att minska våra utsläpp och värnar om ekologisk hållbarhet och de globala målen."
-        imageSrc="src/Images/grocery1.jpg"
+        imageSrc="public/Images/grocery1.jpg"
         imageAlt="Matkasse med grönsaker"
       />
 
       <BigHowCardReversed
         title="Laga med kärlek"
         text="Njut av mat som är god både för dig och planeten! Följa våra roliga och enkla recept eller laga på ditt eget sätt. Vad väntar du på? Testa Vegokassen idag!"
-        imageSrc="src/Images/fresh_greens2.jpg"
+        imageSrc="public/Images/fresh_greens2.jpg"
         imageAlt="Grönsaker"
       />
       <StyledFillerCard>
@@ -56,7 +56,7 @@ export function HowItWorks() {
           Genom att välja vegetariskt kan du bidra till att skydda vår planet
           och dess resurser
         </StyledFillerText>
-        <StyledFillerImg src="src/Images/farm.jpeg" alt="Närbild på växter" />
+        <StyledFillerImg src="public/Images/farm.jpeg" alt="Närbild på växter" />
       </StyledFillerCard>
     </div>
   );

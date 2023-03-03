@@ -80,7 +80,7 @@ export const ApiComponent = () => {
           </ul>
         </div>
         <div>
-          <img src="src/Images/stats.png" alt="statistik" />
+          <img src="public/Images/stats.png" alt="statistik" />
         </div>
 
     </VeganIsTheFuture>
@@ -93,7 +93,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   height: fit-content;
-  background-image: url("src/Images/grass_1.jpg");
+  background-image: url("public/Images/grass_1.jpg");
   background-size: cover;
   background-position: center;
 `;
