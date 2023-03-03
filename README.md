@@ -67,17 +67,17 @@ Om du hittar annan bra font du vill använda, dela med oss andra.
 
 
 ## Krav för G:
-[x] Projektet innehåller och använder minst 8 stycken komponenter varav minst [] stycken är “statefulla"-komponenter.
-[x] React Router har använts för att dynamiskt uppdatera URL’en.
-[x] Git & GitHub har använts
-[x] Projektmappen innehåller en README.md fil
-[x] Uppgiften lämnas in i tid!
-[x] Muntlig presentation är genomförd
+1. [x] Projektet innehåller och använder minst 8 stycken komponenter varav minst [] stycken är “statefulla"-komponenter.
+2. [x] React Router har använts för att dynamiskt uppdatera URL’en.
+3. [x] Git & GitHub har använts
+4. [x] Projektmappen innehåller en README.md fil
+5. [x] Uppgiften lämnas in i tid!
+6. [x] Muntlig presentation är genomförd
 
 ## Krav för VG:
-[x] Alla punkter för godkänt är uppfyllda
-[x] Ett “CSS i JS“ lib skall användas för at skriva CSS (ex JSS, Styled-Components, mm).
-[x] En ”ErrorBoundry”- komponent ska skapas och användas på minst 3 ställen.
-[x] Data från ett web-API hämtas och visas på sidan.
+7. [x] Alla punkter för godkänt är uppfyllda
+8. [x] Ett “CSS i JS“ lib skall användas för at skriva CSS (ex JSS, Styled-Components, mm).
+9. [x] En ”ErrorBoundry”- komponent ska skapas och användas på minst 3 ställen.
+10. [x] Data från ett web-API hämtas och visas på sidan.
 
 
